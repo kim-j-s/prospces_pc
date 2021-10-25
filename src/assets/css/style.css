@@ -692,7 +692,8 @@ button.swiper-pagination-bullet {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
   .ps-select::-ms-expand {
     display: none; }
   .ps-select.mini {

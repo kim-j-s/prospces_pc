@@ -70,6 +70,17 @@ function devHTML() {
     .pipe(dest(options.paths.dist.base));
 }
 
+function devGuide() {
+  return src([
+      `${options.paths.src.guide}/**/*.*`
+    ])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: options.paths.src.includeHtml
+    }))
+    .pipe(dest(options.paths.dist.guide));
+}
+
 function devStyles() {
   const tailwindcss = require('tailwindcss');
   return src(`${options.paths.src.css}/**/*.scss`).pipe(sass().on('error', sass.logError))
@@ -101,6 +112,7 @@ function devImages() {
 
 function watchFiles() {
   watch(`${options.paths.src.base}/**/*.html`, series(devHTML, devStyles, previewReload));
+  watch(`${options.paths.src.guide}/**/*.*`, series(devGuide, previewReload));
   watch([options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`], series(devStyles, previewReload));
   watch(`${options.paths.src.js}/**/*.js`, series(devScripts, previewReload));
   watch(`${options.paths.src.img}/**/*`, series(devImages, previewReload));
@@ -169,7 +181,7 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devHTML), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, devHTML, devGuide), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
