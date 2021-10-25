@@ -1,0 +1,283 @@
+/*
+  Prospecs PC styles 공통
+*/
+$duration-short : 0.3s;
+$duration : 0.6s;
+
+$z-gnb: 1000;
+$z-dim: 1100;
+
+
+.line-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+
+.ps-inner {
+  width: 1640px;
+  margin: 0 auto;
+
+  &--1920 {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &--large {
+    max-width: 1760px;
+    margin: 0 auto;
+  }
+
+  &--full-width {
+    width: 100%;
+    min-width: 1640px;
+    margin: 0 auto;
+
+  }
+}
+
+
+.ps-btn {
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.ps-select {
+  -webkit-border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.mini {
+    display: inline-block;
+    width: auto;
+    height: 24px;
+    padding: 0 28px 0 0;
+    font-size: 18px;
+    border: none;
+    background: #fff url('../images/icon_down.svg') no-repeat right 2px;
+    color: #222;
+  }
+}
+
+.ps-subtitle {
+  font-size: 40px;
+  margin-bottom: 47px;
+}
+
+.ps-tab {
+  &--wrap {
+    display: flex;
+  }
+
+  &--item {
+    display: block;
+  }
+
+  &--wrap.type1 {
+    margin-bottom: 57px;
+
+    .ps-tab--item {
+      position: relative;
+      display: block;
+      height: 51px;
+      font-size: 26px;
+      color: #999999;
+      font-weight: bold;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 8px;
+        background-color: #222;
+        transition: $duration-short;
+      }
+
+      &+.ps-tab--item {
+        margin-left: 32px;
+      }
+
+      &:hover,
+      &.active {
+        color: #222;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.ps-prd-list {
+  &--wrap {
+    margin-bottom: 140px;
+  }
+
+  &--header {
+    margin-bottom: 10px;
+
+    .ps-list-filter {
+      display: inline-block;
+      width: auto;
+      height: 24px;
+      padding: 0 28px 0 0;
+      font-size: 18px;
+      border: none;
+      background: #fff url('../images/icon_filter.svg') no-repeat right 2px;
+      color: #222;
+    }
+  }
+
+  &--more {
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px solid #222;
+    font-size: 18px;
+    width: 260px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 30px;
+  }
+}
+
+/* 상품 썸네일 */
+.ps-prd-item {
+  display: block;
+  width: auto;
+  margin-bottom: 10px;
+  user-select: none;
+
+  .thumbs {
+    position: relative;
+
+    &.ratio1 {
+      padding-top: 100%;
+
+      &>img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &>img {
+      width: 100%;
+      height: auto;
+    }
+
+    .badge {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      .sex {
+        display: block;
+        color: #fff;
+        overflow: hidden;
+        float: left;
+
+        >span {
+          display: block;
+          float: left;
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 14px;
+          text-align: center;
+          background-color: #222;
+
+          &.male {
+            background-color: #222;
+          }
+
+          &.female {
+            background-color: #D13B40;
+          }
+        }
+      }
+    }
+  }
+
+  .desc {
+    padding-top: 22px;
+
+    .cate {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+
+    .name {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 25px;
+    }
+
+    .price {
+      .base-price {
+        color: #BABABA;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: line-through;
+        line-height: 1;
+      }
+
+      .amount {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 8px;
+        margin-bottom: 15px;
+
+        .per {
+          display: inline-block;
+          color: #E13310;
+          vertical-align: top;
+          margin-top: -4px;
+        }
+      }
+    }
+
+    .badge {
+      &>span {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1;
+        padding: 5px;
+        border: 2px solid #222;
+      }
+    }
+  }
+
+}
