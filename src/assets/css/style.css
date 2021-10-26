@@ -1290,6 +1290,66 @@ button.swiper-pagination-bullet {
               height: 23px;
               background: url("../images/icon_arrow_R_white.svg") center no-repeat; }
 
+.swiper--shop-kv {
+  overflow: hidden; }
+  .swiper--shop-kv .swiper-slide .img {
+    text-align: center; }
+  .swiper--shop-kv .swiper-slide > .ps-inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+    .swiper--shop-kv .swiper-slide > .ps-inner .desc {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 100px; }
+      .swiper--shop-kv .swiper-slide > .ps-inner .desc .headcopy {
+        font-size: 78px;
+        line-height: 90px;
+        margin-bottom: 40px; }
+      .swiper--shop-kv .swiper-slide > .ps-inner .desc .single-prd--button-next,
+      .swiper--shop-kv .swiper-slide > .ps-inner .desc .single-prd--button-prev {
+        display: inline-block;
+        background-color: #222;
+        width: 48px;
+        height: 48px;
+        background: #222 url("../images/icon_arrow_R_white.svg") center no-repeat;
+        overflow: hidden;
+        text-indent: -999px; }
+      .swiper--shop-kv .swiper-slide > .ps-inner .desc .single-prd--button-prev {
+        margin-right: 10px;
+        background: #222 url("../images/icon_arrow_L_white.svg") center no-repeat; }
+      .swiper--shop-kv .swiper-slide > .ps-inner .desc .title {
+        position: absolute;
+        bottom: 100px; }
+        .swiper--shop-kv .swiper-slide > .ps-inner .desc .title .badge {
+          margin-bottom: 20px; }
+          .swiper--shop-kv .swiper-slide > .ps-inner .desc .title .badge span {
+            color: #fff;
+            background-color: #D13B40;
+            padding: 7px 11px 6px; }
+        .swiper--shop-kv .swiper-slide > .ps-inner .desc .title .link {
+          display: block;
+          font-size: 36px;
+          color: #fff; }
+          .swiper--shop-kv .swiper-slide > .ps-inner .desc .title .link span {
+            display: inline-block;
+            background-color: #222;
+            height: 70px;
+            line-height: 1.25;
+            padding: 11px 19px;
+            margin-top: 8px; }
+            .swiper--shop-kv .swiper-slide > .ps-inner .desc .title .link span:last-child::after {
+              content: '';
+              display: inline-block;
+              margin-left: 4px;
+              width: 15px;
+              height: 23px;
+              background: url("../images/icon_arrow_R_white.svg") center no-repeat; }
+
 .main-banner-related {
   margin-bottom: 140px;
   overflow: hidden; }

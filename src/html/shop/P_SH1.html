@@ -10,101 +10,37 @@
     <main>
       <!-- Main -->
       <section>
-        <article id="swiperSinglePrd" class="swiper--single-prd">
-          <div class="swiper-container ps-pagination--vertical">
+        <article id="swiperSubKeyVisual" class="swiper--shop-kv">
+          <div class="swiper-container ps-pagination--bottom">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" style="background-color: #F8F8F8;">
-                <div class="ps-inner--inner">
-                  <div class="img">
-                    <img src="../../assets/images/shop_top_visual.jpg" alt="PERFORMANCE">
-                  </div>
+              <div class="swiper-slide">
+                <div class="img">
+                  <img src="../../assets/images/shop_top_visual.jpg" alt="2021 F/W COLLECTION SEASON OPEN!">
+                </div>
+                <div class="ps-inner">
                   <div class="desc">
-                    <h3 class="headcopy font-extrabold"><span class="font-eng">PRO-SPECS <br />PERFORMANCE</span>
-                    </h3>
-                    <div class="single-prd--button-prev">prev</div>
-                    <div class="single-prd--button-next">next</div>
-                    <div class="title">
-                      <div class="badge">
-                        <span class="font-eng font-extrabold">NEW</span>
-                      </div>
+                    <h3 class="headcopy">
                       <a href="#" class="link">
-                        <span>프로스펙스</span><br />
-                        <span>퍼포먼스 파워소닉 511</span>
+                        <span>프로-스펙스 오리지널</span>
                       </a>
-                    </div>
+                      <span class="font-eng font-bold">2021 F/W COLLECTION<br> SEASON OPEN!</span>
+                    </h3>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide" style="background-color: #F8F8F8;">
-                <div class="ps-inner--inner">
-                  <div class="img">
-                    <img src="../../assets/images/shop_top_visual.jpg" alt="PERFORMANCE">
-                  </div>
-                  <div class="desc">
-                    <h3 class="headcopy font-extrabold"><span class="font-eng">PRO-SPECS <br />PERFORMANCE 2</span>
-                    </h3>
-                    <div class="single-prd--button-prev">prev</div>
-                    <div class="single-prd--button-next">next</div>
-
-                    <div class="title">
-                      <div class="badge">
-                        <span>NEW</span>
-                      </div>
-                      <a href="#" class="link font-bold">
-                        <span>프로스펙스</span><br />
-                        <span>퍼포먼스 파워소닉 511</span>
-                      </a>
-                    </div>
-                  </div>
-
+              <div class="swiper-slide">
+                <div class="img">
+                  <img src="../../assets/images/shop_top_visual.jpg" alt="2021 F/W COLLECTION SEASON OPEN!">
                 </div>
-              </div>
-              <div class="swiper-slide" style="background-color: #F8F8F8;">
-                <div class="ps-inner--inner">
-                  <div class="img">
-                    <img src="../../assets/images/shop_top_visual.jpg" alt="PERFORMANCE">
-                  </div>
+                <div class="ps-inner">
                   <div class="desc">
-                    <h3 class="headcopy font-extrabold"><span class="font-eng">PRO-SPECS <br />PERFORMANCE 3</span>
-                    </h3>
-                    <div class="single-prd--button-prev">prev</div>
-                    <div class="single-prd--button-next">next</div>
-
-                    <div class="title">
-                      <div class="badge">
-                        <span>NEW</span>
-                      </div>
-                      <a href="#" class="link font-bold">
-                        <span>프로스펙스</span><br />
-                        <span>퍼포먼스 파워소닉 511</span>
+                    <h3 class="headcopy">
+                      <a href="#" class="link">
+                        <span>프로-스펙스 오리지널</span>
                       </a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="swiper-slide" style="background-color: #F8F8F8;">
-                <div class="ps-inner--inner">
-                  <div class="img">
-                    <img src="../../assets/images/shop_top_visual.jpg" alt="PERFORMANCE">
-                  </div>
-                  <div class="desc">
-                    <h3 class="headcopy font-extrabold"><span class="font-eng">PRO-SPECS <br />PERFORMANCE 4</span>
+                      <span class="font-eng font-bold">2021 F/W COLLECTION<br> SEASON OPEN!</span>
                     </h3>
-                    <div class="single-prd--button-prev">prev</div>
-                    <div class="single-prd--button-next">next</div>
-
-                    <div class="title">
-                      <div class="badge">
-                        <span>NEW</span>
-                      </div>
-                      <a href="#" class="link font-bold">
-                        <span>프로스펙스</span><br />
-                        <span>퍼포먼스 파워소닉 511</span>
-                      </a>
-                    </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -160,7 +96,7 @@
      * 
      */
 
-     var swiperSinglePrd = new Swiper('#swiperSinglePrd .swiper-container', {
+     var swiperSubKeyVisual = new Swiper('#swiperSubKeyVisual .swiper-container', {
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -169,10 +105,6 @@
           return '<span class="font-eng font-extrabold ' + className + '"><span class="num">0' + (index + 1) +
             "</span></span>";
         },
-      },
-      navigation: {
-        nextEl: '#swiperSinglePrd .single-prd--button-next',
-        prevEl: '#swiperSinglePrd .single-prd--button-prev',
       },
     });
 
