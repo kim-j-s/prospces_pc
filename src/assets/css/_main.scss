@@ -239,68 +239,8 @@
   margin-bottom: 140px;
   overflow: hidden;
 
-  .ui.ps-tab {
-    .menu {
-      margin-bottom: 34px;
-
-      &>a {
-        display: inline-block;
-        position: relative;
-        height: 54px;
-        font-size: 26px;
-        color: #999;
-
-        &:hover,
-        &[aria-selected="true"] {
-          color: #222;
-
-          &::after {
-            width: 100%;
-            transition: width $duration-short;
-          }
-        }
-
-        &::after {
-          content: '';
-          position: absolute;
-          display: block;
-          width: 0;
-          height: 8px;
-          bottom: 0;
-          background-color: #222;
-        }
-
-        &+a {
-          margin-left: 30px;
-        }
-      }
-    }
-
-    .cont {
-      position: relative;
-
-
-      .swiper-slide {
-        width: 320px;
-
-        .ps-prd-item {
-          margin-bottom: 60px;
-        }
-
-        @for $i from 0 through 19 {
-          &:nth-child(#{$i + 1}) {
-            .ps-prd-item {
-              width: 320px;
-              transition-delay: $i * 100ms;
-            }
-          }
-        }
-      }
-    }
-
-  }
+  
 }
-
 
 .main--banner-issue {
   margin-bottom: 80px;

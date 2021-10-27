@@ -477,8 +477,39 @@ button.swiper-pagination-bullet {
       }
     }
   }
-  &--bottom {
-    
+  &--square {
+    &>.swiper-pagination-bullets {
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0;
+        overflow: hidden;
+        font-size: 0;
+        background: #fff;
+        opacity: 0.3;
+        border-radius: 0;
+        transition: 0.3s;
+        + .swiper-pagination-bullet {
+          margin-left: 16px;
+        }
+      }
+      .swiper-pagination-bullet:hover,
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+    &.square-black {
+      &>.swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+          background: #eee;
+          opacity: 1;
+        }
+        .swiper-pagination-bullet:hover,
+        .swiper-pagination-bullet-active {
+          background: #222;
+        }
+      }
+    }
   }
 }
 
