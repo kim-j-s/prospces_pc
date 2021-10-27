@@ -479,6 +479,7 @@ button.swiper-pagination-bullet {
   }
   &--square {
     &>.swiper-pagination-bullets {
+      width: auto;
       .swiper-pagination-bullet {
         width: 10px;
         height: 10px;

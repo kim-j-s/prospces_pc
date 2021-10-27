@@ -265,7 +265,7 @@ $z-dim: 1100;
           display: inline-block;
           color: #E13310;
           vertical-align: top;
-          margin-top: -4px;
+          /* margin-top: -4px; */
         }
       }
     }
@@ -278,6 +278,19 @@ $z-dim: 1100;
         padding: 5px;
         border: 2px solid #222;
       }
+    }
+  }
+
+  &.vertical {
+    align-items: center;
+    display: flex;
+    .thumbs {
+      flex: none;
+      width: 160px;
+    }
+    .desc {
+      flex: 1 1 0%;
+      padding: 0 0 0 30px;
     }
   }
 

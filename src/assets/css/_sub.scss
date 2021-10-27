@@ -283,4 +283,63 @@
       }
     }
   }
+  .best-item {
+    font-size: 0;
+    .visual {
+      display: inline-block;
+      vertical-align: top;
+      width: 520px;
+      margin-right: 40px;
+    }
+    .best-swiper {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: 1080px;
+      margin-top: -50px;
+      padding-top: 50px;
+      overflow: hidden;
+    }
+
+    .swiper-pagination {
+      top: -40px;
+      left: auto;
+      right: 0;
+      bottom: auto;
+    }
+  }
 }
+
+.ps-best-items {
+  display: flex;
+  .ps-prd-item {
+    .one {
+      flex: none;
+      width: 520px;
+    }
+    .thumbs {
+      .ranking {
+        position: absolute;
+        width: 36px;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        color: #fff;
+        background: #000;
+      }
+    }
+
+  }
+  .rankings {
+    flex: 1 1 0%;
+    padding-left: 40px;
+    .ps-prd-item {
+      margin-bottom: 0;
+      + .ps-prd-item {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+
