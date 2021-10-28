@@ -66,7 +66,11 @@
           }
         }
       }
+    }
+  }
 
+  [data-aos="ps-swiper-in"].aos-animate:not(.hidden) {
+    .swiper-slide{
       @for $i from 0 through 19 {
         &:nth-child(#{$i + 1}) {
           .ps-prd-item {
@@ -77,6 +81,24 @@
       }
     }
   }
+
+  [data-aos="zoom-in"].aos-init .ps-prd-item {
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
+    transform: scale(.6);
+    transition-duration: 1s;
+  }
+
+  [data-aos="zoom-in"].aos-animate:not(.hidden) .ps-prd-item {
+      @for $i from 0 through 5 {
+        &:nth-child(#{$i + 1}) {
+            opacity: 1;
+            transform: translateZ(0) scale(1);
+            transition-delay: $i * 100ms;
+        }
+      }
+  }
+
 }
 
 
@@ -312,6 +334,7 @@
 
 .ps-best-items {
   display: flex;
+  overflow: hidden;
   .ps-prd-item {
     .one {
       flex: none;

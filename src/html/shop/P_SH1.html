@@ -158,7 +158,7 @@
               <h3 class="font-bold">믿을수 있는 그이름<br> 프로스펙스</h3>
               <h4 class="font-bold">추천상품</h4>
             </div>
-            <div id="swiperHashTag" data-aos="ps-swiper-in" tabindex="0" role="tabpanel" aria-labelledby="mainRelated1"
+            <div id="swiperPrdList" data-aos="ps-swiper-in" tabindex="0" role="tabpanel" aria-labelledby="mainRelated1"
             class="cont swiper-related">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -243,10 +243,10 @@
               <h4 class="font-bold">BEST</h4>
             </div>
 
-            <div class="ui ps-tab ps-inner--large" role="tablist">
+            <div class="ui ps-tab ps-inner--large best-item-swiper" role="tablist">
               <div class="menu font-bold">
-                <a href="#swiperHashTag" id="mainRelated1" role="tab" aria-selected="true">퍼포먼스라인</a>
-                <a href="#swiperMusinsa" id="mainRelated2" role="tab" aria-selected="false">오리지널라인</a>
+                <a href="#swiperBestPerformance" id="bestitems1" role="tab" aria-selected="true">퍼포먼스라인</a>
+                <a href="#swiperBestOrigin" id="bestitems2" role="tab" aria-selected="false">오리지널라인</a>
               </div>
             </div>
 
@@ -255,196 +255,370 @@
                 <img src="../../assets/images/thumbs_best_item.png" alt="">
               </div>
               <div class="best-swiper">
-                <div class="swiper-container ps-pagination--square square-black">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="ps-best-items">
-                        <a href="#" class="ps-prd-item one">
-                          <div class="thumbs">
-                            <span class="ranking font-bold">1</span>
-                            <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
+                <div id="swiperBestPerformance" data-aos="zoom-in" class="swiper-related" tabindex="0" role="tabpanel" aria-labelledby="bestitems1">
+                  <div class="swiper-container ps-pagination--square square-black">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="ps-best-items">
+                          <a href="#" class="ps-prd-item one">
+                            <div class="thumbs">
+                              <span class="ranking font-bold">1</span>
+                              <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
+                            </div>
+                            <div class="desc">
+                              <p class="cate">2021 FW</p>
+                              <p class="name">퍼포먼스 오리지널 덴스 후디 </p>
+                              <div class="price">
+                                <p class="base-price">89,000원</p>
+                                <p class="amount">
+                                  <span class="per">20%</span>
+                                  71,700원
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="rankings">
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">2</span>
+                                <img src="../../assets/images/temp/temp_best_prd_02.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 크롭티</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">10%</span>
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">3</span>
+                                <img src="../../assets/images/temp/temp_best_prd_03.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 트레이닝팬츠</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">4</span>
+                                <img src="../../assets/images/temp/temp_best_prd_04.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 스택스</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">20%</span>
+                                    129,000원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">5</span>
+                                <img src="../../assets/images/temp/temp_best_prd_05.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 맨투맨</p>
+                                <div class="price">
+                                  <p class="base-price">82,500원</p>
+                                  <p class="amount">
+                                    <span class="per">15%</span>
+                                    65,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
                           </div>
-                          <div class="desc">
-                            <p class="cate">2021 FW</p>
-                            <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                            <div class="price">
-                              <p class="base-price">89,000원</p>
-                              <p class="amount">
-                                <span class="per">20%</span>
-                                71,700원
-                              </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ps-best-items">
+                          <a href="#" class="ps-prd-item one">
+                            <div class="thumbs">
+                              <span class="ranking font-bold">1</span>
+                              <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
                             </div>
+                            <div class="desc">
+                              <p class="cate">2021 FW</p>
+                              <p class="name">퍼포먼스 오리지널 덴스 후디 </p>
+                              <div class="price">
+                                <p class="base-price">89,000원</p>
+                                <p class="amount">
+                                  <span class="per">20%</span>
+                                  71,700원
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="rankings">
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">2</span>
+                                <img src="../../assets/images/temp/temp_best_prd_02.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 크롭티</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">10%</span>
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">3</span>
+                                <img src="../../assets/images/temp/temp_best_prd_03.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 트레이닝팬츠</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">4</span>
+                                <img src="../../assets/images/temp/temp_best_prd_04.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 스택스</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">20%</span>
+                                    129,000원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">5</span>
+                                <img src="../../assets/images/temp/temp_best_prd_05.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 맨투맨</p>
+                                <div class="price">
+                                  <p class="base-price">82,500원</p>
+                                  <p class="amount">
+                                    <span class="per">15%</span>
+                                    65,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
                           </div>
-                        </a>
-                        <div class="rankings">
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">2</span>
-                              <img src="../../assets/images/temp/temp_best_prd_02.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">3</span>
-                              <img src="../../assets/images/temp/temp_best_prd_03.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 리지널 덴스 후디 리지널 덴스 후디 리지널 덴스 후디</p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">4</span>
-                              <img src="../../assets/images/temp/temp_best_prd_04.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">5</span>
-                              <img src="../../assets/images/temp/temp_best_prd_05.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="ps-best-items">
-                        <a href="#" class="ps-prd-item one">
-                          <div class="thumbs">
-                            <span class="ranking font-bold">1</span>
-                            <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
-                          </div>
-                          <div class="desc">
-                            <p class="cate">2021 FW</p>
-                            <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                            <div class="price">
-                              <p class="base-price">89,000원</p>
-                              <p class="amount">
-                                <span class="per">20%</span>
-                                71,700원
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                        <div class="rankings">
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">2</span>
-                              <img src="../../assets/images/temp/temp_best_prd_02.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">3</span>
-                              <img src="../../assets/images/temp/temp_best_prd_03.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 리지널 덴스 후디 리지널 덴스 후디 리지널 덴스 후디</p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">4</span>
-                              <img src="../../assets/images/temp/temp_best_prd_04.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="ps-prd-item vertical">
-                            <div class="thumbs">
-                              <span class="ranking font-bold">5</span>
-                              <img src="../../assets/images/temp/temp_best_prd_05.png" alt="">
-                            </div>
-                            <div class="desc">
-                              <p class="cate">2021 FW</p>
-                              <p class="name line-clamp-2">오리지널 덴스 후디 </p>
-                              <div class="price">
-                                <p class="base-price">89,000원</p>
-                                <p class="amount">
-                                  <span class="per">20%</span>
-                                  71,700원
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                   </div>
-                  <div class="swiper-pagination"></div>
                 </div>
+                <div id="swiperBestOrigin" data-aos="zoom-in" class="swiper-related" tabindex="0" role="tabpanel" aria-labelledby="bestitems2" hidden>
+                  <div class="swiper-container ps-pagination--square square-black">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="ps-best-items">
+                          <a href="#" class="ps-prd-item one">
+                            <div class="thumbs">
+                              <span class="ranking font-bold">1</span>
+                              <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
+                            </div>
+                            <div class="desc">
+                              <p class="cate">2021 신상</p>
+                              <p class="name">오리지널 덴스 후디 </p>
+                              <div class="price">
+                                <p class="base-price">89,000원</p>
+                                <p class="amount">
+                                  <span class="per">20%</span>
+                                  71,700원
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="rankings">
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">2</span>
+                                <img src="../../assets/images/temp/temp_best_prd_02.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 크롭티</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">10%</span>
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">3</span>
+                                <img src="../../assets/images/temp/temp_best_prd_03.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 트레이닝팬츠</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">4</span>
+                                <img src="../../assets/images/temp/temp_best_prd_04.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 스택스</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">20%</span>
+                                    129,000원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">5</span>
+                                <img src="../../assets/images/temp/temp_best_prd_05.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 맨투맨</p>
+                                <div class="price">
+                                  <p class="base-price">82,500원</p>
+                                  <p class="amount">
+                                    <span class="per">15%</span>
+                                    65,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ps-best-items">
+                          <a href="#" class="ps-prd-item one">
+                            <div class="thumbs">
+                              <span class="ranking font-bold">1</span>
+                              <img src="../../assets/images/temp/temp_best_prd_01.png" alt="">
+                            </div>
+                            <div class="desc">
+                              <p class="cate">2021 FW</p>
+                              <p class="name">퍼포먼스 오리지널 덴스 후디 </p>
+                              <div class="price">
+                                <p class="base-price">89,000원</p>
+                                <p class="amount">
+                                  <span class="per">20%</span>
+                                  71,700원
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <div class="rankings">
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">2</span>
+                                <img src="../../assets/images/temp/temp_best_prd_02.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 크롭티</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">10%</span>
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">3</span>
+                                <img src="../../assets/images/temp/temp_best_prd_03.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 트레이닝팬츠</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    32,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">4</span>
+                                <img src="../../assets/images/temp/temp_best_prd_04.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 스택스</p>
+                                <div class="price">
+                                  <p class="amount">
+                                    <span class="per">20%</span>
+                                    129,000원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="#" class="ps-prd-item vertical">
+                              <div class="thumbs">
+                                <span class="ranking font-bold">5</span>
+                                <img src="../../assets/images/temp/temp_best_prd_05.png" alt="">
+                              </div>
+                              <div class="desc">
+                                <p class="cate">2021 신상</p>
+                                <p class="name">오리지널 덴스 여성 맨투맨</p>
+                                <div class="price">
+                                  <p class="base-price">82,500원</p>
+                                  <p class="amount">
+                                    <span class="per">15%</span>
+                                    65,100원
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>                
               </div>
-            </div>
-            
+            </div>            
           </div>
         </section>
 
@@ -456,14 +630,14 @@
             <div class="recommend-color">
 
             </div>
-            <div id="swiperHashTag" data-aos="ps-swiper-in" tabindex="0" role="tabpanel" aria-labelledby="mainRelated1"
+            <div id="swiperPrdList" data-aos="ps-swiper-in" tabindex="0" role="tabpanel" aria-labelledby="mainRelated1"
             class="cont swiper-related">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="#" class="ps-prd-item vertical">
+                    <a href="#" class="ps-prd-item">
                       <div class="thumbs">
-                        <img src="../../assets/images/temp/temp_prd_320_01.png" alt="오리지널 덴스 후디">
+                        <img src="../../assets/images/temp/temp_prd_thumbs_15.png" alt="오리지널 덴스 후디">
                       </div>
                       <div class="desc s-items">
                         <p class="name">빅스타 103</p>
@@ -474,44 +648,44 @@
                   <div class="swiper-slide">
                     <a href="#" class="ps-prd-item">
                       <div class="thumbs">
-                        <img src="../../assets/images/temp/temp_prd_320_02.png" alt="오리지널 덴스 후디">
+                        <img src="../../assets/images/temp/temp_prd_thumbs_14.png" alt="오리지널 덴스 후디">
                       </div>
                       <div class="desc s-items">
-                        <p class="name">빅스타 103</p>
-                        <p class="amount font-bold">71,700원</p>
+                        <p class="name">오리지널 스택스 TR</p>
+                        <p class="amount font-bold">80,500원</p>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a href="#" class="ps-prd-item">
                       <div class="thumbs">
-                        <img src="../../assets/images/temp/temp_prd_320_03.png" alt="오리지널 덴스 후디">
+                        <img src="../../assets/images/temp/temp_prd_thumbs_4.png" alt="오리지널 덴스 후디">
                       </div>
                       <div class="desc s-items">
-                        <p class="name">빅스타 103</p>
-                        <p class="amount font-bold">71,700원</p>
+                        <p class="name">스택스 TR 101</p>
+                        <p class="amount font-bold">46,500원</p>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a href="#" class="ps-prd-item">
                       <div class="thumbs">
-                        <img src="../../assets/images/temp/temp_prd_320_04.png" alt="오리지널 덴스 후디">
+                        <img src="../../assets/images/temp/temp_prd_thumbs_12.png" alt="오리지널 덴스 후디">
                       </div>
                       <div class="desc s-items">
-                        <p class="name">빅스타 103</p>
-                        <p class="amount font-bold">71,700원</p>
+                        <p class="name">오리지널 스택스 103</p>
+                        <p class="amount font-bold">55,100원</p>
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
                     <a href="#" class="ps-prd-item">
                       <div class="thumbs">
-                        <img src="../../assets/images/temp/temp_prd_320_05.png" alt="오리지널 덴스 후디">
+                        <img src="../../assets/images/temp/temp_prd_thumbs_5.png" alt="오리지널 덴스 후디">
                       </div>
                       <div class="desc s-items">
-                        <p class="name">빅스타 103</p>
-                        <p class="amount font-bold">71,700원</p>
+                        <p class="name">스택스 캡 102</p>
+                        <p class="amount font-bold">32,200원</p>
                       </div>
                     </a>
                   </div>
@@ -519,7 +693,7 @@
                     <div class="swiper-slide">
                       <a href="#" class="ps-prd-item">
                         <div class="thumbs">
-                          <img src="../../assets/images/temp/temp_prd_320_01.png" alt="오리지널 덴스 후디">
+                          <img src="../../assets/images/temp/temp_prd_thumbs_15.png" alt="오리지널 덴스 후디">
                         </div>
                         <div class="desc s-items">
                           <p class="name">빅스타 103</p>
@@ -540,7 +714,7 @@
       @@include('_footer.html')
     </div>
     <script>
-      var swiperSinglePrd = new Swiper('.sub--key-visual .swiper-container', {
+      var swiperSubKv = new Swiper('.sub--key-visual .swiper-container', {
         autoplay: {
           delay: 4000,
         },
@@ -555,7 +729,7 @@
           },
         },
       });
-      var swiperSinglePrd = new Swiper('.sub-prd-list--type1 .swiper-container', {
+      var swiperPrdListType1 = new Swiper('.sub-prd-list--type1 .swiper-container', {
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -566,7 +740,8 @@
           },
         },
       });
-      var swiperSinglePrd = new Swiper('.best-swiper .swiper-container', {
+      
+      var swiperBestPerformance = new Swiper('#swiperBestPerformance .swiper-container', {
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -577,11 +752,37 @@
           },
         },
       });
+      var swiperBestOrigin = new Swiper('#swiperBestOrigin .swiper-container', {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="font-eng font-extrabold ' + className + '"><span class="num">0' + (index + 1) +
+              "</span></span>";
+          },
+        },
+      });
+
+      $('.best-item-swiper [role=tab]').on({
+        click: function () {
+          var isIE = !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+            /Trident.*rv\:11\./))
+          var swiperVar = eval($($(this).attr('href')).attr('id'));
+          if (!isIE) $('.best-item .swiper-related').removeClass('aos-animate')
+          setTimeout(function () {
+            swiperVar.slideTo(1);
+            swiperVar.update();
+            if (!isIE) $($(this).attr('href')).addClass('aos-animate')
+            if (!isIE) AOS.refresh();
+          }, 100)
+        }
+      })
 
       
 
 
-      var swiperHashTag = new Swiper('#swiperHashTag .swiper-container', {
+      var swiperPrdList = new Swiper('#swiperPrdList .swiper-container', {
         slidesPerView: "auto",
         slidesPerGroup: 4,
         spaceBetween: 20,
