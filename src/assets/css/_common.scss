@@ -7,6 +7,12 @@ $duration : 0.6s;
 $z-gnb: 1000;
 $z-dim: 1100;
 
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 
 .line-clamp-1 {
   overflow: hidden;
@@ -282,16 +288,69 @@ $z-dim: 1100;
   }
 
   &.vertical {
-    align-items: center;
-    display: flex;
+    font-size: 0;
     .thumbs {
-      flex: none;
+      display: inline-block;
+      vertical-align: middle;
       width: 160px;
     }
     .desc {
-      flex: 1 1 0%;
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 160px);
       padding: 0 0 0 30px;
     }
   }
 
+}
+
+
+.color-sort {
+  &-wrap {
+    margin-bottom: 30px;
+    font-size: 0;
+  }
+  &--btn {
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    > span {
+      display: block;
+      height: 30px;
+      overflow: hidden;
+      text-indent: -999px;
+    }
+    & + & {
+      margin-left: 16px;
+    }
+  }
+  &--all {
+    background: rgb(225,51,16);
+    background: linear-gradient(135deg, rgba(225,51,16,1) 0%, rgba(244,204,34,1) 30%, rgba(125,199,25,1) 50%, rgba(58,157,219,1) 70%, rgba(123,54,204,1) 100%);
+  }
+  &--ty1 {
+    background: #e13310;
+  }
+  &--ty2 {
+    background: #f07811;
+  }
+  &--ty3 {
+    background: #ffe414;
+  }
+  &--ty4 {
+    background: #1ab5e3;
+  }
+  &--ty5 {
+    background: #1a50e3;
+  }
+  &--ty6 {
+    background: #6f1ae3;
+  }
+  &--ty7 {
+    background: #222;
+  }
+  &--ty8 {
+    border: 1px solid #ccc;
+    background: #fff;
+  }
 }

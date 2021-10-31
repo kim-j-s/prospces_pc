@@ -3,6 +3,7 @@ module.exports = {
   purge: ['./src/**/*.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    // 기본적인거 수정
     colors: {
       gray: {
         darkest: '#1f2d3d',
@@ -19,6 +20,7 @@ module.exports = {
       sans: ['Spoqa Han Sans Neo', 'sans-serif'],
       eng: ['Poppins', 'sans-serif'],
     },
+    // 추가할 경우
     extend: {
       colors: {
         psred: '#D13B40',
