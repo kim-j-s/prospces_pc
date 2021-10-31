@@ -2234,15 +2234,13 @@ button.swiper-pagination-bullet {
     .sub-sns-tab a {
       display: inline-block;
       vertical-align: top;
-      margin-bottom: 16px;
+      margin: 0 16px 16px 0;
       padding: 15px 16px;
       font-weight: 700;
       font-size: 20px;
       line-height: 26px;
       border: 3px solid #222;
       transition: 0.3s; }
-      .sub-sns-tab a + a {
-        margin-left: 16px; }
       .sub-sns-tab a:hover, .sub-sns-tab a[aria-selected="true"] {
         color: #fff;
         background: #222; }
@@ -2260,6 +2258,7 @@ button.swiper-pagination-bullet {
         position: absolute;
         left: 14px;
         bottom: 14px;
+        width: calc(100% - 28px);
         font-size: 20px;
         color: #fff; }
       .sub-sns--items .items.one {

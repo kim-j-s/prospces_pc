@@ -672,16 +672,13 @@
     a {
       display: inline-block;
       vertical-align: top;
-      margin-bottom: 16px;
+      margin: 0 16px 16px 0;
       padding: 15px 16px;
       font-weight: 700;
       font-size: 20px;
       line-height: 26px;
       border: 3px solid #222;
       transition: $duration-short;
-      + a {
-        margin-left: 16px;
-      }
       &:hover,
       &[aria-selected="true"] {
         color: #fff;
@@ -703,6 +700,7 @@
         position: absolute;
         left: 14px;
         bottom: 14px;
+        width: calc(100% - 28px);
         font-size: 20px;
         color: #fff;
       }
