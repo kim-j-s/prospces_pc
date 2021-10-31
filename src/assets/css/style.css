@@ -862,13 +862,15 @@ button.swiper-pagination-bullet {
         background-image: url(../images/icon_chkbox.svg);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 11px auto;
         border: none; }
       .ps-chkbox > label > input[type="checkbox"].etc-color + .text::before {
         border: none; }
       .ps-chkbox > label > input[type="checkbox"].etc-color:checked + .text::before {
         background-image: url(../images/icon_chkbox.svg);
         background-repeat: no-repeat;
-        background-position: center; }
+        background-position: center;
+        background-size: 11px auto; }
       .ps-chkbox > label > input[type="radio"] + .text {
         color: red; }
       .ps-chkbox > label > input.orange + .text::before {
@@ -1096,7 +1098,8 @@ button.swiper-pagination-bullet {
 
 /* layer pop */
 .ps-layer-popup {
-  position: relative; }
+  position: relative;
+  display: none; }
   .ps-layer-popup--close {
     position: absolute;
     top: 40px;

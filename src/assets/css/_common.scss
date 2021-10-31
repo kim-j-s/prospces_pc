@@ -262,6 +262,7 @@ $z-dim: 1100;
                         background-image: url(../images/icon_chkbox.svg);
                         background-repeat: no-repeat;
                         background-position: center;
+                        background-size: 11px auto;
                         border: none;
                     }
                 }
@@ -278,6 +279,7 @@ $z-dim: 1100;
                     background-image: url(../images/icon_chkbox.svg);
                     background-repeat: no-repeat;
                     background-position: center;
+                    background-size: 11px auto;
                   }
                 }
               }
@@ -645,6 +647,7 @@ $z-dim: 1100;
 
 .ps-layer-popup {
   position: relative;
+  display: none;
   &--close {
     position: absolute;
     top: 40px;

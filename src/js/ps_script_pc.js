@@ -242,7 +242,14 @@ var ui = {
    * @date    :
    */
   fxLayer: function() {
-    console.log('이게머니');
+    $('.open-layer').on('click', function(){
+      var data = $(this).data('open');
+      $('[data-layer="'+ data +'"]').show();
+    });
+
+    $('.ps-layer-popup--close').on('click', function(){
+      $(this).closest('.ps-layer-popup').hide();
+    });
   }
 }
 
