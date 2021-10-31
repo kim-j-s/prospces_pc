@@ -707,11 +707,37 @@ button.swiper-pagination-bullet {
     min-width: 1640px;
     margin: 0 auto; }
 
+/* button */
 .ps-btn {
   border: none;
   outline: none; }
   .ps-btn:focus {
     outline: none; }
+  .ps-btn.type01 {
+    display: inline-block;
+    vertical-align: top;
+    width: 160px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+    text-align: center;
+    line-height: 52px;
+    border: 1px solid #222; }
+  .ps-btn.type02 {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+    width: 160px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 54px;
+    background: #222; }
+  .ps-btn-wrap {
+    font-size: 0;
+    text-align: center; }
+    .ps-btn-wrap .ps-btn + .ps-btn {
+      margin-left: 20px; }
 
 .ps-select {
   -webkit-border-radius: 0px;
@@ -781,6 +807,13 @@ button.swiper-pagination-bullet {
     border: none;
     background: #fff url("../images/icon_filter.svg") no-repeat right 2px;
     color: #222; }
+    .ps-prd-list--header .ps-list-filter-wrap {
+      position: relative; }
+      .ps-prd-list--header .ps-list-filter-wrap .ps-filter {
+        position: absolute;
+        top: 54px;
+        right: 0;
+        z-index: 1; }
 
 .ps-prd-list--more {
   display: inline-block;
@@ -791,6 +824,93 @@ button.swiper-pagination-bullet {
   height: 60px;
   line-height: 60px;
   margin-top: 30px; }
+
+/* checkbox */
+.ps-chkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: top; }
+  .ps-chkbox > label {
+    position: relative;
+    display: block;
+    cursor: pointer; }
+    .ps-chkbox > label > input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0); }
+      .ps-chkbox > label > input[type="checkbox"] + .text {
+        position: relative;
+        display: inline-block;
+        padding-left: 30px;
+        font-size: 16px;
+        color: #222;
+        line-height: 20px; }
+        .ps-chkbox > label > input[type="checkbox"] + .text::before {
+          content: '';
+          position: absolute;
+          top: 0px;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #ccc; }
+      .ps-chkbox > label > input[type="checkbox"]:not(.etc-color):checked + .text::before {
+        background-color: #222;
+        background-image: url(../images/icon_chkbox.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none; }
+      .ps-chkbox > label > input[type="checkbox"].etc-color + .text::before {
+        border: none; }
+      .ps-chkbox > label > input[type="checkbox"].etc-color:checked + .text::before {
+        background-image: url(../images/icon_chkbox.svg);
+        background-repeat: no-repeat;
+        background-position: center; }
+      .ps-chkbox > label > input[type="radio"] + .text {
+        color: red; }
+      .ps-chkbox > label > input.orange + .text::before {
+        background-color: #ff7510; }
+      .ps-chkbox > label > input.beige + .text::before {
+        background-color: #f5e9c9; }
+      .ps-chkbox > label > input.pink + .text::before {
+        background-color: #f46a7a; }
+      .ps-chkbox > label > input.red + .text::before {
+        background-color: #e13310; }
+      .ps-chkbox > label > input.brown + .text::before {
+        background-color: #956243; }
+      .ps-chkbox > label > input.gray + .text::before {
+        background-color: #dedede; }
+      .ps-chkbox > label > input.purple + .text::before {
+        background-color: #944bc3; }
+      .ps-chkbox > label > input.green + .text::before {
+        background-color: #79cba5; }
+      .ps-chkbox > label > input.blue + .text::before {
+        background-color: #5b7ae2; }
+      .ps-chkbox > label > input.navy + .text::before {
+        background-color: #353f8b; }
+  .ps-chkbox + .ps-chkbox {
+    margin-left: 30px; }
+
+/* input */
+.ps-input {
+  position: relative;
+  overflow: hidden; }
+  .ps-input > .inp {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    transition: 0.3s; }
+    .ps-input > .inp.on, .ps-input > .inp:focus {
+      outline: none;
+      border-bottom: 1px solid #ccc; }
+    .ps-input > .inp.error, .ps-input > .inp.error:focus {
+      border-bottom: 1px solid #ccc; }
 
 /* 상품 썸네일 */
 .ps-prd-item {
@@ -809,29 +929,6 @@ button.swiper-pagination-bullet {
     .ps-prd-item .thumbs > img {
       width: 100%;
       height: auto; }
-    .ps-prd-item .thumbs .badge {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      overflow: hidden; }
-      .ps-prd-item .thumbs .badge .sex {
-        display: block;
-        color: #fff;
-        overflow: hidden;
-        float: left; }
-        .ps-prd-item .thumbs .badge .sex > span {
-          display: block;
-          float: left;
-          width: 24px;
-          height: 24px;
-          line-height: 24px;
-          font-size: 14px;
-          text-align: center;
-          background-color: #222; }
-          .ps-prd-item .thumbs .badge .sex > span.male {
-            background-color: #222; }
-          .ps-prd-item .thumbs .badge .sex > span.female {
-            background-color: #D13B40; }
   .ps-prd-item .desc {
     padding-top: 22px; }
     .ps-prd-item .desc .cate {
@@ -864,8 +961,29 @@ button.swiper-pagination-bullet {
       display: inline-block;
       font-size: 14px;
       line-height: 1;
-      padding: 5px;
+      padding: 3px 4px;
       border: 2px solid #222; }
+    .ps-prd-item .desc .badge .sex {
+      display: block;
+      margin-right: 8px;
+      padding: 0;
+      color: #fff;
+      overflow: hidden;
+      float: left;
+      border: none; }
+      .ps-prd-item .desc .badge .sex > span {
+        display: block;
+        float: left;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 14px;
+        text-align: center;
+        background-color: #222; }
+        .ps-prd-item .desc .badge .sex > span.male {
+          background-color: #222; }
+        .ps-prd-item .desc .badge .sex > span.female {
+          background-color: #D13B40; }
   .ps-prd-item.vertical {
     font-size: 0; }
     .ps-prd-item.vertical .thumbs {
@@ -922,6 +1040,72 @@ button.swiper-pagination-bullet {
 .color-sort--ty8 {
   border: 1px solid #ccc;
   background: #fff; }
+
+/* filter */
+.ps-filter {
+  width: 1100px;
+  padding: 40px;
+  border: 1px solid #222;
+  background: #fff; }
+  .ps-filter--header {
+    margin-bottom: 40px; }
+    .ps-filter--header h3 {
+      font-size: 18px;
+      padding-bottom: 16px;
+      border-bottom: 4px solid #222; }
+  .ps-filter .ps-btn-wrap {
+    margin-top: 60px; }
+  .ps-filter--list > li {
+    display: flex; }
+    .ps-filter--list > li .cate {
+      flex-shrink: 0;
+      width: 90px;
+      line-height: 20px; }
+      .ps-filter--list > li .cate.etc {
+        line-height: 44px; }
+    .ps-filter--list > li .filters {
+      flex-grow: 1; }
+    .ps-filter--list > li + li {
+      margin-top: 50px; }
+  .ps-filter .filter-chk-list {
+    font-size: 0; }
+    .ps-filter .filter-chk-list > li {
+      display: inline-block;
+      vertical-align: top;
+      width: 137px;
+      margin-top: 17px;
+      font-size: 0; }
+      .ps-filter .filter-chk-list > li:nth-child(7n) {
+        width: auto; }
+      .ps-filter .filter-chk-list > li:nth-child(-n + 7) {
+        margin-top: 0; }
+  .ps-filter--price {
+    font-size: 0;
+    margin-bottom: 20px; }
+    .ps-filter--price .ps-input {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px; }
+    .ps-filter--price .mw {
+      display: inline-block;
+      vertical-align: top;
+      width: 34px;
+      font-size: 16px;
+      line-height: 44px;
+      text-align: center; }
+
+/* layer pop */
+.ps-layer-popup {
+  position: relative; }
+  .ps-layer-popup--close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_close.svg) no-repeat center center; }
 
 #psWrap {
   width: 100%;
@@ -2059,6 +2243,28 @@ button.swiper-pagination-bullet {
       .sub-sns-tab a:hover, .sub-sns-tab a[aria-selected="true"] {
         color: #fff;
         background: #222; }
+  .sub-sns--items {
+    position: relative;
+    overflow: hidden;
+    font-size: 0; }
+    .sub-sns--items .items {
+      position: relative;
+      float: left;
+      width: 260px;
+      height: 260px;
+      margin: 16px 0 0 16px; }
+      .sub-sns--items .items .name {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        font-size: 20px;
+        color: #fff; }
+      .sub-sns--items .items.one {
+        width: 536px;
+        height: 536px;
+        margin: 0; }
+      .sub-sns--items .items:nth-child(-n + 5) {
+        margin-top: 0; }
 
 /*
   Animation On Scroll
@@ -2222,3 +2428,36 @@ html.msie [data-aos="ps-paint-in"].aos-init .img-wrap {
   to {
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0; } }
+
+[data-aos="flip-left"].aos-init {
+  position: relative;
+  overflow: hidden; }
+
+[data-aos="flip-left"] .items {
+  transform: perspective(2500px) rotateY(-100deg);
+  transition-duration: 1s; }
+
+[data-aos="flip-left"].aos-animate .items {
+  transform: perspective(2500px) rotateY(0); }
+  [data-aos="flip-left"].aos-animate .items:nth-child(1) {
+    transition-delay: 0ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(2) {
+    transition-delay: 30ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(3) {
+    transition-delay: 60ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(4) {
+    transition-delay: 90ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(5) {
+    transition-delay: 120ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(6) {
+    transition-delay: 150ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(7) {
+    transition-delay: 180ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(8) {
+    transition-delay: 210ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(9) {
+    transition-delay: 240ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(10) {
+    transition-delay: 270ms; }
+  [data-aos="flip-left"].aos-animate .items:nth-child(11) {
+    transition-delay: 300ms; }

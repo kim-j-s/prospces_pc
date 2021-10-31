@@ -201,3 +201,26 @@ html {
     mask-position: 100% 0;
   }
 }
+
+
+[data-aos="flip-left"] {
+  &.aos-init {
+    position: relative;
+    overflow: hidden;
+  }
+  .items {
+    transform: perspective(2500px) rotateY(-100deg);
+    transition-duration: 1s;
+  }
+  &.aos-animate {
+    .items {
+      @for $i from 0 through 10 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: $i * 30ms;
+        }
+      }
+      transform: perspective(2500px) rotateY(0);
+    }
+  }
+
+}

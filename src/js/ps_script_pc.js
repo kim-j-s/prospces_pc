@@ -35,6 +35,7 @@ var ui = {
     ui.fxUserAgent();
     ui.fxCheckScroll();
     ui.fxTab();
+    ui.fxLayer();
   },
   /**
    * comment  : 윈도우 이벤트
@@ -234,6 +235,15 @@ var ui = {
       }
     })
   },
+  /**
+   * comment  : 팝업
+   * param    : 
+   * @author  : 
+   * @date    :
+   */
+  fxLayer: function() {
+    console.log('이게머니');
+  }
 }
 
 $(function () {

@@ -7,6 +7,16 @@ $duration : 0.6s;
 $z-gnb: 1000;
 $z-dim: 1100;
 
+@mixin input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
 @mixin ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -58,13 +68,44 @@ $z-dim: 1100;
   }
 }
 
-
+/* button */
 .ps-btn {
   border: none;
   outline: none;
 
   &:focus {
     outline: none;
+  }
+
+  &.type01 {
+    display: inline-block;
+    vertical-align: top;
+    width: 160px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+    text-align: center;
+    line-height: 52px;
+    border: 1px solid #222;
+  }
+  &.type02 {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+    width: 160px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 54px;
+    background: #222;
+  }
+  
+  &-wrap {
+    font-size: 0;
+    text-align: center;
+    .ps-btn + .ps-btn {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -161,6 +202,15 @@ $z-dim: 1100;
       border: none;
       background: #fff url('../images/icon_filter.svg') no-repeat right 2px;
       color: #222;
+      &-wrap {
+        position: relative;
+        .ps-filter {
+          position: absolute;
+          top: 54px;
+          right: 0;
+          z-index: 1;
+        }
+      }
     }
   }
 
@@ -175,6 +225,171 @@ $z-dim: 1100;
     margin-top: 30px;
   }
 }
+
+/* checkbox */
+.ps-chkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  > label {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      > input {
+        @include input;
+        &[type="checkbox"] {
+            + .text {
+                position: relative;
+                display: inline-block;
+                padding-left: 30px;
+                font-size: 16px;
+                color: #222;
+                line-height: 20px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #ccc;
+                }
+            }
+            &:not(.etc-color):checked {
+                + .text {
+                    &::before {
+                        background-color: #222;
+                        background-image: url(../images/icon_chkbox.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        border: none;
+                    }
+                }
+            }
+            &.etc-color {
+              + .text {
+                &::before {
+                  border: none;
+                }
+              }
+              &:checked {
+                + .text {
+                  &::before {
+                    background-image: url(../images/icon_chkbox.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+              }
+            }
+        }
+        &[type="radio"] {
+            + .text {
+                color: red;
+            }
+        }
+        &.orange {
+          + .text {
+            &::before {
+              background-color: #ff7510;
+            }
+          }
+        }
+        &.beige {
+          + .text {
+            &::before {
+              background-color: #f5e9c9;
+            }
+          }
+        }
+        &.pink {
+          + .text {
+            &::before {
+              background-color: #f46a7a;
+            }
+          }
+        }
+        &.red {
+          + .text {
+            &::before {
+              background-color: #e13310;
+            }
+          }
+        }
+        &.brown {
+          + .text {
+            &::before {
+              background-color: #956243;
+            }
+          }
+        }
+        &.gray {
+          + .text {
+            &::before {
+              background-color: #dedede;
+            }
+          }
+        }
+        &.purple {
+          + .text {
+            &::before {
+              background-color: #944bc3;
+            }
+          }
+        }
+        &.green {
+          + .text {
+            &::before {
+              background-color: #79cba5;
+            }
+          }
+        }
+        &.blue {
+          + .text {
+            &::before {
+              background-color: #5b7ae2;
+            }
+          }
+        }
+        &.navy {
+          + .text {
+            &::before {
+              background-color: #353f8b;
+            }
+          }
+        }
+      }
+  }
+  + .ps-chkbox {
+      margin-left: 30px;
+  }
+}
+
+/* input */
+.ps-input {
+  position: relative;
+  overflow: hidden;
+  > .inp {
+      display: block;
+      width: 100%;
+      height: 44px;
+      padding: 0 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      transition: 0.3s;
+      &.on,
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid #ccc;
+      }
+      &.error,
+      &.error:focus {
+          border-bottom: 1px solid #ccc;
+      }
+  }
+}
+
+
 
 /* 상품 썸네일 */
 .ps-prd-item {
@@ -199,39 +414,6 @@ $z-dim: 1100;
     &>img {
       width: 100%;
       height: auto;
-    }
-
-    .badge {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      overflow: hidden;
-
-      .sex {
-        display: block;
-        color: #fff;
-        overflow: hidden;
-        float: left;
-
-        >span {
-          display: block;
-          float: left;
-          width: 24px;
-          height: 24px;
-          line-height: 24px;
-          font-size: 14px;
-          text-align: center;
-          background-color: #222;
-
-          &.male {
-            background-color: #222;
-          }
-
-          &.female {
-            background-color: #D13B40;
-          }
-        }
-      }
     }
   }
 
@@ -281,8 +463,36 @@ $z-dim: 1100;
         display: inline-block;
         font-size: 14px;
         line-height: 1;
-        padding: 5px;
+        padding: 3px 4px;
         border: 2px solid #222;
+      }
+      .sex {
+        display: block;
+        margin-right: 8px;
+        padding: 0;
+        color: #fff;
+        overflow: hidden;
+        float: left;
+        border: none;
+
+        >span {
+          display: block;
+          float: left;
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 14px;
+          text-align: center;
+          background-color: #222;
+
+          &.male {
+            background-color: #222;
+          }
+
+          &.female {
+            background-color: #D13B40;
+          }
+        }
       }
     }
   }
@@ -354,3 +564,109 @@ $z-dim: 1100;
     background: #fff;
   }
 }
+
+
+/* filter */
+.ps-filter {
+  width: 1100px;
+  padding: 40px;
+  border: 1px solid #222;
+  background: #fff;
+  &--header {
+    margin-bottom: 40px;
+    h3 {
+      font-size: 18px;
+      padding-bottom: 16px;
+      border-bottom: 4px solid #222;
+    }
+  }
+  .ps-btn-wrap {
+    margin-top: 60px;
+  }
+  &--list {
+    > li {
+      display: flex;
+      .cate {
+        flex-shrink: 0;
+        width: 90px;
+        line-height: 20px;
+        &.etc {
+          line-height: 44px;
+        }
+      }
+      .filters {
+        flex-grow: 1;
+      }
+      + li {
+        margin-top: 50px;
+      }
+    }
+  }
+  .filter-chk-list {
+    font-size: 0;
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      width: 137px;
+      margin-top: 17px;
+      font-size: 0;
+      &:nth-child(7n) {
+        width: auto;
+      }
+      &:nth-child(-n + 7) {
+        margin-top: 0;
+      }
+      
+    }
+  }
+  &--price {
+    font-size: 0;
+    margin-bottom: 20px;
+    .ps-input {
+      display: inline-block;
+      vertical-align: top;
+      width: 200px;
+    }
+    .mw {
+      display: inline-block;
+      vertical-align: top;
+      width: 34px;
+      font-size: 16px;
+      line-height: 44px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+/* layer pop */
+
+.ps-layer-popup {
+  position: relative;
+  &--close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_close.svg) no-repeat center center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
