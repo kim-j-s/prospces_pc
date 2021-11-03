@@ -1396,6 +1396,11 @@ button.swiper-pagination-bullet {
     .ps-footer__cs-list01 li + li {
       margin-top: 8px; }
 
+.ps-tab > a {
+  display: inline-block; }
+  .ps-tab > a + a {
+    margin-left: 40px; }
+
 .ps-table {
   border: 1px solid #ccc; }
   .ps-table table > thead th {
