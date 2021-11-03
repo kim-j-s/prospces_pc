@@ -151,66 +151,6 @@
             width: 516px;
             height: 100%;
             margin-left: 130px;
-
-            .quick-menu {
-              font-size: 18px;
-
-              li+li {
-                margin-left: 80px;
-              }
-
-              a {
-                display: inline-block;
-                height: 39px;
-                border-bottom: 8px solid #fff;
-                transition: border $duration-short, color $duration-short;
-                line-height: 32px;
-
-                &:hover,
-                &.active {
-                  color: #D13B40;
-                  border-bottom: 8px solid #D13B40;
-                }
-              }
-
-              &--banner {
-                display: block;
-                position: relative;
-                margin-top: 32px;
-
-                >img {
-                  width: 516px;
-                  height: 298px;
-                }
-
-                .desc {
-                  position: absolute;
-                  width: 100%;
-                  left: 0;
-                  bottom: 0;
-                  padding-bottom: 30px;
-                  padding-left: 26px;
-                  padding-right: 26px;
-
-                  .badge {
-                    display: inline-block;
-                    background-color: #222;
-                    color: #fff;
-                    height: 30px;
-                    line-height: 30px;
-                    padding: 0 12px;
-                    font-size: 14px;
-                  }
-
-                  .title {
-                    font-size: 22px;
-                    line-height: 28px;
-                    margin-top: 9px;
-                  }
-                }
-
-              }
-            }
           }
 
           &--nav {
@@ -299,6 +239,87 @@
             }
           }
         }
+
+        .quick-menu {
+          font-size: 18px;
+
+          li+li {
+            margin-left: 80px;
+          }
+
+          a {
+            display: inline-block;
+            height: 39px;
+            border-bottom: 8px solid #fff;
+            transition: border $duration-short, color $duration-short;
+            line-height: 32px;
+
+            &:hover,
+            &.active {
+              color: #D13B40;
+              border-bottom: 8px solid #D13B40;
+            }
+          }
+
+          &.l-type {
+            li + li {
+              margin-left: 120px;
+            }
+          }
+        }
+
+        .quick-menu--banner {
+          display: block;
+          position: relative;
+
+          &.shop {
+            margin-top: 32px;
+            >img {
+              width: 516px;
+              height: 298px;
+            }
+          }
+
+          .desc {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            padding-bottom: 30px;
+            padding-left: 26px;
+            padding-right: 26px;
+
+            .badge {
+              display: inline-block;
+              background-color: #222;
+              color: #fff;
+              height: 30px;
+              line-height: 30px;
+              padding: 0 12px;
+              font-size: 14px;
+              &.red {
+                background-color: #d13b40;
+              }
+            }
+
+            .title {
+              font-size: 22px;
+              line-height: 28px;
+              margin-top: 9px;
+              &.white {
+                color: #fff;
+              }
+            }
+          }
+
+        }
+
+        .archive-banner {
+          .quick-menu--banner + .quick-menu--banner {
+            margin-left: 40px;
+          }
+        }
+
       }
     }
   }
