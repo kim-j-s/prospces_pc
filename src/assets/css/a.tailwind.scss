@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        word-wrap: break-word;
-        word-break: keep-all;
-    }
+  body {
+      word-wrap: break-word;
+      word-break: keep-all;
+  }
+  table {
+    width: 100%;
+  }    
 }

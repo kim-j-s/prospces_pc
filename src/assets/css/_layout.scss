@@ -435,8 +435,12 @@
     li {
       line-height: 22px;
 
-      &+li {
+      & + li {
         margin-top: 5px;
+      }
+      a {
+        padding-left: 18px;
+        text-decoration: underline;
       }
     }
 
@@ -446,6 +450,7 @@
   }
 
   &__terms {
+    width: 276px;
     margin-top: 57px;
 
     li {
@@ -458,46 +463,48 @@
   }
 
   &__cs {
-    margin-left: 179px;
-
-    li {
-      line-height: 17px;
-
-      &+li {
-        margin-top: 5px;
-      }
-
-      &:nth-child(2) {
-        margin-top: 39px;
-      }
-
-      &:nth-child(3) {
-        margin-top: 11px;
-      }
-
-      &:nth-child(4) {
-        margin-top: 31px;
-      }
-
-      &:nth-child(5) {
-        margin-top: 13px;
-      }
-
-      &:nth-child(6) {
-        margin-top: 32px;
-      }
-
-      &:nth-child(7) {
-        margin-top: 5px;
-      }
-
-      &:nth-child(8) {
-        margin-top: 5px;
-      }
-    }
-
     .social-media {
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
+    dl {
+      > dt {
+        font-size: 24px;
+      }
+      > dd {
+        margin-top: 25px;
+        & + dd {
+          margin-top: 42px;
+          line-height: 22px;
+        }
+      }
+    }
+    &-list01 {
+      li {
+        line-height: 18px;
+        & + li {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.ps-table {
+  border: 1px solid #ccc;
+  table {
+    > thead {
+      th {
+        height: 40px;
+        padding: 10px 5px;
+        font-weight: 500;
+        font-size: 14px;
+        background: #eee;
+      }
+    }
+    > tbody {
+      text-align: center;
+    }    
   }
 }

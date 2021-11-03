@@ -560,6 +560,8 @@ video {
   body {
     word-wrap: break-word;
     word-break: keep-all; }
+  table {
+    width: 100%; }
 .float-left {
 	float: left;
 }
@@ -585,9 +587,6 @@ video {
 }
 .ml-4 {
 	margin-left: 1rem;
-}
-.mt-8 {
-	margin-top: 2rem;
 }
 .ml-5 {
 	margin-left: 1.25rem;
@@ -681,10 +680,6 @@ video {
 }
 .font-sans {
 	font-family: Spoqa Han Sans Neo, sans-serif;
-}
-.text-2xl {
-	font-size: 1.5rem;
-	line-height: 2rem;
 }
 .font-bold {
 	font-weight: 700;
@@ -2014,36 +2009,42 @@ button.swiper-pagination-bullet {
       line-height: 22px; }
       .ps-footer__copy li + li {
         margin-top: 5px; }
+      .ps-footer__copy li a {
+        padding-left: 18px;
+        text-decoration: underline; }
     .ps-footer__copy .copyright {
       margin-top: 18px; }
   .ps-footer__terms {
+    width: 276px;
     margin-top: 57px; }
     .ps-footer__terms li {
       line-height: 17px; }
       .ps-footer__terms li + li {
         margin-top: 9px; }
-  .ps-footer__cs {
-    margin-left: 179px; }
-    .ps-footer__cs li {
-      line-height: 17px; }
-      .ps-footer__cs li + li {
-        margin-top: 5px; }
-      .ps-footer__cs li:nth-child(2) {
-        margin-top: 39px; }
-      .ps-footer__cs li:nth-child(3) {
-        margin-top: 11px; }
-      .ps-footer__cs li:nth-child(4) {
-        margin-top: 31px; }
-      .ps-footer__cs li:nth-child(5) {
-        margin-top: 13px; }
-      .ps-footer__cs li:nth-child(6) {
-        margin-top: 32px; }
-      .ps-footer__cs li:nth-child(7) {
-        margin-top: 5px; }
-      .ps-footer__cs li:nth-child(8) {
-        margin-top: 5px; }
-    .ps-footer__cs .social-media {
-      margin-bottom: 32px; }
+  .ps-footer__cs .social-media {
+    margin-bottom: 26px; }
+  .ps-footer__cs dl > dt {
+    font-size: 24px; }
+  .ps-footer__cs dl > dd {
+    margin-top: 25px; }
+    .ps-footer__cs dl > dd + dd {
+      margin-top: 42px;
+      line-height: 22px; }
+  .ps-footer__cs-list01 li {
+    line-height: 18px; }
+    .ps-footer__cs-list01 li + li {
+      margin-top: 8px; }
+
+.ps-table {
+  border: 1px solid #ccc; }
+  .ps-table table > thead th {
+    height: 40px;
+    padding: 10px 5px;
+    font-weight: 500;
+    font-size: 14px;
+    background: #eee; }
+  .ps-table table > tbody {
+    text-align: center; }
 
 /*
   Home(main)
