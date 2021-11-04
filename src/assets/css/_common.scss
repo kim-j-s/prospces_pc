@@ -516,6 +516,52 @@ $z-dim: 1100;
 
 }
 
+.ps-post-item {
+  display: block;
+  width: auto;
+  margin-bottom: 10px;
+  user-select: none;
+
+  .thumbs {
+    position: relative;
+
+    &.ratio1 {
+      padding-top: 100%;
+
+      &>img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &>img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .desc {
+    padding-top: 20px;
+
+    .ps-badge {
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    .d-txt {
+      padding-top: 8px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+  }
+}
+
 
 .color-sort {
   &-wrap {

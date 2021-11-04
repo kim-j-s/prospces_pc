@@ -511,6 +511,24 @@
 }
 
 
+.ps-badge {
+  > .badge {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 62px;
+    padding: 0 5px;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    line-height: 28px;
+    &.type1 {
+      background: #d13b40;
+    }
+    &.type2 {
+      background: #222;
+    }
+  }
+}
 
 .ps-tab {
   > a {

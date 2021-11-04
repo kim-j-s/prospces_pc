@@ -59,7 +59,8 @@ html {
 [data-aos="ps-fade-in"] {
   &.aos-init {
     .ps-col {
-      .ps-prd-item {
+      .ps-prd-item,
+      .ps-post-item {
         opacity: 0;
         transform: translateY(80px);
       }
@@ -68,15 +69,17 @@ html {
 
   &.aos-animate {
     .ps-col {
-      @for $i from 0 through 16 {
+      @for $i from 0 through 18 {
         &:nth-child(#{$i + 1}) {
-          .ps-prd-item {
+          .ps-prd-item,
+          .ps-post-item {
             transition-delay: $i * 50ms;
           }
         }
       }
 
-      .ps-prd-item {
+      .ps-prd-item,
+      .ps-post-item {
         transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) $duration;
         opacity: 1;
         transform: translateX(0);
