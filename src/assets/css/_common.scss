@@ -116,6 +116,13 @@ $z-dim: 1100;
   appearance: none;
   outline: none;
   cursor: pointer;
+  min-width: 360px;
+  height: 60px;
+  padding: 0 40px 0 20px;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid #222;
+  background: #fff url('../images/icon_down.svg') no-repeat right 17px center / 20px auto;
 
   &::-ms-expand {
     display: none;
@@ -124,9 +131,10 @@ $z-dim: 1100;
   &.mini {
     display: inline-block;
     width: auto;
+    min-width: 0;
     height: 24px;
     padding: 0 28px 0 0;
-    font-size: 18px;
+    font-weight: normal;
     border: none;
     background: #fff url('../images/icon_down.svg') no-repeat right 2px;
     color: #222;

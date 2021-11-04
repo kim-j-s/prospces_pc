@@ -36,6 +36,7 @@ var ui = {
     ui.fxCheckScroll();
     ui.fxTab();
     ui.fxLayer();
+    ui.fxSelect();
   },
   /**
    * comment  : 윈도우 이벤트
@@ -250,9 +251,22 @@ var ui = {
     $('.ps-layer-popup--close').on('click', function(){
       $(this).closest('.ps-layer-popup').hide();
     });
-  }
+  },
+  /**
+   * comment  : 팝업
+   * param    : 
+   * @author  : 
+   * @date    :
+   */
+   fxSelect: function() {
+    
+  },
+  
 }
 
 $(function () {
   ui.fxInit();
-})
+
+  
+});
+
