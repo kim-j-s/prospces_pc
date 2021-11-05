@@ -8,25 +8,42 @@
     <!-- Main -->
     <main>
       <div class="ps-inner">
-        <h3 class="ps-subtitle font-eng font-bold">Sub Title</h3>
-        <p> 내용 </p>
+        <div class="ps-detail-header">
+          <div class="top">
+            <h3 class="ps-detail-title font-bold">[기획전] 인플루언서 8인의 스택스 TR</h3>
+            @@include("_drop_down.html")
+          </div>
+          <p class="ps-detail-desc">
+            2021.09.06 mon 07:00 ~ 2024.01.31 wed 09:59
+          </p>
+          @@include("_btn_share.html")
+        </div>
+        <div class="ps-detail-content">
+          <div class="thumbs">
+            <img src="../../assets/images/temp/temp_detail_1.png" alt="기획서 홍보 이미지">
+          </div>
+        </div>
+
+        <div class="w-full overflow-hidden text-center">
+          <a href="javascript:void(0)" class="ps-btn ps-prd-list--more font-bold">목록</a>
+        </div>
       </div>
     </main>
     <!--// Main -->
     @@include('_footer.html')
   </div>
   <script>
-    // AOS.init({
-    //   disable: function msieversion() {
-    //     return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
-    //       /Trident.*rv\:11\./))
-    //   }
-    // });
-    // $(function () {
-    //   setTimeout(function () {
-    //     AOS.refresh();
-    //   }, 100);
-    // })
+    AOS.init({
+      disable: function msieversion() {
+        return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+          /Trident.*rv\:11\./))
+      }
+    });
+    $(function () {
+      setTimeout(function () {
+        AOS.refresh();
+      }, 100);
+    })
   </script>
 </body>
 

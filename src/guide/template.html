@@ -1,6 +1,19 @@
 @@include('_guidehead.html')
 	<h1 class="guideTitleh1">Component</h1>
 
+	<h2 class="guideTitleh2">Common</h2>
+	<div class="guideElement">
+		<p class="font-eng">font-family: Poppins, sans-serif;</p>		
+		<p class="font-bold">두껍게</p>		
+	</div>
+
+	<h2 class="guideTitleh2">Title</h2>
+	<div class="guideElement">
+		<h3 class="ps-subtitle font-eng font-bold">Title</h3>
+		<h3 class="ps-subtitle">타이틀</h3>
+		<h4 class="ps-title-type1 font-bold">타이틀</h4>
+	</div>
+
 	<h2 class="guideTitleh2">Input</h2>
 	<div class="guideElement">
 		<div style="width: 200px;">
@@ -22,7 +35,7 @@
 
   <h2 class="guideTitleh2">Select</h2>
 	<div class="guideElement">
-		<select name="" id="sb" class="ps-select event">
+		<select name="" id="" class="ps-select">
       <option value="">진행중</option>
       <option value="">종료</option>
     </select>
@@ -39,26 +52,36 @@
 	<h2 class="guideTitleh2">Button</h2>
 	<div class="guideElement">
     <div>
-      <a href="javascript:void(0)" class="ps-btn type01">초기화</a>
+      <a href="javascript:void(0)" class="ps-btn type1">초기화</a>
     </div>
     <div class="mt-2">
-      <a href="javascript:void(0)" class="ps-btn type02">필터적용</a>
+      <a href="javascript:void(0)" class="ps-btn type2">필터적용</a>
     </div>
 	</div>
 
-	<h2 class="guideTitleh2">Button - 더보기</h2>
+	<h2 class="guideTitleh2">Button - 더보기 - 260px 공통 사용</h2>
 	<div class="guideElement">
 		<div class="w-full overflow-hidden my-5 px-5 text-center">
-      <a href="javascript:void(0)" class="ps-btn ps-prd-list--more font-bold">더보기</a>
-    </div>
+			<a href="javascript:void(0)" class="ps-btn ps-prd-list--more font-bold">더보기</a>
+		</div>
 	</div>
 
   <h2 class="guideTitleh2">Button - wrap</h2>
 	<div class="guideElement">
 		<div class="ps-btn-wrap">
-      <a href="javascript:void(0)" class="ps-btn type01">초기화</a>
-      <a href="javascript:void(0)" class="ps-btn type02">필터적용</a>
+      <a href="javascript:void(0)" class="ps-btn type1">초기화</a>
+      <a href="javascript:void(0)" class="ps-btn type2">필터적용</a>
     </div>
+	</div>
+
+  <h2 class="guideTitleh2">Button - share</h2>
+	<div class="guideElement">
+    @@include("_btn_share.html")
+	</div>
+
+  <h2 class="guideTitleh2">Button - dropdown</h2>
+	<div class="guideElement">
+    @@include("_drop_down.html")
 	</div>
 
 	<h2 class="guideTitleh2">Badge</h2>

@@ -253,20 +253,19 @@ var ui = {
     });
   },
   /**
-   * comment  : 팝업
+   * comment  : Selectbox
    * param    : 
    * @author  : 
    * @date    :
    */
-   fxSelect: function() {
-    
+  fxSelect: function() {
+    //$('.ps-select').not('.mini').selectric();
+    $('.ps-select').selectric();
+    //$('.selectric-input').remove();
   },
-  
 }
 
 $(function () {
   ui.fxInit();
-
-  
 });
 

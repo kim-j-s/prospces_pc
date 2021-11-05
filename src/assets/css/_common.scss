@@ -77,7 +77,7 @@ $z-dim: 1100;
     outline: none;
   }
 
-  &.type01 {
+  &.type1 {
     display: inline-block;
     vertical-align: top;
     width: 160px;
@@ -88,7 +88,8 @@ $z-dim: 1100;
     line-height: 52px;
     border: 1px solid #222;
   }
-  &.type02 {
+
+  &.type2 {
     display: inline-block;
     vertical-align: top;
     font-weight: 700;
@@ -107,8 +108,36 @@ $z-dim: 1100;
       margin-left: 20px;
     }
   }
+
+  &.share {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_share.svg) no-repeat center center;
+  }
+
+  &.dropdown {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #222;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_arrow_D.svg) no-repeat center center;
+  }
 }
 
+
+
+
+
+
+
+/* select */
+/*
 .ps-select {
   -webkit-border-radius: 0px;
   -webkit-appearance: none;
@@ -140,11 +169,93 @@ $z-dim: 1100;
     color: #222;
   }
 }
+*/
 
+.selectric-wrapper {
+  position: relative;
+  border: 1px solid #222;
+  .selectric {
+    &-hide-select {
+      position: relative;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      > select {
+        @include input;
+      }
+    }
+    > .label {
+      display: block;
+    }
+    > .button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .selectric-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100% !important;
+    background: #F8F8F8;
+    border: 1px solid #c4c4c4;
+    z-index: -1;
+  }
+  
+  &.selectric-open {
+    .selectric-items {
+      display: block;
+    }
+  }
+
+
+
+  .selectric-input {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    outline: none !important;
+    border: none !important;
+    *font: 0/0 a !important;
+    background: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* title */
 .ps-subtitle {
   font-size: 40px;
   margin-bottom: 47px;
 }
+
+.ps-title {
+  &-type1 {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
 
 .ps-tab {
   &--wrap {
@@ -398,8 +509,6 @@ $z-dim: 1100;
       }
   }
 }
-
-
 
 /* 상품 썸네일 */
 .ps-prd-item {
@@ -695,10 +804,7 @@ $z-dim: 1100;
 }
 
 
-
-
 /* layer pop */
-
 .ps-layer-popup {
   position: relative;
   display: none;
