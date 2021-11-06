@@ -812,6 +812,7 @@
   }
   &-item {
     display: flex;
+    width: 100%;
     & + & {
       margin-top: 80px;
     }
@@ -820,6 +821,53 @@
       width: 820px;
       height: 547px;
       overflow: hidden;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .desc {
+      width: 820px;
+      padding-left: 40px;
+      dl {
+        > dt {
+          padding-bottom: 15px;
+          > a {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            padding-bottom: 5px;
+            font-size: 32px;
+            line-height: 48px;
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              border-bottom: 8px solid #222;
+              transition: $duration-short;
+              overflow: hidden;
+            }
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+        > dd {
+          font-size: 18px;
+          line-height: 24px;
+          &.date {
+            margin-top: 40px;
+            font-size: 16px;
+            color: #999;
+          }
+        }
+      }
     }
   }
 }

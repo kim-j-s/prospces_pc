@@ -3205,7 +3205,8 @@ button.swiper-pagination-bullet {
   padding-top: 18px; }
 
 .ps-news-item {
-  display: flex; }
+  display: flex;
+  width: 100%; }
   .ps-news-item + .ps-news-item {
     margin-top: 80px; }
   .ps-news-item .thumbs {
@@ -3213,6 +3214,41 @@ button.swiper-pagination-bullet {
     width: 820px;
     height: 547px;
     overflow: hidden; }
+    .ps-news-item .thumbs img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .ps-news-item .desc {
+    width: 820px;
+    padding-left: 40px; }
+    .ps-news-item .desc dl > dt {
+      padding-bottom: 15px; }
+      .ps-news-item .desc dl > dt > a {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        padding-bottom: 5px;
+        font-size: 32px;
+        line-height: 48px; }
+        .ps-news-item .desc dl > dt > a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          border-bottom: 8px solid #222;
+          transition: 0.3s;
+          overflow: hidden; }
+        .ps-news-item .desc dl > dt > a:hover::after {
+          width: 100%; }
+    .ps-news-item .desc dl > dd {
+      font-size: 18px;
+      line-height: 24px; }
+      .ps-news-item .desc dl > dd.date {
+        margin-top: 40px;
+        font-size: 16px;
+        color: #999; }
 
 /*
   Animation On Scroll
