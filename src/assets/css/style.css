@@ -733,11 +733,22 @@ button.swiper-pagination-bullet {
     text-align: center;
     line-height: 54px;
     background: #222; }
+  .ps-btn.type3 {
+    display: inline-block;
+    width: 260px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #222; }
   .ps-btn-wrap {
     font-size: 0;
     text-align: center; }
     .ps-btn-wrap .ps-btn + .ps-btn {
       margin-left: 20px; }
+    .ps-btn-wrap.list-more {
+      margin-top: 80px; }
   .ps-btn.share {
     display: inline-block;
     width: 44px;
@@ -755,40 +766,6 @@ button.swiper-pagination-bullet {
     text-indent: -999px;
     background: url(../images/icon_arrow_D.svg) no-repeat center center; }
 
-/* select */
-/*
-.ps-select {
-  -webkit-border-radius: 0px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  min-width: 360px;
-  height: 60px;
-  padding: 0 40px 0 20px;
-  font-weight: 500;
-  font-size: 18px;
-  border: 1px solid #222;
-  background: #fff url('../images/icon_down.svg') no-repeat right 17px center / 20px auto;
-
-  &::-ms-expand {
-    display: none;
-  }
-
-  &.mini {
-    display: inline-block;
-    width: auto;
-    min-width: 0;
-    height: 24px;
-    padding: 0 28px 0 0;
-    font-weight: normal;
-    border: none;
-    background: #fff url('../images/icon_down.svg') no-repeat right 2px;
-    color: #222;
-  }
-}
-*/
 .selectric-wrapper {
   position: relative;
   z-index: 300;
@@ -866,9 +843,9 @@ button.swiper-pagination-bullet {
       width: 24px;
       height: 24px; }
     .selectric-wrapper.selectric-mini .selectric-items {
+      top: 56px;
       min-width: 180px; }
     .selectric-wrapper.selectric-mini.selectric-right .selectric-items {
-      top: 56px;
       left: auto;
       right: 0; }
   .selectric-wrapper .selectric-input {
@@ -950,16 +927,6 @@ button.swiper-pagination-bullet {
         z-index: 1; }
       .ps-prd-list--header .ps-list-filter-wrap + .selectric-wrapper {
         margin-left: 20px; }
-
-.ps-prd-list--more {
-  display: inline-block;
-  margin: 0 auto;
-  border: 1px solid #222;
-  font-size: 18px;
-  width: 260px;
-  height: 60px;
-  line-height: 60px;
-  margin-top: 30px; }
 
 /* checkbox */
 .ps-chkbox {
@@ -1593,6 +1560,13 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid #eee; }
   .ps-detail-content > .thumbs {
     text-align: center; }
+
+.ps-detail-sub-content {
+  margin-top: 70px; }
+  .ps-detail-sub-content + .ps-detail-sub-content {
+    margin-top: 140px; }
+  .ps-detail-sub-content .ps-prd-list--wrap {
+    margin-bottom: 0; }
 
 .ps-badge > .badge {
   display: inline-block;

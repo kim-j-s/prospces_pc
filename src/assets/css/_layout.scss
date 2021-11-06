@@ -550,6 +550,16 @@
       text-align: center;
     }
   }
+
+  &-sub-content {
+    margin-top: 70px;
+    + .ps-detail-sub-content {
+      margin-top: 140px;
+    }
+    .ps-prd-list--wrap {
+      margin-bottom: 0;
+    }
+  }
 }
 
 
