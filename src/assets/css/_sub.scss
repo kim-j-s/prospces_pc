@@ -40,6 +40,7 @@
   }
 }
 
+/* swiper */
 .ps-items-swiper {
   overflow: hidden;
   .cont {
@@ -49,6 +50,7 @@
 
       .ps-prd-item {
         margin-bottom: 60px;
+        width: 320px;
         .desc {
           &.s-items {
             padding-top: 26px;
@@ -74,8 +76,65 @@
       @for $i from 0 through 19 {
         &:nth-child(#{$i + 1}) {
           .ps-prd-item {
-            width: 320px;
+            
             transition-delay: $i * 100ms;
+          }
+        }
+      }
+    }
+  }
+
+  &.lookbook {
+    margin-top: 25px;
+    .cont {
+      .swiper-slide {
+        width: 480px;
+        margin-right: 40px;
+        .ps-prd-item {
+          width: 480px;
+          margin-bottom: 0;
+        }
+      }
+
+      .swiper--button {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        display: none;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;
+        text-indent: -999px;
+        &-prev {
+          left: 0;
+          background-image: url(../../assets/images/icon_arrow_L_white_blur.svg);
+        }
+        &-next {
+          right: 150px;
+          background-image: url(../../assets/images/icon_arrow_R_white_blur.svg);
+        }
+      }
+
+      .swiper-container-initialized {
+        .swiper-slide {
+          margin-right: 0;
+        }
+        .swiper--button {
+          display: block;
+        }
+      }
+    }
+
+    [data-aos="ps-swiper-in"].aos-animate:not(.hidden) {
+      .swiper-slide{
+        @for $i from 0 through 19 {
+          &:nth-child(#{$i + 1}) {
+            .ps-prd-item {
+              transition-delay: $i * 100ms;
+            }
           }
         }
       }
@@ -100,7 +159,6 @@
   }
 
 }
-
 
 .sub--key-visual {
   position: relative;
@@ -714,3 +772,57 @@
     }
   }
 }
+
+.ps-film {
+  margin-top: 20px;
+  &--container {
+    position: relative;
+    height: 0; 
+    max-width: 100%; 
+    height: auto;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    iframe, 
+    object, 
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  > dl {
+    margin-top: 30px;
+    dt {
+      font-size: 28px;
+      line-height: 38px;
+    }
+    dd {
+      padding-top: 14px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+.ps-news {
+  &-wrap {
+    padding-top: 18px;  
+  }
+  &-item {
+    display: flex;
+    & + & {
+      margin-top: 80px;
+    }
+    .thumbs {
+      position: relative;
+      width: 820px;
+      height: 547px;
+      overflow: hidden;
+    }
+  }
+}
+
+
+

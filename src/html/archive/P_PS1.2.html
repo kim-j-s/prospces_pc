@@ -1,0 +1,118 @@
+@@include("_head.html",{
+"title" : "프로스펙스 | LOOKBOOK"
+})
+
+<body>
+  <div id="psWrap" class="sub">
+    @@include("_header.html")
+    <!-- Main -->
+    <main>
+      <div class="ps-inner">
+        <h3 class="ps-subtitle font-eng font-bold">LOOKBOOK</h3>
+
+        <div class="ps-sub-content">
+          <div class="flex items-center justify-between">
+            <h4 class="ps-title-type1 font-bold">21 F/W 오리지널 LOOKBOOK</h4>
+            <select name="" id="" class="ps-select mini right">
+              <option value="">21 FALL/WINTER</option>
+              <option value="">21 SPRING/SUMMER</option>
+              <option value="">21 FALL/WINTER</option>
+              <option value="">21 SPRING/SUMMER</option>
+            </select>
+          </div>
+
+          <section class="ps-items-swiper lookbook">
+            <div id="swiperLookbook" data-aos="ps-swiper-in" class="cont swiper-related">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_1.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_2.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_3.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ps-prd-item">
+                      <div class="thumbs">
+                        <img src="../../assets/images/temp/temp_lookbook_4.png" alt="화보">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper--button swiper--button-prev">prev</div>
+                <div class="swiper--button swiper--button-next">next</div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="ps-sub-content">
+          <div class="flex items-center justify-between">
+            <h4 class="ps-title-type1 font-eng font-bold">FILM</h4>
+          </div>
+          <div class="ps-film">
+            <div class="ps-film--container">
+              <iframe onload="videoPopupSetting(this);" src="https://player.vimeo.com/video/638994225?h=a00f76b6c6&amp;autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" width="1200" height="675" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen="" data-ready="true"></iframe>
+            </div>
+            <dl>
+              <dt class="font-eng font-bold">[PROSPECS ORIGINAL]</dt>
+              <dd>
+                지루해? 프로스펙스에서 즐거움을 찾아봐!<br>
+                언제까지 답답하고 지루한 일상 속에 살래? 프로스펙스에서 너만의 작은 즐거움을 찾아봐
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--// Main -->
+    @@include('_footer.html')
+  </div>
+  <script>
+
+    var swiperLookbook = new Swiper('#swiperLookbook .swiper-container', {
+      // 신규 시즌 리스트의 경우 활성화
+      /* autoplay: {
+        delay: 2500,
+      },
+      speed: 500,
+      loop: true, */
+
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      navigation: {
+        nextEl: '#swiperLookbook .swiper--button-next',
+        prevEl: '#swiperLookbook .swiper--button-prev',
+      },
+    });
+
+    AOS.init({
+      disable: function msieversion() {
+        return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+          /Trident.*rv\:11\./))
+      }
+    });
+    $(function () {
+      setTimeout(function () {
+        AOS.refresh();
+      }, 100);
+    })
+  </script>
+</body>
+
+</html>
