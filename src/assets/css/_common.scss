@@ -173,7 +173,10 @@ $z-dim: 1100;
 
 .selectric-wrapper {
   position: relative;
-  border: 1px solid #222;
+  z-index: 300;
+  display: inline-block;
+  width: 360px;
+  cursor: pointer;
   .selectric {
     &-hide-select {
       position: relative;
@@ -186,30 +189,96 @@ $z-dim: 1100;
     }
     > .label {
       display: block;
+      padding: 16px 54px 16px 19px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      border: 1px solid #222;
+      @include ellipsis;
     }
     > .button {
       position: absolute;
       top: 0;
       right: 0;
+      width: 54px;
+      height: 100%;
+      text-indent: -999px;
+      overflow: hidden;
+      background: url('../images/icon_down.svg') no-repeat center center / 20px auto;
+      transition: $duration-short;
     }
   }
 
   .selectric-items {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
     left: 0;
     width: 100% !important;
-    background: #F8F8F8;
-    border: 1px solid #c4c4c4;
+    background: #fff;
+    border: 1px solid #222;
     z-index: -1;
+    > .selectric-scroll {
+      height: 100%;
+      overflow: auto;
+      > ul {
+        padding: 8px 0;
+        > li {
+          padding: 11px 18px;
+          font-size: 16px;
+          color: #999;
+          line-height: 26px;
+          transition: $duration-short;
+          &.selected,
+          &:hover {
+            font-weight: 500;
+            color: #222;
+          }
+        }
+      }
+    }
   }
   
   &.selectric-open {
     .selectric-items {
       display: block;
     }
+    .selectric {
+      > .button {
+        transform: rotate(-180deg);
+      }
+    }
   }
+
+  &.selectric-mini {
+    width: auto;
+    min-width: 0;
+    .selectric {
+      > .label {
+        border: none;
+        padding: 0 28px 0 0;
+      }
+      > .button {
+        top: 1px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .selectric-items {
+      min-width: 180px;
+    }
+
+    &.selectric-right {
+      .selectric-items {
+        top: 56px;
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+
+
 
 
 
@@ -317,6 +386,7 @@ $z-dim: 1100;
       width: auto;
       height: 24px;
       padding: 0 28px 0 0;
+      font-weight: 500;
       font-size: 18px;
       border: none;
       background: #fff url('../images/icon_filter.svg') no-repeat right 2px;
@@ -328,6 +398,9 @@ $z-dim: 1100;
           top: 54px;
           right: 0;
           z-index: 1;
+        }
+        + .selectric-wrapper {
+          margin-left: 20px;
         }
       }
     }
@@ -731,6 +804,25 @@ $z-dim: 1100;
 }
 
 
+
+
+
+/* layer pop */
+.ps-layer-popup {
+  position: relative;
+  display: none;
+  &--close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_close.svg) no-repeat center center;
+  }
+}
+
 /* filter */
 .ps-filter {
   width: 1100px;
@@ -802,25 +894,6 @@ $z-dim: 1100;
     }
   }
 }
-
-
-/* layer pop */
-.ps-layer-popup {
-  position: relative;
-  display: none;
-  &--close {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-    text-indent: -999px;
-    background: url(../images/icon_close.svg) no-repeat center center;
-  }
-}
-
-
 
 
 

@@ -261,7 +261,7 @@ var ui = {
   fxSelect: function() {
     //$('.ps-select').not('.mini').selectric();
     $('.ps-select').selectric();
-    //$('.selectric-input').remove();
+    $('.selectric-input').remove();
   },
 }
 

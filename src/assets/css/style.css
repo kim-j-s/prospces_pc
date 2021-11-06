@@ -791,7 +791,10 @@ button.swiper-pagination-bullet {
 */
 .selectric-wrapper {
   position: relative;
-  border: 1px solid #222; }
+  z-index: 300;
+  display: inline-block;
+  width: 360px;
+  cursor: pointer; }
   .selectric-wrapper .selectric-hide-select {
     position: relative;
     width: 0;
@@ -806,22 +809,68 @@ button.swiper-pagination-bullet {
       overflow: hidden;
       clip: rect(0, 0, 0, 0); }
   .selectric-wrapper .selectric > .label {
-    display: block; }
+    display: block;
+    padding: 16px 54px 16px 19px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    border: 1px solid #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .selectric-wrapper .selectric > .button {
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 0;
+    width: 54px;
+    height: 100%;
+    text-indent: -999px;
+    overflow: hidden;
+    background: url("../images/icon_down.svg") no-repeat center center/20px auto;
+    transition: 0.3s; }
   .selectric-wrapper .selectric-items {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
     left: 0;
     width: 100% !important;
-    background: #F8F8F8;
-    border: 1px solid #c4c4c4;
+    background: #fff;
+    border: 1px solid #222;
     z-index: -1; }
+    .selectric-wrapper .selectric-items > .selectric-scroll {
+      height: 100%;
+      overflow: auto; }
+      .selectric-wrapper .selectric-items > .selectric-scroll > ul {
+        padding: 8px 0; }
+        .selectric-wrapper .selectric-items > .selectric-scroll > ul > li {
+          padding: 11px 18px;
+          font-size: 16px;
+          color: #999;
+          line-height: 26px;
+          transition: 0.3s; }
+          .selectric-wrapper .selectric-items > .selectric-scroll > ul > li.selected, .selectric-wrapper .selectric-items > .selectric-scroll > ul > li:hover {
+            font-weight: 500;
+            color: #222; }
   .selectric-wrapper.selectric-open .selectric-items {
     display: block; }
+  .selectric-wrapper.selectric-open .selectric > .button {
+    transform: rotate(-180deg); }
+  .selectric-wrapper.selectric-mini {
+    width: auto;
+    min-width: 0; }
+    .selectric-wrapper.selectric-mini .selectric > .label {
+      border: none;
+      padding: 0 28px 0 0; }
+    .selectric-wrapper.selectric-mini .selectric > .button {
+      top: 1px;
+      width: 24px;
+      height: 24px; }
+    .selectric-wrapper.selectric-mini .selectric-items {
+      min-width: 180px; }
+    .selectric-wrapper.selectric-mini.selectric-right .selectric-items {
+      top: 56px;
+      left: auto;
+      right: 0; }
   .selectric-wrapper .selectric-input {
     position: absolute !important;
     top: 0 !important;
@@ -887,6 +936,7 @@ button.swiper-pagination-bullet {
     width: auto;
     height: 24px;
     padding: 0 28px 0 0;
+    font-weight: 500;
     font-size: 18px;
     border: none;
     background: #fff url("../images/icon_filter.svg") no-repeat right 2px;
@@ -898,6 +948,8 @@ button.swiper-pagination-bullet {
         top: 54px;
         right: 0;
         z-index: 1; }
+      .ps-prd-list--header .ps-list-filter-wrap + .selectric-wrapper {
+        margin-left: 20px; }
 
 .ps-prd-list--more {
   display: inline-block;
@@ -1155,6 +1207,20 @@ button.swiper-pagination-bullet {
   border: 1px solid #ccc;
   background: #fff; }
 
+/* layer pop */
+.ps-layer-popup {
+  position: relative;
+  display: none; }
+  .ps-layer-popup--close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -999px;
+    background: url(../images/icon_close.svg) no-repeat center center; }
+
 /* filter */
 .ps-filter {
   width: 1100px;
@@ -1207,20 +1273,6 @@ button.swiper-pagination-bullet {
       font-size: 16px;
       line-height: 44px;
       text-align: center; }
-
-/* layer pop */
-.ps-layer-popup {
-  position: relative;
-  display: none; }
-  .ps-layer-popup--close {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
-    text-indent: -999px;
-    background: url(../images/icon_close.svg) no-repeat center center; }
 
 #psWrap {
   width: 100%;
@@ -1555,11 +1607,6 @@ button.swiper-pagination-bullet {
     background: #d13b40; }
   .ps-badge > .badge.type2 {
     background: #222; }
-
-.ps-tab > a {
-  display: inline-block; }
-  .ps-tab > a + a {
-    margin-left: 40px; }
 
 .ps-table {
   border: 1px solid #ccc; }
