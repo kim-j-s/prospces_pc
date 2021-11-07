@@ -4,6 +4,9 @@
 @layer base {
   body {
     word-wrap: break-word;
-    word-break: keep-all; }
+    word-break: keep-all;
+  }
   table {
-    width: 100%; } }
+    width: 100%;
+  }
+}

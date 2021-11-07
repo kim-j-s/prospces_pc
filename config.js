@@ -12,6 +12,7 @@ module.exports = {
 			img: "./src/assets/images",
 			includeHtml: './src/html/include_html',
 			guide: './src/guide',
+			guideImg: './src/guide/code/styles',
 		},
 		dist: {
 			base: "./dist",
@@ -21,6 +22,7 @@ module.exports = {
 			jsFile: "ps_script_pc",
 			img: "./dist/assets/images",
 			guide: './dist/guide',
+			guideImg: './dist/guide/code/styles',
 		},
 		build: {
 			base: "./build",

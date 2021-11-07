@@ -26,6 +26,7 @@ const browserSync = require('browser-sync').create();
 
 const sass = require('gulp-sass'); //For Compiling SASS files
 const postcss = require('gulp-postcss'); //For Compiling tailwind utilities with tailwind config
+const autoprefixer = require('gulp-autoprefixer'); // -webkit
 const concat = require('gulp-concat'); //For Concatinating js,css files
 const uglify = require('gulp-terser'); //To Minify JS files
 const imagemin = require('gulp-imagemin'); //To Optimize Images
@@ -72,7 +73,8 @@ function devHTML() {
 
 function devGuide() {
   return src([
-      `${options.paths.src.guide}/**/*.*`
+      `${options.paths.src.guide}/**/*.*`,
+      `!${options.paths.src.guide}/**/*.png`
     ])
     .pipe(fileinclude({
       prefix: '@@',
@@ -81,14 +83,19 @@ function devGuide() {
     .pipe(dest(options.paths.dist.guide));
 }
 
+function devGuideImages() {
+  return src(`${options.paths.src.guideImg}/**/*.png`).pipe(dest(options.paths.dist.guideImg));
+}
+
 function devStyles() {
   const tailwindcss = require('tailwindcss');
-  return src(`${options.paths.src.css}/**/*.scss`).pipe(sass().on('error', sass.logError))
+  return src(`${options.paths.src.css}/**/*.scss`).pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(dest(options.paths.src.css))
     .pipe(postcss([
       tailwindcss(options.config.tailwindjs),
       require('autoprefixer'),
     ]))
+    .pipe(autoprefixer())
     .pipe(concat({
       path: options.paths.dist.cssFile + '.css'
     }))
@@ -113,6 +120,7 @@ function devImages() {
 function watchFiles() {
   watch(`${options.paths.src.base}/**/*.html`, series(devHTML, devStyles, previewReload));
   watch(`${options.paths.src.guide}/**/*.*`, series(devGuide, previewReload));
+  watch(`${options.paths.src.guideImg}/**/*.*`, series(devGuideImages, previewReload));
   watch([options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`], series(devStyles, previewReload));
   watch(`${options.paths.src.js}/**/*.js`, series(devScripts, previewReload));
   watch(`${options.paths.src.img}/**/*`, series(devImages, previewReload));
@@ -181,7 +189,7 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devHTML, devGuide), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, devHTML, devGuide, devGuideImages), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

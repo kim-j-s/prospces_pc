@@ -252,8 +252,9 @@ $z-dim: 1100;
     }
   }
 
-
-
+  &.selectric-disabled {
+    opacity: 0.5;
+  }
 
 
   .selectric-input {
