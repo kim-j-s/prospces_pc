@@ -4638,19 +4638,7 @@ main.index + .ps-footer {
 }
 
 .ps-news-item .thumbs {
-  position: relative;
   width: 820px;
-  height: 547px;
-  overflow: hidden;
-}
-
-.ps-news-item .thumbs img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .ps-news-item .desc {

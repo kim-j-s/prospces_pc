@@ -817,16 +817,7 @@
       margin-top: 80px;
     }
     .thumbs {
-      position: relative;
       width: 820px;
-      height: 547px;
-      overflow: hidden;
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
     }
     .desc {
       width: 820px;
