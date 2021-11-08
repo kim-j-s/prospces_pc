@@ -252,6 +252,28 @@ $z-dim: 1100;
     }
   }
 
+  &.selectric-t-type {
+    width: auto;
+    max-width: 100%;
+    .selectric {
+      > .label {
+        padding: 0 45px 0 0;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        border: none;
+      }
+      > .button {
+        top: 15px;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #222;
+        border-radius: 50%;
+        background: url(../images/icon_arrow_D.svg) no-repeat center center;
+      }
+    }
+  }
+
   &.selectric-disabled {
     opacity: 0.5;
   }

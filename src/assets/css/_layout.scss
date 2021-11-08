@@ -518,7 +518,7 @@
   &-header {
     position: relative;
     margin-bottom: 60px;
-    padding-right: 50px;
+    padding-right: 80px;
     padding-bottom: 34px;
     border-bottom: 3px solid #222;
     .top {
@@ -534,13 +534,8 @@
       right: 0;
     }
   }
-  &-title {
-    display: inline-block;
-    font-size: 40px;
-    line-height: 50px;
-  }
   &-desc {
-    padding-top: 10px;
+    padding-top: 7px;
     color: #999;
   }
   &-content {
