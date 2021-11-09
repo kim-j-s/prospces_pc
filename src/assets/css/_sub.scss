@@ -75,8 +75,7 @@
     .swiper-slide{
       @for $i from 0 through 19 {
         &:nth-child(#{$i + 1}) {
-          .ps-prd-item {
-            
+          .ps-prd-item {            
             transition-delay: $i * 100ms;
           }
         }
