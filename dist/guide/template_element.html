@@ -60,7 +60,7 @@
 	</div>
 	<h1 class="guideTitleh1">Element</h1>
 
-  <h2 class="guideTitleh2">Tab</h2>
+  <h2 class="guideTitleh2">Tab - type1</h2>
 	<div class="guideElement">
 		<div class="ps-tab--wrap type1">
 			<a href="#" class="ps-tab--item active">전체</a>
@@ -69,25 +69,119 @@
 		  </div>
 	</div>
 
-	<h2 class="guideTitleh2">Table</h2>
+  <h2 class="guideTitleh2">Tab - type2</h2>
 	<div class="guideElement">
-		<div class="ps-table">
+		<div class="ps-tab--wrap type2">
+			<a href="#" class="ps-tab--item active">회원</a>
+			<a href="#" class="ps-tab--item">배송</a>
+			<a href="#" class="ps-tab--item">주문/결제</a>
+			<a href="#" class="ps-tab--item">교환/반품/배송</a>
+			<a href="#" class="ps-tab--item">쿠폰/포인트</a>
+			<a href="#" class="ps-tab--item">상품</a>
+		 </div>
+	</div>
+
+	<h2 class="guideTitleh2">Table - type1</h2>
+	<div class="guideElement">
+		<div class="ps-table type1">
 			<table>
 				<colgroup>
-					<col style="width: 33%;">
-					<col style="width: 33%;">
-					<col style="width: *">
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: 25%;">
+					<col style="width: auto">
 				</colgroup>
 				<thead>
-					<th scope="col">헤드</th>
-					<th scope="col">헤드</th>
-					<th scope="col">헤드</th>
+					<tr>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+						<th scope="col">헤드</th>
+					</tr>
 				</thead>
 				<tbody>
 					<tr>
+						<th scope="row" rowspan="2">헤드</th>
 						<td>내용</td>
+						<td class="text-center">가운데 정렬</td>
+						<td class="text-right">우측 정렬</td>
+					</tr>
+					<tr>
+						<td colspan="2">내용</td>
+						<td rowspan="2">내용</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">헤드</th>
+						<td class="text-center">가운데 정렬</td>
+						<td class="text-right">우측 정렬</td>
+					</tr>
+					<tr>
+						<td rowspan="2">내용</td>
+						<td colspan="2">내용</td>
+					</tr>
+					<tr>
+						<th scope="row">헤드</th>
+						<td class="text-center">가운데 정렬</td>
+						<td class="text-right">우측 정렬</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<h2 class="guideTitleh2">Table - type2 - 디자인 협의 필요</h2>
+	<div class="mb-5">
+		<p>헤더영역의 높이가 디자인별로 다름 [ 50px / 60px ] 기준은 50px로 설정 상태</p>
+		<p>tbody td 의 상하 여백이 디자인별로 다름 [ 20px / 24px / 27px / 30px ] 기준은 24로 설정 상태</p>
+	</div>
+	<div class="guideElement">
+		<div class="ps-table type2">
+			<table>
+				<colgroup>
+					<col style="width: 220px;">
+					<col style="width: auto">
+					<col style="width: 220px;">
+					<col style="width: auto">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">헤더</th>
+						<th scope="col">헤더</th>
+						<th scope="col">헤더</th>
+						<th scope="col">헤더</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">헤더</th>
 						<td>내용</td>
-						<td>내용</td>
+						<th scope="row">헤더</th>
+						<td>
+							<div class="flex items-center justify-between">
+								내용
+								<a href="javascript:void(0)" class="ps-btn type4">상세조회</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="essential">헤더</th>
+						<td colspan="3">
+							<div class="ps-input">
+								<input type="text" class="inp">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top">헤더</th>
+						<td colspan="3">
+							<textarea name="" id="" cols="30" rows="10" class="ps-textarea" placeholder="구매를 원하시는 상품코드를 콤마(,)로&#13;&#10;구분하여 입력해주세요."></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="top essential">헤더</th>
+						<td colspan="3">
+							<textarea name="" id="" cols="30" rows="10" class="ps-textarea" placeholder="구매를 원하시는 상품코드를 콤마(,)로&#13;&#10;구분하여 입력해주세요."></textarea>
+						</td>
 					</tr>
 				</tbody>
 			</table>
