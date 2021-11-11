@@ -908,6 +908,7 @@ button.swiper-pagination-bullet {
 .ps-btn.type4 {
   display: inline-block;
   min-width: 125px;
+  padding: 0 25px;
   font-size: 16px;
   text-align: center;
   line-height: 42px;
@@ -1166,8 +1167,6 @@ button.swiper-pagination-bullet {
 }
 
 .ps-tab--wrap.type2 {
-  display: flex;
-  /* justify-content: stretch; */
   margin-bottom: 60px;
   border-bottom: 2px solid #222;
 }
@@ -1224,6 +1223,68 @@ button.swiper-pagination-bullet {
 
 .ps-tab--wrap.type2 .ps-tab--item + .ps-tab--item {
   margin-left: -1px;
+}
+
+.ps-tab--wrap.type3 {
+  flex-flow: row wrap;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item {
+  position: relative;
+  flex: auto;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3%;
+  max-width: 454px;
+  /* margin: -1px 0 0 -1px; */
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-left: none;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:first-child {
+  border-left: 1px solid #ccc;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:nth-child(-n + 3) {
+  border-top: 1px solid #ccc;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:nth-child(-n + 3):hover::before, .ps-tab--wrap.type3 .ps-tab--item:nth-child(-n + 3):active::before {
+  content: none;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:nth-child(3n + 4) {
+  border-left: 1px solid #ccc;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:nth-child(3n) {
+  width: 33.4%;
+  max-width: none;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:hover, .ps-tab--wrap.type3 .ps-tab--item.active {
+  z-index: 1;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  border-color: #000;
+}
+
+.ps-tab--wrap.type3 .ps-tab--item:hover::before, .ps-tab--wrap.type3 .ps-tab--item.active::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #000;
 }
 
 /* tab */
@@ -1432,7 +1493,27 @@ button.swiper-pagination-bullet {
 }
 
 .ps-chkbox > label > input[type="radio"] + .text {
-  color: red;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 28px;
+  color: #222;
+  line-height: 20px;
+}
+
+.ps-chkbox > label > input[type="radio"] + .text:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.ps-chkbox > label > input[type="radio"]:checked + .text::before {
+  border: 6px solid #222;
 }
 
 .ps-chkbox > label > input.orange + .text::before {
@@ -1524,6 +1605,51 @@ button.swiper-pagination-bullet {
 }
 
 /* textarea */
+/* list */
+.ps-list.type1 > li {
+  position: relative;
+  padding-left: 14px;
+  line-height: 20px;
+}
+
+.ps-list.type1 > li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 4px;
+  border-bottom: 4px solid #222;
+}
+
+.ps-list.type1 > li > .ps-list.type2 {
+  padding-top: 10px;
+}
+
+.ps-list.type1 > li + li {
+  margin-top: 8px;
+}
+
+.ps-list.type2 > li {
+  position: relative;
+  padding-left: 10px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+.ps-list.type2 > li::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 6px;
+  border-bottom: 1px solid #999;
+}
+
+.ps-list.type2 > li + li {
+  margin-top: 6px;
+}
+
 #psWrap {
   width: 100%;
   height: 100%;
@@ -2041,6 +2167,11 @@ main.index + .ps-footer {
   margin: 0 auto;
 }
 
+.ps-inner--small {
+  max-width: 1364px;
+  margin: 0 auto;
+}
+
 .ps-sub-content + .ps-sub-content {
   margin-top: 140px;
 }
@@ -2051,6 +2182,41 @@ main.index + .ps-footer {
 
 .ps-detail-content + .ps-sub-content {
   margin-top: 70px;
+}
+
+.ps-cont-head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #222;
+  /* background: blue; */
+}
+
+.ps-cont-head > h4 {
+  font-size: 22px;
+}
+
+.ps-cont-head .small-desc {
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+}
+
+.ps-cont-head .ps-cont-head--side.essential {
+  font-size: 14px;
+}
+
+.ps-cont-head .ps-cont-head--side.essential::before {
+  content: '';
+  display: inline-block;
+  vertical-align: text-top;
+  width: 4px;
+  margin-right: 4px;
+  border-bottom: 4px solid #d13b40;
+}
+
+.ps-cont-head + .ps-table.type2 {
+  margin-top: -4px;
 }
 
 /* 상품 리스트 */

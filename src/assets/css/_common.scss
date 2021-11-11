@@ -91,6 +91,7 @@ $z-dim: 1100;
   &.type4 {
     display: inline-block;
     min-width: 125px;
+    padding: 0 25px;
     font-size: 16px;
     text-align: center;
     line-height: 42px;
@@ -345,8 +346,6 @@ $z-dim: 1100;
   }
 
   &--wrap.type2 {
-    display: flex;
-    /* justify-content: stretch; */
     margin-bottom: 60px;
     border-bottom: 2px solid #222;
     
@@ -401,7 +400,64 @@ $z-dim: 1100;
     }
   }
 
+  &--wrap.type3 {
+    flex-flow: row wrap;
 
+    .ps-tab--item {
+      position: relative;
+      flex: auto;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 33.3%;
+      max-width: 454px;
+      /* margin: -1px 0 0 -1px; */
+      padding: 15px 20px;
+      font-size: 14px;
+      line-height: 18px;
+      border: 1px solid #ccc;
+      border-top: none;
+      border-left: none;
+      background: #fff;
+      transition: $duration-short;
+      &:first-child {
+        border-left: 1px solid #ccc;
+      }
+      &:nth-child(-n + 3) {
+        border-top: 1px solid #ccc;
+        &:hover,
+        &:active {
+          &::before {
+            content: none;
+          }
+        }
+      }
+      &:nth-child(3n + 4) {
+        border-left: 1px solid #ccc;
+      }
+      &:nth-child(3n) {
+        width: 33.4%;
+        max-width: none;
+      }
+      &:hover,
+      &.active {
+        z-index: 1;
+        font-weight: 700;
+        color: #fff;
+        background: #000;
+        border-color: #000;
+        &::before {
+          content: '';
+          position: absolute;
+          top: -1px;
+          left: 0;
+          width: 100%;
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
 
 }
 /* tab */
@@ -555,8 +611,6 @@ $z-dim: 1100;
 }
 /* table */
 
-
-
 /* checkbox */
 .ps-chkbox {
   position: relative;
@@ -569,57 +623,79 @@ $z-dim: 1100;
       > input {
         @include input;
         &[type="checkbox"] {
+          + .text {
+              position: relative;
+              display: inline-block;
+              padding-left: 30px;
+              font-size: 16px;
+              color: #222;
+              line-height: 20px;
+              &::before {
+                  content: '';
+                  position: absolute;
+                  top: 0px;
+                  left: 0;
+                  width: 20px;
+                  height: 20px;
+                  border: 1px solid #ccc;
+              }
+          }
+          &:not(.etc-color):checked {
+              + .text {
+                  &::before {
+                      background-color: #222;
+                      background-image: url(../images/icon_chkbox.svg);
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-size: 11px auto;
+                      border: none;
+                  }
+              }
+          }
+          &.etc-color {
             + .text {
-                position: relative;
-                display: inline-block;
-                padding-left: 30px;
-                font-size: 16px;
-                color: #222;
-                line-height: 20px;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0px;
-                    left: 0;
-                    width: 20px;
-                    height: 20px;
-                    border: 1px solid #ccc;
-                }
+              &::before {
+                border: none;
+              }
             }
-            &:not(.etc-color):checked {
-                + .text {
-                    &::before {
-                        background-color: #222;
-                        background-image: url(../images/icon_chkbox.svg);
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: 11px auto;
-                        border: none;
-                    }
-                }
-            }
-            &.etc-color {
+            &:checked {
               + .text {
                 &::before {
-                  border: none;
-                }
-              }
-              &:checked {
-                + .text {
-                  &::before {
-                    background-image: url(../images/icon_chkbox.svg);
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 11px auto;
-                  }
+                  background-image: url(../images/icon_chkbox.svg);
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  background-size: 11px auto;
                 }
               }
             }
+          }
         }
         &[type="radio"] {
-            + .text {
-                color: red;
+          + .text {
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            padding-left: 28px;
+            color: #222;
+            line-height: 20px;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              border: 1px solid #ccc;
+              border-radius: 50%;
             }
+          }
+          &:checked {
+            + .text {
+              &::before {
+                border: 6px solid #222;
+              }
+            }
+          }
         }
         &.orange {
           + .text {
@@ -741,7 +817,51 @@ $z-dim: 1100;
 }
 /* textarea */
 
+/* list */
+.ps-list {
+  &.type1 {
+    > li {
+      position: relative;
+      padding-left: 14px;
+      line-height: 20px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 4px;
+        border-bottom: 4px solid #222;
+      }
+      > .ps-list.type2 {
+        padding-top: 10px;
+      }
+      + li {
+        margin-top: 8px;
+      }
+    }
+  }
 
+  &.type2 {
+    > li {
+      position: relative;
+      padding-left: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #999;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 6px;
+        border-bottom: 1px solid #999;
+      }
+      + li {
+        margin-top: 6px;
+      }
+    }
+  }
+}
 
 
 
