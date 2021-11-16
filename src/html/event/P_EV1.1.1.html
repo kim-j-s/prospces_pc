@@ -1,104 +1,153 @@
+
 @@include("_head.html",{
-"title" : "프로스펙스 | EVENT"
-})
-
-<body>
-  <div id="psWrap" class="sub">
-    @@include("_header.html")
-    <!-- Main -->
-    <main>
-      <div class="ps-inner">
-        <h3 class="ps-subtitle font-eng font-bold">EVENT</h3>
-
-        <div class="ps-tab--wrap type1">
-          <a href="#" class="ps-tab--item active">전체</a>
-          <a href="#" class="ps-tab--item">이벤트</a>
-          <a href="#" class="ps-tab--item">기획전</a>
-        </div>
-
-        <div class="ps-prd-list--header flex justify-end">
-          <select name="" id="" class="ps-select mini right">
-            <option value="">전체</option>
-            <option value="">진행중</option>
-            <option value="">종료</option>
-          </select>
-          <div class="ps-prd-list--util flex">
+  "title" : "프로스펙스 | EVENT"
+  })
+  
+  <body>
+    <div id="psWrap" class="sub">
+      @@include("_header.html")
+      <!-- Main -->
+      <main>
+        <div class="ps-inner">
+          <h3 class="ps-subtitle font-eng font-bold">EVENT</h3>
+  
+          <div class="ps-tab--wrap type1">
+            <a href="#" class="ps-tab--item active">전체</a>
+            <a href="#" class="ps-tab--item">이벤트</a>
+            <a href="#" class="ps-tab--item">기획전</a>
           </div>
-        </div>
-
-        <div data-aos="ps-fade-in" data-aos-once="true" class="ps-prd-list--wrap ps-post-list flex flex-wrap overflow-hidden -mx-5">
-          <div class="ps-col w-full px-5">
-            <a href="#" class="ps-post-item">
-              <div class="thumbs">
-                <img src="../../assets/images/temp/temp_eventlist_1.png" alt="[이벤트] 신한/현대카드 즉시할인">
-              </div>
-              <div class="desc">
-                <div class="ps-badge">
-                  <span class="badge type1">진행중</span>
+  
+          <div class="ps-prd-list--header flex justify-end">
+            <select name="" id="" class="ps-select mini right">
+              <option value="">진행중</option>
+              <option value="">종료</option>
+            </select>
+            <div class="ps-prd-list--util flex">
+            </div>
+          </div>
+  
+          <div data-aos="ps-fade-in" data-aos-once="true" class="ps-prd-list--wrap flex flex-wrap overflow-hidden -mx-5">
+              @@for (var i = 1; i <= 3; i++) {
+                <div class="ps-col w-full my-5 px-5 w-1/3">
+                  <a href="#" class="ps-post-item">
+                    <div class="thumbs">
+                      <img src="../../assets/images/temp/temp_event_1.png" alt="[이벤트] 신한/현대카드 즉시할인">
+                    </div>
+                    <div class="desc">
+                      <div class="ps-badge">
+                        <span class="badge type1">진행중</span>
+                      </div>
+                      <p class="name font-bold line-clamp-1">[이벤트] 신한/현대카드 즉시할인</p>
+                      <p class="d-txt line-clamp-1">
+                        본 기획전 상품을 구매하신 고객님들께 추첨을 통해 선물을 드립니다. 구매 시 자동 응모됩니다.
+                      </p>
+                    </div>
+                  </a>
                 </div>
-                <p class="name font-bold line-clamp-1">[이벤트] 신한/현대카드 즉시할인</p>
-                <p class="d-txt">
-                  본 기획전 상품을 구매하신 고객님들께 추첨을 통해 선물을 드립니다.
-                  <br>구매 시 자동 응모됩니다.
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="ps-col w-full px-5">
-            <a href="#" class="ps-post-item">
-              <div class="thumbs">
-                <img src="../../assets/images/temp/temp_eventlist_2.png" alt="[기획전]  인플루언서 8인의 스택스 TR">
-              </div>
-              <div class="desc">
-                <div class="ps-badge">
-                  <span class="badge type1">진행중</span>
+                <div class="ps-col w-full my-5 px-5 w-1/3">
+                  <a href="#" class="ps-post-item">
+                    <div class="thumbs">
+                      <img src="../../assets/images/temp/temp_event_2.png" alt="[기획전] 인플루언서 8인의 스택스 TR">
+                    </div>
+                    <div class="desc">
+                      <div class="ps-badge">
+                        <span class="badge type1">진행중</span>
+                      </div>
+                      <p class="name font-bold line-clamp-1">[기획전] 인플루언서 8인의 스택스 TR</p>
+                      <p class="d-txt line-clamp-1">
+                        #스테디셀러  #보아다이얼
+                      </p>
+                    </div>
+                  </a>
                 </div>
-                <p class="name font-bold line-clamp-1">[기획전]  인플루언서 8인의 스택스 TR</p>
-                <p class="d-txt">
-                  #스테디셀러  #보아다이얼
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="ps-col w-full px-5">
-            <a href="#" class="ps-post-item">
-              <div class="thumbs">
-                <img src="../../assets/images/temp/temp_eventlist_3.png" alt="[이벤트]  9월 포토리뷰 이벤트">
-              </div>
-              <div class="desc">
-                <div class="ps-badge">
-                  <span class="badge type2">진행중</span>
+                <div class="ps-col w-full my-5 px-5 w-1/3">
+                  <a href="#" class="ps-post-item">
+                    <div class="thumbs">
+                      <img src="../../assets/images/temp/temp_event_3.png" alt="[이벤트] 9월 포토상품평 이벤트">
+                    </div>
+                    <div class="desc">
+                      <div class="ps-badge">
+                        <span class="badge type2">종료</span>
+                      </div>
+                      <p class="name font-bold line-clamp-1">[이벤트] 9월 포토상품평 이벤트</p>
+                      <p class="d-txt line-clamp-1">
+                        최대 3천 포인트에 경품까지!
+                      </p>
+                    </div>
+                  </a>
                 </div>
-                <p class="name font-bold line-clamp-1">[이벤트]  9월 포토리뷰 이벤트</p>
-                <p class="d-txt">
-                  최대 3천 포인트에 경품까지!
-                </p>
+                <div class="ps-col w-full my-5 px-5 w-1/3">
+                  <a href="#" class="ps-post-item">
+                    <div class="thumbs">
+                      <img src="../../assets/images/temp/temp_event_4.png" alt="[이벤트]  10월 출석체크 이벤트">
+                    </div>
+                    <div class="desc">
+                      <div class="ps-badge">
+                        <span class="badge type1">진행중</span>
+                      </div>
+                      <p class="name font-bold line-clamp-1">[이벤트]  10월 출석체크 이벤트</p>
+                      <p class="d-txt line-clamp-1">
+                        출석체크 하고 3천포인트+주유권 받자!
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="ps-col w-full my-5 px-5 w-1/3">
+                  <a href="#" class="ps-post-item">
+                    <div class="thumbs">
+                      <img src="../../assets/images/temp/temp_event_5.png" alt="[기획전]  프로스펙스 브랜드 감사제">
+                    </div>
+                    <div class="desc">
+                      <div class="ps-badge">
+                        <span class="badge type1">진행중</span>
+                      </div>
+                      <p class="name font-bold line-clamp-1">[기획전]  프로스펙스 브랜드 감사제</p>
+                      <p class="d-txt line-clamp-1">
+                        꽝없는 경품룰렛에 오리지널라인 추가할인까지!
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="ps-col w-full my-5 px-5 w-1/3">
+                  <a href="#" class="ps-post-item">
+                    <div class="thumbs">
+                      <img src="../../assets/images/temp/temp_event_6.png" alt="[이벤트]  KB국민/BC카드  즉시할인">
+                    </div>
+                    <div class="desc">
+                      <div class="ps-badge">
+                        <span class="badge type2">종료</span>
+                      </div>
+                      <p class="name font-bold line-clamp-1">[이벤트]  KB국민/BC카드  즉시할인</p>
+                      <p class="d-txt line-clamp-1">
+                        KB국민/BC카드로 구매 시, 최대 10% 즉시할인
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              }
+              <div class="w-full ps-btn-wrap list-more">
+                <a href="javascript:void(0)" class="ps-btn type3 font-bold">더보기</a>
               </div>
-            </a>
           </div>
-          <div class="w-full ps-btn-wrap list-more">
-            <a href="javascript:void(0)" class="ps-btn type3 font-bold">더보기</a>
-          </div>
+          
         </div>
-        
-      </div>
-    </main>
-    <!--Main -->
-    @@include('_footer.html')
-  </div>
-  <script>
-    AOS.init({
-      disable: function msieversion() {
-        return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
-          /Trident.*rv\:11\./))
-      }
-    });
-    /* $(function () {
-      setTimeout(function () {
-        AOS.refresh();
-      }, 100);
-    }) */
-  </script>
-</body>
-
-</html>
+      </main>
+      <!--Main -->
+      @@include('_footer.html')
+    </div>
+    <script>
+      AOS.init({
+        disable: function msieversion() {
+          return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+            /Trident.*rv\:11\./))
+        }
+      });
+      /* $(function () {
+        setTimeout(function () {
+          AOS.refresh();
+        }, 100);
+      }) */
+    </script>
+  </body>
+  
+  </html>

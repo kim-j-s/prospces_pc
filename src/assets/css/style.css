@@ -2246,6 +2246,79 @@ main.index + .ps-footer {
   margin-top: 140px;
 }
 
+.ps-sub-content--top.smartfit {
+  background: #f8f8fa url(../images/smartfit/bg_smartfit_top.png) no-repeat center center;
+}
+
+.ps-sub-content--top.sponsorship {
+  margin-bottom: 120px;
+  background: #f8f8fa url(../images/sponsorship/bg_sponsorship_top.png) no-repeat center center;
+}
+
+.ps-sub-content--top > .inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1640px;
+  height: 680px;
+  margin: 0 auto;
+}
+
+.ps-sub-content--top > .inner .title {
+  font-size: 78px;
+  line-height: 88px;
+}
+
+.ps-sub-content--top > .inner .title small {
+  display: block;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.ps-sub-content--top > .inner .title > span {
+  display: block;
+}
+
+.ps-sub-content--top > .inner .title > span.line1 {
+  line-height: 109px;
+}
+
+.ps-sub-content--top > .inner .title > span.line2 {
+  margin-top: -36px;
+  font-size: 104px;
+  line-height: 145px;
+}
+
+.ps-sub-content--top > .inner .desc {
+  position: relative;
+  margin-top: 22px;
+  padding-top: 60px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.ps-sub-content--top > .inner .desc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  border-bottom: 14px solid #222;
+}
+
+.ps-sub-content--top > .inner.white .title {
+  color: #fff;
+}
+
+.ps-sub-content--top > .inner.white .desc {
+  color: #fff;
+}
+
+.ps-sub-content--top > .inner.white .desc::before {
+  border-bottom-color: #fff;
+}
+
 .ps-cont-head {
   display: flex;
   justify-content: space-between;
@@ -2288,6 +2361,10 @@ main.index + .ps-footer {
 
 .ps-prd-list--header {
   margin-bottom: 10px;
+}
+
+.ps-prd-list--header > .f-text {
+  font-size: 18px;
 }
 
 .ps-prd-list--header .ps-list-filter {
@@ -4122,57 +4199,48 @@ main.index + .ps-footer {
   color: #999;
 }
 
-/* 스마트핏 */
-.ps-smart-fit--top {
-  background: #f8f8fa url(../images/smartfit/bg_smartfit_top.png) no-repeat center center;
+/* 룩북 필름 */
+.ps-film {
+  margin-top: 20px;
 }
 
-.ps-smart-fit--top > .inner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 1640px;
-  height: 680px;
-  margin: 0 auto;
-}
-
-.ps-smart-fit--top > .inner .title small {
-  display: block;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 32px;
-}
-
-.ps-smart-fit--top > .inner .title > span {
-  display: block;
-}
-
-.ps-smart-fit--top > .inner .title > span.line1 {
-  font-size: 78px;
-  line-height: 109px;
-}
-
-.ps-smart-fit--top > .inner .title > span.line2 {
-  margin-top: -36px;
-  font-size: 104px;
-  line-height: 145px;
-}
-
-.ps-smart-fit--top > .inner .desc {
+.ps-film--container {
   position: relative;
-  margin-top: 22px;
-  padding-top: 60px;
-  font-size: 20px;
-  line-height: 32px;
+  height: 0;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+  overflow: hidden;
 }
 
-.ps-smart-fit--top > .inner .desc::before {
-  content: '';
+.ps-film--container iframe,
+.ps-film--container object,
+.ps-film--container embed {
   position: absolute;
   top: 0;
   left: 0;
-  width: 36px;
-  border-bottom: 14px solid #222;
+  width: 100%;
+  height: 100%;
+}
+
+.ps-film > dl {
+  margin-top: 30px;
+}
+
+.ps-film > dl dt {
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.ps-film > dl dd {
+  padding-top: 14px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* 스마트핏 */
+.ps-smart-fit {
+  margin-top: 170px;
 }
 
 .ps-smart-fit--guide {
@@ -4316,45 +4384,6 @@ main.index + .ps-footer {
 }
 
 /* 스마트핏 */
-/* 룩북 필름 */
-.ps-film {
-  margin-top: 20px;
-}
-
-.ps-film--container {
-  position: relative;
-  height: 0;
-  max-width: 100%;
-  height: auto;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-}
-
-.ps-film--container iframe,
-.ps-film--container object,
-.ps-film--container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.ps-film > dl {
-  margin-top: 30px;
-}
-
-.ps-film > dl dt {
-  font-size: 28px;
-  line-height: 38px;
-}
-
-.ps-film > dl dd {
-  padding-top: 14px;
-  font-size: 18px;
-  line-height: 24px;
-}
-
 /*
   Animation On Scroll
   
