@@ -635,9 +635,6 @@ video {
 .w-1\/4 {
 	width: 25%;
 }
-.w-1\/3 {
-	width: 33.333333%;
-}
 .flex-auto {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 auto;
@@ -1781,7 +1778,8 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
-  border: 1px solid #222;
+  color: #999;
+  border: 1px solid #ccc;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1795,7 +1793,7 @@ button.swiper-pagination-bullet {
   height: 100%;
   text-indent: -999px;
   overflow: hidden;
-  background: url("../images/icon_down.svg") no-repeat center center/20px auto;
+  background: url("../images/icon_down_gray.svg") no-repeat center center/14px auto;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1807,7 +1805,7 @@ button.swiper-pagination-bullet {
   left: 0;
   width: 100% !important;
   background: #fff;
-  border: 1px solid #222;
+  border: 1px solid #ccc;
   z-index: -1;
 }
 
@@ -1830,8 +1828,7 @@ button.swiper-pagination-bullet {
 }
 
 .selectric-wrapper .selectric-items > .selectric-scroll > ul > li.selected, .selectric-wrapper .selectric-items > .selectric-scroll > ul > li:hover {
-  font-weight: 500;
-  color: #222;
+  background: #f5f5f5;
 }
 
 .selectric-wrapper.selectric-open .selectric-items {
@@ -1881,6 +1878,7 @@ button.swiper-pagination-bullet {
   font-size: 40px;
   line-height: 60px;
   border: none;
+  color: #222;
 }
 
 .selectric-wrapper.selectric-t-type .selectric > .button {
@@ -3260,6 +3258,14 @@ main.index + .ps-footer {
   vertical-align: middle;
   width: calc(100% - 160px);
   padding: 0 0 0 30px;
+}
+
+.ps-post-list {
+  padding-top: 20px;
+}
+
+.ps-post-list .ps-col + .ps-col {
+  margin-top: 70px;
 }
 
 .ps-post-item {

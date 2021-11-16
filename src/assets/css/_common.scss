@@ -154,7 +154,8 @@ $z-dim: 1100;
       font-weight: 500;
       font-size: 18px;
       line-height: 26px;
-      border: 1px solid #222;
+      color: #999;
+      border: 1px solid #ccc;
       @include ellipsis;
     }
     > .button {
@@ -165,7 +166,7 @@ $z-dim: 1100;
       height: 100%;
       text-indent: -999px;
       overflow: hidden;
-      background: url('../images/icon_down.svg') no-repeat center center / 20px auto;
+      background: url('../images/icon_down_gray.svg') no-repeat center center / 14px auto;
       transition: $duration-short;
     }
   }
@@ -177,7 +178,7 @@ $z-dim: 1100;
     left: 0;
     width: 100% !important;
     background: #fff;
-    border: 1px solid #222;
+    border: 1px solid #ccc;
     z-index: -1;
     > .selectric-scroll {
       height: 100%;
@@ -192,8 +193,7 @@ $z-dim: 1100;
           transition: $duration-short;
           &.selected,
           &:hover {
-            font-weight: 500;
-            color: #222;
+            background: #f5f5f5;
           }
         }
       }
@@ -249,6 +249,7 @@ $z-dim: 1100;
         font-size: 40px;
         line-height: 60px;
         border: none;
+        color: #222;
       }
       > .button {
         top: 15px;
