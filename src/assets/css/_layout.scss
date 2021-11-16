@@ -585,6 +585,13 @@
   .ps-detail-content + & {
     margin-top: 70px;
   }
+
+  &.lookbook {
+    margin-top: 30px;
+    & + & {
+      margin-top: 140px;
+    }
+  }
 }
 
 .ps-cont-head {

@@ -84,7 +84,7 @@
   }
 
   &.lookbook {
-    margin-top: 25px;
+    margin-top: 30px;
     .cont {
       .swiper-slide {
         width: 480px;
@@ -772,39 +772,6 @@
   }
 }
 
-.ps-film {
-  margin-top: 20px;
-  &--container {
-    position: relative;
-    height: 0; 
-    max-width: 100%; 
-    height: auto;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    iframe, 
-    object, 
-    embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  > dl {
-    margin-top: 30px;
-    dt {
-      font-size: 28px;
-      line-height: 38px;
-    }
-    dd {
-      padding-top: 14px;
-      font-size: 18px;
-      line-height: 24px;
-    }
-  }
-}
-
 .ps-news {
   &-wrap {
     padding-top: 18px;  
@@ -861,4 +828,232 @@
     }
   }
 }
+
+/* 스마트핏 */
+.ps-smart-fit {
+  &--top {
+    background: #f8f8fa url(../images/smartfit/bg_smartfit_top.png) no-repeat center center;
+    > .inner {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 1640px;
+      height: 680px;
+      margin: 0 auto;
+      .title {
+        small {
+          display: block;
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 32px;
+        }
+        > span {
+          display: block;
+          &.line1 {
+            font-size: 78px;
+            line-height: 109px;
+          }
+          &.line2 {
+            margin-top: -36px;
+            font-size: 104px;
+            line-height: 145px;
+          }
+        }
+      }
+      .desc {
+        position: relative;
+        margin-top: 22px;
+        padding-top: 60px;
+        font-size: 20px;
+        line-height: 32px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 36px;
+          border-bottom: 14px solid #222;
+        }
+      }
+    }
+  }
+
+  &--guide {
+    width: 1640px;
+    margin: 0 auto;
+    margin-top: 170px;
+    > .title {
+      text-align: center;
+      font-size: 46px;
+      line-height: 58px;
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: text-top;
+        width: 10px;
+        margin-left: 4px;
+        border-bottom: 10px solid #d13b40;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: stretch;
+      margin-top: 100px;
+      > li {
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        width: 750px;
+        margin: 110px 140px 0 0;
+        border: 4px solid #222;
+        &:nth-child(-n + 2) {
+          margin-top: 0;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        .top {
+          flex-grow: 1;
+          display: flex;
+          padding: 50px;
+          .num {
+            width: 74px;
+            font-size: 55px;
+            line-height: 78px;
+            letter-spacing: -1px;
+          }
+          .desc {
+            padding-top: 22px;
+            padding-left: 10px;
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 44px;
+          }
+        }
+        .thumbs {
+          position: relative;
+          height: 690px;
+          background: #222 url(../images/smartfit/img_smartfit_guide_frame.png) no-repeat center bottom;
+          img {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+          }
+        }
+
+      }
+    }
+  }
+
+  &--footer {
+    margin-top: 170px;
+    background: #222;
+
+    > .top {
+      position: relative;
+      background: url(../images/smartfit/bg_smartfit_footer_top.png) no-repeat center;
+
+      > .inner {
+        position: relative;
+        width: 1640px;
+        height: 480px;
+        margin: 0 auto;
+        > .title {
+          position: relative;
+          padding-top: 168px;
+          padding-bottom: 66px;
+          font-size: 40px;
+          color: #fff;
+          line-height: 50px;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            border-bottom: 16px solid #fff;
+          }
+        }
+  
+        > a {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          padding-right: 50px;
+          font-size: 42px;
+          color: #fff;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            border-bottom: 16px solid #d13b40;
+          }
+        }
+      }
+    }
+
+    > .bottom {
+      width: 1640px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+  }
+}
+/* 스마트핏 */
+
+
+
+
+/* 룩북 필름 */
+.ps-film {
+  margin-top: 20px;
+  &--container {
+    position: relative;
+    height: 0; 
+    max-width: 100%; 
+    height: auto;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    iframe, 
+    object, 
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  > dl {
+    margin-top: 30px;
+    dt {
+      font-size: 28px;
+      line-height: 38px;
+    }
+    dd {
+      padding-top: 14px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
