@@ -13,7 +13,6 @@
 
       <div id="psBrandstory" class="ps-brandstory">
         <div class="inner">
-
           <div class="swiper-container">
             <div class="swiper-wrapper">
 
@@ -458,6 +457,9 @@
             <div class="ps-bs--button ps-bs--button-prev">prev</div>
             <div class="ps-bs--button ps-bs--button-next">next</div>
           </div>
+          <div class="ps-brandstory-channel">
+            <a href="https://www.youtube.com/c/ProspecsBrand" target="_blank"><span>자세히보기</span></a>
+          </div>
         </div>
       </div>
 
@@ -470,6 +472,7 @@
     var swiper = new Swiper("#psBrandstory .swiper-container", {
       init: false,
       direction: 'horizontal',
+      touchRatio: 0,
       slidesPerView: "auto",
       spaceBetween: 200,
       navigation: {

@@ -2026,6 +2026,24 @@
     font-size: 50px;
   }
 
+  &-channel {
+    margin-top: 28px;
+    font-size: 0;
+    > a {
+      display: inline-block;
+      padding: 12px 34px;
+      
+      border: 2px solid #222;
+      > span {
+        display: block;
+        padding-left: 33px;
+        font-weight: 500;
+        font-size: 16px;
+        background: url(../images/brandstory/icon_youtube.png) no-repeat left center;
+      }
+    }
+  }
+
 
 }
 /* 브랜드스토리 */

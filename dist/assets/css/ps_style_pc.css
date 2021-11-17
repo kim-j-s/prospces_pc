@@ -6631,6 +6631,25 @@ main.index + .ps-footer {
   font-size: 50px;
 }
 
+.ps-brandstory-channel {
+  margin-top: 28px;
+  font-size: 0;
+}
+
+.ps-brandstory-channel > a {
+  display: inline-block;
+  padding: 12px 34px;
+  border: 2px solid #222;
+}
+
+.ps-brandstory-channel > a > span {
+  display: block;
+  padding-left: 33px;
+  font-weight: 500;
+  font-size: 16px;
+  background: url(../images/brandstory/icon_youtube.png) no-repeat left center;
+}
+
 /* 브랜드스토리 */
 /*
   Animation On Scroll
