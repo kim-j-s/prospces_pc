@@ -1147,19 +1147,22 @@
 
     .swiper-container {
 
+      padding-right: 200px;
+
       .swiper-wrapper {
         padding-bottom: 160px;
       }
 
       .swiper-slide {
+        position: relative;
+        
         .ps-brandstory-item {
-          /* background: #ddd; */
 
           &::before {
-            content: attr(data-year);
+            content: '';
             position: absolute;
             top: 0;
-            left: 0;
+            left: -1px;
             z-index: 5;
             width: 100%;
             height: 100%;
@@ -1169,14 +1172,45 @@
             transition: 0.8s;
           }
 
+          &::after {
+            content: attr(data-year);
+            position: absolute;
+            z-index: 6;
+            top: 50px;
+            left: -50px;
+            font-family: Poppins, sans-serif;
+            font-weight: 800;
+            font-size: 40px;
+            letter-spacing: 20px;
+            color: #222;
+            transform: rotate(270deg);
+            transition: 0.8s;
+          }
+
           .k-year {
             position: absolute;
             font-family: Poppins, sans-serif;
             font-weight: 800;
             font-size: 340px;
             line-height: 1;
-            letter-spacing: -10px;
+            letter-spacing: -10px;            
             color: #e8e8e8;
+            &.up {
+              top: -35px;
+            }
+            &.down {
+              bottom: -51px;
+            }
+
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+              &.up {
+                top: -17px;
+              }
+              &.down {
+                bottom: -67px;
+              }
+            }
+
           }
   
           .y-thumb {
@@ -1206,6 +1240,9 @@
             &.etc1 {
               padding-left: 0;
             }
+            &.etc2 {
+              padding-left: 0;
+            }
           }
   
           .bs-story {
@@ -1218,6 +1255,7 @@
               font-weight: 700;
               font-size: 42px;
               line-height: 53px;
+              letter-spacing: -1px;
               opacity: 0;
               transition: 1s;
             }
@@ -1240,6 +1278,10 @@
               opacity: 0;
             }
 
+            &::after {
+              top: -200px;
+              opacity: 0;
+            }
 
             .bs-story {
               > dt {
@@ -1263,6 +1305,11 @@
         height: 40px;
         overflow: hidden;
         text-indent: -9999px;
+        &.swiper-button-disabled {
+          &:before {
+            opacity: 0.4;
+          }
+        }
         &-prev {
           left: 0;
           &:before {
@@ -1275,6 +1322,13 @@
             border-top: 5px solid #999;
             border-left: 5px solid #999;
             transform: translateY(-50%) rotate(-45deg);
+            transition: $duration-short;
+          }          
+          &:not(.swiper-button-disabled):hover {
+            &:before {
+              border-top: 5px solid #222;
+              border-left: 5px solid #222;
+            }
           }
         }
         &-next {
@@ -1289,6 +1343,13 @@
             border-top: 5px solid #999;
             border-left: 5px solid #999;
             transform: translateY(-50%) rotate(135deg);
+            transition: $duration-short;
+          }
+          &:not(.swiper-button-disabled):hover {
+            &:before {
+              border-top: 5px solid #222;
+              border-left: 5px solid #222;
+            }
           }
         }
       }
@@ -1299,7 +1360,7 @@
       width: 1640px;
 
       &.ps-bs-index {
-        width: 600px;
+        width: 500px;
 
         .ps-brandstory-item {
           padding-top: 175px;
@@ -1323,12 +1384,9 @@
 
       &.ps-bs-1949 {
         width: 1582px;
-
         .k-year {
           left: 802px;
-          bottom: -51px;
         }
-
         .y-thumb {
           top: 0;
           left: 0;
@@ -1336,7 +1394,6 @@
             top: 46px;
           }
         }
-
         .bs-story {
           top: 59px;
           left: 888px;
@@ -1347,7 +1404,6 @@
       &.ps-bs-1950 {
         width: 1410px;        
         .k-year {
-          top: -35px;
           left: 170px;
         }
         .y-thumb {
@@ -1373,7 +1429,6 @@
       &.ps-bs-1961 {
         width: 1329px;
         .k-year {
-          bottom: -51px;
           right: 74px;
         }
         .y-thumb {
@@ -1396,93 +1451,569 @@
 
       &.ps-bs-1962 {
         width: 1600px;
-        background: yellow;
+        .k-year {
+          left: 131px;
+        }
+        .y-thumb {
+          right: 0;
+          bottom: 0;
+          .year {
+            bottom: 21px;
+          }
+          &.etc1 {
+            bottom: 0;
+            left: 0;
+          }
+        }
+        .bs-story {
+          top: 193px;
+          left: 457px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1969 {
         width: 1140px;
-        background: red;
+        .k-year {
+          left: 342px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 32px;
+          }
+        }
+        .bs-story {
+          top: 91px;
+          left: 642px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1975 {
         width: 1346px;
-        background: yellow;
+        .k-year {
+          left: 162px;
+        }
+        .y-thumb {
+          right: 0;
+          bottom: 108px;
+          .year {
+            top: 19px;
+          }
+          &.etc1 {
+            bottom: 0;
+            left: 0;
+          }
+        }
+        .bs-story {
+          top: 318px;
+          left: 416px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1976 {
-        width: 1285px;
+        width: 1282px;
+        .k-year {
+          left: 293px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 19px;
+          }
+          &.etc1 {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+          }
+        }
+        .bs-story {
+          top: 57px;
+          left: 782px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1978 {
         width: 1163px;
+        .k-year {
+          left: 111px;
+        }
+        .y-thumb {
+          top: 0;
+          right: 0;
+          .year {
+            top: 518px;
+          }
+          &.etc1 {
+            top: 0;
+            left: 0;
+          }
+        }
+        .bs-story {
+          top: 318px;
+          left: 46px;
+          width: 500px;
+        }        
       }
 
       &.ps-bs-1978-2 {
         width: 1380px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -50px;
+          width: 213px;
+          height: 190px;
+          background: url(../images/brandstory/hs-arrow-1.png) no-repeat;
+        }
+        .k-year {
+          left: 595px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 208px;
+          .year {
+            top: 25px;
+          }
+        }
+        .bs-story {
+          top: 302px;
+          left: 0;
+          width: 500px;
+        }   
       }
 
       &.ps-bs-1980 {
         width: 1477px;
+        .k-year {
+          left: 675px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 296px;
+          .year {
+            top: 25px;
+          }
+          &.etc1 {
+            top: auto;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+          }
+          &.etc2 {
+            top: 38px;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 302px;
+          left: 659px;
+          dd {
+            width: 500px;
+          }
+        }
       }
 
       &.ps-bs-1981 {
         width: 1314px;
+        .k-year {
+          left: 623px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 637px;
+          .year {
+            top: 27px;
+          }
+          &.etc1 {
+            top: 0;
+            left: 0;
+          }
+          &.etc2 {
+            top: auto;
+            left: 145px;
+            bottom: 32px;
+          }
+        }
+        .bs-story {
+          top: 234px;
+          left: 373px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1982 {
         width: 1393px;
+        .k-year {
+          left: 616px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 61px;
+          }
+          &.etc1 {
+            top: 190px;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 361px;
+          left: 599px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1983 {
         width: 1490px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 192px;
+          right: -170px;
+          width: 213px;
+          height: 190px;
+          background: url(../images/brandstory/hs-arrow-1.png) no-repeat;
+        }
+        .k-year {
+          left: 723px;
+          letter-spacing: 0 !important;
+        }
+        .y-thumb {
+          top: 232px;
+          left: 137px;
+          .year {
+            top: 254px;
+          }
+          &.etc1 {
+            z-index: 1;
+            top: 0;
+            left: 0;
+          }
+          &.etc2 {
+            top: 191px;
+            left: 1266px;
+          }
+        }
+        .bs-story {
+          top: 5px;
+          left: 684px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1984 {
         width: 1366px;
+        .k-year {
+          left: 512px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 220px;
+          .year {
+            top: 61px;
+          }
+          &.etc1 {
+            z-index: 1;
+            top: 99px;
+            left: 0;
+          }
+          &.etc2 {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+          }
+        }
+        .bs-story {
+          top: 317px;
+          left: 602px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1984-2 {
         width: 1525px;
+        .k-year {
+          left: 730px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 9px;
+          }
+          &.etc1 {
+            z-index: 1;
+            top: 0;
+            left: 947px;
+          }
+        }
+        .bs-story {
+          top: 266px;
+          left: 589px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1986 {
         width: 1225px;
+        .k-year {
+          left: 386px;
+        }
+        .y-thumb {
+          top: 191px;
+          left: 0;
+          .year {
+            top: 38px;
+          }
+        }
+        .bs-story {
+          top: 384px;
+          left: 725px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1988 {
         width: 1447px;
+        .k-year {
+          left: 173px;
+          z-index: 1;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 1px;
+          }
+          &.etc1 {
+            z-index: 0;
+            top: 0;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 36px;
+          left: 641px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1992 {
         width: 1129px;
+        .k-year {
+          left: 48px;
+        }
+        .y-thumb {
+          top: 0;
+          left: auto;
+          right: 0;
+          .year {
+            top: 384px;
+          }
+        }
+        .bs-story {
+          top: 383px;
+          left: 0;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1993 {
         width: 1455px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 197px;
+          left: -52px;
+          width: 213px;
+          height: 190px;
+          background: url(../images/brandstory/hs-arrow-1.png) no-repeat;
+        }
+        .k-year {
+          left: 372px;
+          letter-spacing: 0 !important;
+        }
+        .y-thumb {
+          top: 0;
+          left: auto;
+          right: 0;
+          .year {
+            top: 246px;
+          }
+          &.etc1 {
+            top: 0;
+            left: 0;
+          }
+        }
+        .bs-story {
+          top: 36px;
+          left: 506px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1994 {
         width: 1227px;
+        .k-year {
+          left: 0;
+        }
+        .y-thumb {
+          top: 192px;
+          left: 605px;
+          .year {
+            top: 117px;
+          }
+          &.etc1 {
+            z-index: 1;
+            top: 0;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 383px;
+          left: 37px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-1998 {
         width: 1360px;
+        .k-year {
+          left: 372px;
+        }
+        .y-thumb {
+          top: 192px;
+          left: 0;
+          .year {
+            top: 8px;
+          }
+          &.etc1 {
+            top: 0;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 52px;
+          left: 443px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-2009 {
         width: 1446px;
+        .k-year {
+          left: 630px;
+        }
+        .y-thumb {
+          top: 190px;
+          left: 134px;
+          .year {
+            top: 130px;
+          }
+          &.etc1 {
+            top: 0;
+            left: 0;
+          }
+        }
+        .bs-story {
+          top: 307px;
+          left: 842px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-2017 {
         width: 1321px;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 193px;
+          right: -199px;
+          width: 421px;
+          height: 381px;
+          background: url(../images/brandstory/hs-arrow-2.png) no-repeat;
+        }
+        .k-year {
+          left: 594px;
+          z-index: 1;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 14px;
+          }
+          &.etc1 {
+            top: 0;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 105px;
+          left: 665px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-2018 {
         width: 1262px;
+        .k-year {
+          top: 28px;
+          left: 475px;
+          line-height: 476px !important;
+        }
+        .y-thumb {
+          top: 263px;
+          left: 0;
+          .year {
+            top: 21px;
+          }
+          &.etc1 {
+            top: 336px;
+            left: auto;
+            right: 0;
+          }
+        }
+        .bs-story {
+          top: 22px;
+          left: 145px;
+          width: 500px;
+        }
       }
 
       &.ps-bs-2021 {
         width: 1133px;
+        .k-year {
+          left: 107px;
+        }
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 0;
+          }
+        }
+        .bs-story {
+          top: 310px;
+          left: 633px;
+          width: 500px;
+        }
       }
 
     }
