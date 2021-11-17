@@ -772,6 +772,7 @@
   }
 }
 
+/* 뉴스 */
 .ps-news {
   &-wrap {
     padding-top: 18px;  
@@ -828,6 +829,7 @@
     }
   }
 }
+/* 뉴스 */
 
 /* 룩북 필름 */
 .ps-film {
@@ -862,10 +864,7 @@
     }
   }
 }
-
-
-
-
+/* 룩북 필름 */
 
 /* 스마트핏 */
 .ps-smart-fit {
@@ -1003,13 +1002,502 @@
 /* 스마트핏 */
 
 
+/* 스폰서쉽 */
+.ps-media {
+
+  &-item {
+    text-align: center;
+    & + & {
+      margin-top: 80px;
+    }
+
+    .btn-area {
+      margin-top: 36px;
+    }
+  }
+
+  &-thumb {
+    > a {
+      display: block;
+      > img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-body {
+    padding-top: 30px;
+
+    > .title {
+      font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    > .desc {
+      padding-top: 20px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+  }
+
+}
+
+.ps-sponer {
+  &-content {
+    margin-top: 80px;
+    padding: 80px 0 100px 0;
+    background: #222 url(../images/sponsorship/bg_sponsor_content.png) no-repeat right bottom;
+    > .inner {
+      width: 1640px;
+      margin: 0 auto;
+      > .title {
+        padding-bottom: 40px;
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+
+  &-media {
+    font-size: 0;
+    &--content {
+      display: inline-block;
+      vertical-align: top;
+      width: 800px;
+      & + & {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+/* 스폰서쉽 */
 
 
+/* 100% 넓이 영상 구간 */
+.media-add {
+  position: relative;
+  height: 0; 
+  max-width: 100%; 
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  iframe, 
+  object, 
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* 100% 넓이 영상 구간 */
 
 
+/* 브랜드스토리 */
+.ps-brandstory {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    pointer-events: none;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 573px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    pointer-events: none;
+  }
+
+  > .inner {
+    position: relative;
+    width: 1640px;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 191px;
+      left: -50vw;
+      width: 200vw;
+      border-bottom: 1px solid #eee;
+      pointer-events: none;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 382px;
+      left: -50vw;
+      width: 200vw;
+      border-bottom: 1px solid #eee;
+      pointer-events: none;
+    }
+
+    .swiper-container {
+
+      .swiper-wrapper {
+        padding-bottom: 160px;
+      }
+
+      .swiper-slide {
+        .ps-brandstory-item {
+          /* background: #ddd; */
+
+          &::before {
+            content: attr(data-year);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(112,54,204,0) 100%);
+            pointer-events: none;
+            transition: 0.8s;
+          }
+
+          .k-year {
+            position: absolute;
+            font-family: Poppins, sans-serif;
+            font-weight: 800;
+            font-size: 340px;
+            line-height: 1;
+            letter-spacing: -10px;
+            color: #e8e8e8;
+          }
+  
+          .y-thumb {
+            position: absolute;
+            z-index: 2;
+            padding-left: 68px;
+            > .year {
+              position: absolute;
+              left: 0;
+              display: inline-block;
+              padding-right: 37px;
+              font-family: Poppins, sans-serif;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 28px;
+              &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 30px;
+                border-bottom: 4px solid #222;
+                transform: translateY(-50%);
+              }
+            }
+
+            &.etc1 {
+              padding-left: 0;
+            }
+          }
+  
+          .bs-story {
+            position: absolute;
+            z-index: 3;
+            > dt {
+              position: relative;
+              top: 80px;
+              padding-bottom: 34px;
+              font-weight: 700;
+              font-size: 42px;
+              line-height: 53px;
+              opacity: 0;
+              transition: 1s;
+            }
+            > dd {
+              position: relative;
+              top: 80px;
+              font-size: 14px;
+              line-height: 24px;
+              opacity: 0;
+              transition: 1.3s;
+            }
+          }  
+        }
+
+        &.swiper-slide-active {
+
+          .ps-brandstory-item {
+
+            &::before {
+              opacity: 0;
+            }
 
 
+            .bs-story {
+              > dt {
+                top: 0;
+                opacity: 1;
+              }
+              > dd {
+                top: 0;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }      
 
+      .ps-bs--button {
+        position: absolute;
+        bottom: 6px;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        text-indent: -9999px;
+        &-prev {
+          left: 0;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            width: 16px;
+            height: 16px;
+            border-top: 5px solid #999;
+            border-left: 5px solid #999;
+            transform: translateY(-50%) rotate(-45deg);
+          }
+        }
+        &-next {
+          right: 0;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 15px;;
+            width: 16px;
+            height: 16px;
+            border-top: 5px solid #999;
+            border-left: 5px solid #999;
+            transform: translateY(-50%) rotate(135deg);
+          }
+        }
+      }
+    }
+
+    .swiper-slide {
+
+      width: 1640px;
+
+      &.ps-bs-index {
+        width: 600px;
+
+        .ps-brandstory-item {
+          padding-top: 175px;
+
+          h4 {
+            position: relative;
+            padding-top: 40px;
+            font-size: 74px;
+            line-height: 90px;
+            &:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 40px;
+              border-bottom: 16px solid #222;
+            }
+          }
+        }
+      }
+
+      &.ps-bs-1949 {
+        width: 1582px;
+
+        .k-year {
+          left: 802px;
+          bottom: -51px;
+        }
+
+        .y-thumb {
+          top: 0;
+          left: 0;
+          .year {
+            top: 46px;
+          }
+        }
+
+        .bs-story {
+          top: 59px;
+          left: 888px;
+          width: 500px;
+        }
+      }
+
+      &.ps-bs-1950 {
+        width: 1410px;        
+        .k-year {
+          top: -35px;
+          left: 170px;
+        }
+        .y-thumb {
+          top: 188px;
+          left: 0;
+          .year {
+            top: 11px;
+          }
+          &.etc1 {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+          }
+        }
+        .bs-story {
+          top: 305px;
+          left: 399px;
+          width: 500px;
+        }
+      }
+
+      &.ps-bs-1961 {
+        width: 1329px;
+        .k-year {
+          bottom: -51px;
+          right: 74px;
+        }
+        .y-thumb {
+          top: 0;
+          right: 0;
+          .year {
+            top: 18px;
+          }
+          &.etc1 {
+            top: 0;
+            left: 0;
+          }
+        }
+        .bs-story {
+          top: 140px;
+          left: 213px;
+          width: 500px;
+        }
+      }
+
+      &.ps-bs-1962 {
+        width: 1600px;
+        background: yellow;
+      }
+
+      &.ps-bs-1969 {
+        width: 1140px;
+        background: red;
+      }
+
+      &.ps-bs-1975 {
+        width: 1346px;
+        background: yellow;
+      }
+
+      &.ps-bs-1976 {
+        width: 1285px;
+      }
+
+      &.ps-bs-1978 {
+        width: 1163px;
+      }
+
+      &.ps-bs-1978-2 {
+        width: 1380px;
+      }
+
+      &.ps-bs-1980 {
+        width: 1477px;
+      }
+
+      &.ps-bs-1981 {
+        width: 1314px;
+      }
+
+      &.ps-bs-1982 {
+        width: 1393px;
+      }
+
+      &.ps-bs-1983 {
+        width: 1490px;
+      }
+
+      &.ps-bs-1984 {
+        width: 1366px;
+      }
+
+      &.ps-bs-1984-2 {
+        width: 1525px;
+      }
+
+      &.ps-bs-1986 {
+        width: 1225px;
+      }
+
+      &.ps-bs-1988 {
+        width: 1447px;
+      }
+
+      &.ps-bs-1992 {
+        width: 1129px;
+      }
+
+      &.ps-bs-1993 {
+        width: 1455px;
+      }
+
+      &.ps-bs-1994 {
+        width: 1227px;
+      }
+
+      &.ps-bs-1998 {
+        width: 1360px;
+      }
+
+      &.ps-bs-2009 {
+        width: 1446px;
+      }
+
+      &.ps-bs-2017 {
+        width: 1321px;
+      }
+
+      &.ps-bs-2018 {
+        width: 1262px;
+      }
+
+      &.ps-bs-2021 {
+        width: 1133px;
+      }
+
+    }
+
+  }
+
+  &-item {
+    position: relative;
+    height: 573px;
+    font-size: 50px;
+  }
+
+
+}
+/* 브랜드스토리 */
 
 
 

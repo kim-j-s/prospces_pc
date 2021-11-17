@@ -5188,6 +5188,7 @@ main.index + .ps-footer {
   margin-top: 0;
 }
 
+/* 뉴스 */
 .ps-news-wrap {
   padding-top: 18px;
 }
@@ -5253,6 +5254,7 @@ main.index + .ps-footer {
   color: #999;
 }
 
+/* 뉴스 */
 /* 룩북 필름 */
 .ps-film {
   margin-top: 20px;
@@ -5292,6 +5294,7 @@ main.index + .ps-footer {
   line-height: 24px;
 }
 
+/* 룩북 필름 */
 /* 스마트핏 */
 .ps-smart-fit {
   margin-top: 170px;
@@ -5467,6 +5470,514 @@ main.index + .ps-footer {
 }
 
 /* 스마트핏 */
+/* 스폰서쉽 */
+.ps-media-item {
+  text-align: center;
+}
+
+.ps-media-item + .ps-media-item {
+  margin-top: 80px;
+}
+
+.ps-media-item .btn-area {
+  margin-top: 36px;
+}
+
+.ps-media-thumb > a {
+  display: block;
+}
+
+.ps-media-thumb > a > img {
+  width: 100%;
+}
+
+.ps-media-body {
+  padding-top: 30px;
+}
+
+.ps-media-body > .title {
+  font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.ps-media-body > .desc {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.ps-sponer-content {
+  margin-top: 80px;
+  padding: 80px 0 100px 0;
+  background: #222 url(../images/sponsorship/bg_sponsor_content.png) no-repeat right bottom;
+}
+
+.ps-sponer-content > .inner {
+  width: 1640px;
+  margin: 0 auto;
+}
+
+.ps-sponer-content > .inner > .title {
+  padding-bottom: 40px;
+  font-size: 40px;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+}
+
+.ps-sponer-media {
+  font-size: 0;
+}
+
+.ps-sponer-media--content {
+  display: inline-block;
+  vertical-align: top;
+  width: 800px;
+}
+
+.ps-sponer-media--content + .ps-sponer-media--content {
+  margin-left: 40px;
+}
+
+/* 스폰서쉽 */
+/* 100% 넓이 영상 구간 */
+.media-add {
+  position: relative;
+  height: 0;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.media-add iframe,
+.media-add object,
+.media-add embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 100% 넓이 영상 구간 */
+/* 브랜드스토리 */
+.ps-brandstory {
+  position: relative;
+  overflow: hidden;
+}
+
+.ps-brandstory::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  pointer-events: none;
+}
+
+.ps-brandstory::after {
+  content: '';
+  position: absolute;
+  top: 573px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  pointer-events: none;
+}
+
+.ps-brandstory > .inner {
+  position: relative;
+  width: 1640px;
+  margin: 0 auto;
+}
+
+.ps-brandstory > .inner::before {
+  content: '';
+  position: absolute;
+  top: 191px;
+  left: -50vw;
+  width: 200vw;
+  border-bottom: 1px solid #eee;
+  pointer-events: none;
+}
+
+.ps-brandstory > .inner::after {
+  content: '';
+  position: absolute;
+  top: 382px;
+  left: -50vw;
+  width: 200vw;
+  border-bottom: 1px solid #eee;
+  pointer-events: none;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-wrapper {
+  padding-bottom: 160px;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item {
+  /* background: #ddd; */
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item::before {
+  content: attr(data-year);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(112, 54, 204, 0)));
+  background: -webkit-linear-gradient(left, white 0%, rgba(112, 54, 204, 0) 100%);
+  background: linear-gradient(90deg, white 0%, rgba(112, 54, 204, 0) 100%);
+  pointer-events: none;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .k-year {
+  position: absolute;
+  font-family: Poppins, sans-serif;
+  font-weight: 800;
+  font-size: 340px;
+  line-height: 1;
+  letter-spacing: -10px;
+  color: #e8e8e8;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .y-thumb {
+  position: absolute;
+  z-index: 2;
+  padding-left: 68px;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .y-thumb > .year {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  padding-right: 37px;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .y-thumb > .year:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 30px;
+  border-bottom: 4px solid #222;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .y-thumb.etc1 {
+  padding-left: 0;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .bs-story {
+  position: absolute;
+  z-index: 3;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .bs-story > dt {
+  position: relative;
+  top: 80px;
+  padding-bottom: 34px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 53px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide .ps-brandstory-item .bs-story > dd {
+  position: relative;
+  top: 80px;
+  font-size: 14px;
+  line-height: 24px;
+  opacity: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide.swiper-slide-active .ps-brandstory-item::before {
+  opacity: 0;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide.swiper-slide-active .ps-brandstory-item .bs-story > dt {
+  top: 0;
+  opacity: 1;
+}
+
+.ps-brandstory > .inner .swiper-container .swiper-slide.swiper-slide-active .ps-brandstory-item .bs-story > dd {
+  top: 0;
+  opacity: 1;
+}
+
+.ps-brandstory > .inner .swiper-container .ps-bs--button {
+  position: absolute;
+  bottom: 6px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.ps-brandstory > .inner .swiper-container .ps-bs--button-prev {
+  left: 0;
+}
+
+.ps-brandstory > .inner .swiper-container .ps-bs--button-prev:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  border-top: 5px solid #999;
+  border-left: 5px solid #999;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+
+.ps-brandstory > .inner .swiper-container .ps-bs--button-next {
+  right: 0;
+}
+
+.ps-brandstory > .inner .swiper-container .ps-bs--button-next:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  border-top: 5px solid #999;
+  border-left: 5px solid #999;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+      -ms-transform: translateY(-50%) rotate(135deg);
+          transform: translateY(-50%) rotate(135deg);
+}
+
+.ps-brandstory > .inner .swiper-slide {
+  width: 1640px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-index {
+  width: 600px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-index .ps-brandstory-item {
+  padding-top: 175px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-index .ps-brandstory-item h4 {
+  position: relative;
+  padding-top: 40px;
+  font-size: 74px;
+  line-height: 90px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-index .ps-brandstory-item h4:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  border-bottom: 16px solid #222;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1949 {
+  width: 1582px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1949 .k-year {
+  left: 802px;
+  bottom: -51px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1949 .y-thumb {
+  top: 0;
+  left: 0;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1949 .y-thumb .year {
+  top: 46px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1949 .bs-story {
+  top: 59px;
+  left: 888px;
+  width: 500px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1950 {
+  width: 1410px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1950 .k-year {
+  top: -35px;
+  left: 170px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1950 .y-thumb {
+  top: 188px;
+  left: 0;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1950 .y-thumb .year {
+  top: 11px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1950 .y-thumb.etc1 {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1950 .bs-story {
+  top: 305px;
+  left: 399px;
+  width: 500px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1961 {
+  width: 1329px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1961 .k-year {
+  bottom: -51px;
+  right: 74px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1961 .y-thumb {
+  top: 0;
+  right: 0;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1961 .y-thumb .year {
+  top: 18px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1961 .y-thumb.etc1 {
+  top: 0;
+  left: 0;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1961 .bs-story {
+  top: 140px;
+  left: 213px;
+  width: 500px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1962 {
+  width: 1600px;
+  background: yellow;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1969 {
+  width: 1140px;
+  background: red;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1975 {
+  width: 1346px;
+  background: yellow;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1976 {
+  width: 1285px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1978 {
+  width: 1163px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1978-2 {
+  width: 1380px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1980 {
+  width: 1477px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1981 {
+  width: 1314px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1982 {
+  width: 1393px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1983 {
+  width: 1490px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1984 {
+  width: 1366px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1984-2 {
+  width: 1525px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1986 {
+  width: 1225px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1988 {
+  width: 1447px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1992 {
+  width: 1129px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1993 {
+  width: 1455px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1994 {
+  width: 1227px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-1998 {
+  width: 1360px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-2009 {
+  width: 1446px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-2017 {
+  width: 1321px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-2018 {
+  width: 1262px;
+}
+
+.ps-brandstory > .inner .swiper-slide.ps-bs-2021 {
+  width: 1133px;
+}
+
+.ps-brandstory-item {
+  position: relative;
+  height: 573px;
+  font-size: 50px;
+}
+
+/* 브랜드스토리 */
 /*
   Animation On Scroll
   
