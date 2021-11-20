@@ -703,7 +703,30 @@
   }
 }
 
-
+.ps-breadcrumb {
+  margin-bottom: 30px;
+  > span {
+    position: relative;
+    display: inline-block;
+    font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+    &:last-child {
+      font-weight: 500;
+      color: #222;
+    }
+    + span {
+      margin-left: 24px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -12px;
+      }
+    }
+  }
+}
 
 .ps-drop-down {
 }

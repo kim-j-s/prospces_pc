@@ -18896,7 +18896,34 @@ var ui = {
   },
 }
 
+// 공유하기 url 복사
+function CopyUrlToClipboard(){
+  $('.ps-btn-clipboard').on('click', function () {
+    var ct;
+    clearTimeout(ct);
+    var dummy = document.createElement("input");
+    var text = location.href;      
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+    $('.ps-toast-msg').addClass('on');    
+    ct = setTimeout(clearToast, 1500);    
+  });
+}
+
+function clearToast() {
+  $('.ps-toast-msg').removeClass('on');
+}
+
+
+
 $(function () {
   ui.fxInit();
+
+  // 공유하기 url 복사
+  CopyUrlToClipboard();
+
 });
 
