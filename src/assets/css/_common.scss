@@ -97,6 +97,21 @@ $z-dim: 1100;
     line-height: 42px;
     border: 1px solid #222;
   }
+
+  &.type5 {
+    display: inline-block;
+    min-width: 125px;
+    padding: 0 16px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 42px;
+    color: #999;
+    border: 1px solid #999;
+    > span {
+      padding-right: 22px;
+      background: url(../images/icon_down_coupon.svg) no-repeat right center;
+    }
+  }
   
   &-wrap {
     font-size: 0;
@@ -127,7 +142,7 @@ $z-dim: 1100;
     text-indent: -9999px;
   }
 
-  &-share {
+  &.share {
     display: inline-block;
     width: 44px;
     height: 44px;
@@ -136,30 +151,35 @@ $z-dim: 1100;
     background: url(../images/icon_share.svg) no-repeat center center;
   }
 
-  &-kakao {
+  &.kakao {
     width: 24px;
     height: 22px;
     background: url(../images/icon_kakao.svg) no-repeat center center / 100% 100%;
   }
-  &-kakaostory {
+  &.kakaostory {
     width: 11px;
     height: 20px;
     background: url(../images/icon_kakaostory.svg) no-repeat center center / 100% 100%;
   }
-  &-facebook {
+  &.facebook {
     width: 11px;
     height: 22px;
     background: url(../images/icon_facebook_share.svg) no-repeat center center / 100% 100%;
   }
-  &-twitter {
+  &.twitter {
     width: 24px;
     height: 20px;
     background: url(../images/icon_twitter.svg) no-repeat center center / 100% 100%;
   }
-  &-blog {
+  &.blog {
     width: 27px;
     height: 22px;
     background: url(../images/icon_blog.svg) no-repeat center center / 100% 100%;
+  }
+  &.wishlist {
+    width: 44px;
+    height: 44px;
+    background: url(../images/icon_wishlist.svg) no-repeat center center / 100% 100%;
   }
 }
 /* button */
@@ -540,7 +560,6 @@ $z-dim: 1100;
 }
 /* badge */
 
-
 /* 공유하기 */
 .ps-share {
   position: relative;
@@ -559,8 +578,7 @@ $z-dim: 1100;
     background: #fff;
     opacity: 0;
     visibility: hidden;
-    transform: opacity 0.3s, visibility 0.3s;
-    transition: $duration-short;
+    transition: opacity .3s, visibility .3s;
   }
 
   &-item {
@@ -571,26 +589,26 @@ $z-dim: 1100;
   }
 
   .ps-btn {
-    &-kakao {
+    &.kakao {
       margin-right: 24px;
     }
-    &-kakaostory {
+    &.kakaostory {
       margin-right: 26px;
     }
-    &-facebook {
+    &.facebook {
       margin-right: 21px;
     }
-    &-twitter {
+    &.twitter {
       margin-right: 22px;
     }
-    &-blog {
+    &.blog {
       margin-right: 19px;
     }
     &-clipboard {
       font-size: 14px;
     }
 
-    &-share {
+    &.share {
       &:focus {
         + .ps-share-box {
           opacity: 1;
@@ -602,7 +620,7 @@ $z-dim: 1100;
 }
 /* 공유하기 */
 
-
+/* 토스트 팝업 */
 .ps-toast-msg {
   position: fixed;
   z-index: 10;
@@ -616,8 +634,7 @@ $z-dim: 1100;
   transform: translateX(-50%);
   opacity: 0;
   visibility: hidden;
-  transform: opacity 0.3s, visibility 0.3s;
-  transition: $duration-short;
+  transition: opacity 0.5s, visibility 0.5s, bottom 0.5s;  
   border-radius: 50px;
   background: rgba(0, 0, 0, 0.6);
 
@@ -627,7 +644,7 @@ $z-dim: 1100;
     visibility: visible;
   }
 }
-
+/* 토스트 팝업 */
 
 /* table */
 .ps-table {

@@ -721,8 +721,13 @@
       &::before {
         content: '';
         position: absolute;
-        top: 50%;
-        left: -12px;
+        top: 7px;
+        left: -17px;
+        width: 5px;
+        height: 5px;
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+        transform: rotate(45deg);
       }
     }
   }
@@ -892,6 +897,214 @@
     }
   }
 }
+
+
+/* 상품상세 */
+.ps-item {
+
+  /* 상단 */
+  &-top {
+    font-size: 0;
+
+    &--thumbs {
+      display: inline-block;
+      vertical-align: top;
+      width: 700px;
+    }
+
+    &--info {
+      display: inline-block;
+      vertical-align: top;
+      width: 664px;
+      padding-top: 40px;
+      padding-left: 84px;
+    }
+  }
+
+  // 뷰어
+  &--viewer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    background: #f5f5f5;
+
+    > .item {
+      width: 100%;
+    }
+
+    .ps-ai-lens {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      z-index: 1;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: #fff url(../images/icon_ai_lens.svg) no-repeat center center;
+    }
+
+    &-list {
+      font-size: 0;
+
+      > .item {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: top;
+        margin: 20px 20px 0 0;
+        width: 160px;
+        height: 160px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 1px solid #999;
+          pointer-events: none;
+          opacity: 0;
+          transition: $duration-short;
+
+        }
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+
+        &:hover,
+        &.on {
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        > a {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // 상품정보 - 명
+  &-name {
+    position: relative;
+    padding-right: 120px;
+    .cate {
+      padding-bottom: 6px;
+      font-size: 16px;
+      font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+    }
+    .name {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 35px;
+    }
+
+    .units {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      .ps-share {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  // 상품정보 - 가격
+  &-price {
+    padding-top: 30px;
+    .base-price {
+      padding-bottom: 8px;
+      font-weight: 500;
+      font-size: 18px;
+      text-decoration: line-through;
+      line-height: 1;
+      color: #999;
+    }
+    .amount {
+      font-size: 32px;
+      line-height: 40px;
+      .per {
+        padding-right: 10px;
+        color: #e13310;
+      }
+    }
+
+  }
+
+  // 상품정보 - 별점, 쿠폰
+  &-etc {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .rating-link {
+      .rating {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 16px;
+        
+        > span {
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+          background: #ebebeb;
+          + span {
+            margin-left: 10px;
+          }
+        }
+        &[data-rating="1"] {
+          span:nth-child(1) {
+            background: #d13b40;
+          }
+        }
+        &[data-rating="2"] {
+          span:nth-child(-n + 2) {
+            background: #d13b40;
+          }
+        }
+        &[data-rating="3"] {
+          span:nth-child(-n + 3) {
+            background: #d13b40;
+          }
+        }
+        &[data-rating="4"] {
+          span:nth-child(-n + 4) {
+            background: #d13b40;
+          }
+        }
+        &[data-rating="5"] {
+          span:nth-child(-n + 5) {
+            background: #d13b40;
+          }
+        }
+      }
+
+      > .text {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        text-decoration: underline;
+      }
+      
+    }
+  }
+
+
+
+}
+/* 상품상세 */
+
+
+
 
 .ps-post-list {
   padding-top: 20px;

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+  <g id="그룹_984" data-name="그룹 984" transform="translate(-893.5 -815.5)">
+    <g id="그룹_985" data-name="그룹 985" transform="translate(0 0)">
+      <path id="패스_187" data-name="패스 187" d="M-657.821,826.624v-10h10" transform="translate(1552.821 0.376)" fill="none" stroke="#222" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="패스_188" data-name="패스 188" d="M-647.821,826.624v-10h-10" transform="translate(1578.821 0.376)" fill="none" stroke="#222" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="패스_189" data-name="패스 189" d="M-657.821,816.624v10h10" transform="translate(1552.821 26.376)" fill="none" stroke="#222" stroke-miterlimit="10" stroke-width="3"/>
+      <path id="패스_190" data-name="패스 190" d="M-647.821,816.624v10h-10" transform="translate(1578.821 26.376)" fill="none" stroke="#222" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+    <g id="타원_91" data-name="타원 91" transform="translate(901 823)" fill="#222" stroke="#222" stroke-width="2">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11" fill="none"/>
+    </g>
+    <g id="그룹_986" data-name="그룹 986" transform="translate(-0.5 -0.5)">
+      <line id="선_9" data-name="선 9" x2="10" transform="translate(908.5 835.5)" fill="none" stroke="#fff" stroke-width="2"/>
+      <line id="선_10" data-name="선 10" x2="10" transform="translate(913.5 830.5) rotate(90)" fill="none" stroke="#fff" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

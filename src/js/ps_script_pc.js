@@ -286,12 +286,25 @@ function clearToast() {
 }
 
 
+// 상품상세 이미지 교체
+function thumbnail() {
+  $('.ps-item--viewer-list a').on('click', function () {
+    $(this).closest('.ps-item--viewer-list').find('.item').removeClass('on');
+    $(this).closest('.item').addClass('on');
+    var img = $(this).find('img').attr('src');
+    $('.ps-item--viewer').find('img').attr('src', img);
+  });
+}
+
 
 $(function () {
   ui.fxInit();
 
   // 공유하기 url 복사
   CopyUrlToClipboard();
+
+  // 상품상세 이미지 교체
+  thumbnail();
 
 });
 
