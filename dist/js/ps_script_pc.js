@@ -18929,6 +18929,22 @@ function thumbnail() {
 }
 
 
+function slide() {
+  $('.ps-slide-item a').on('click', function () {
+    var $this = $(this);
+    if ( $this.next().css('display') == 'none' ) {
+      $this.closest('.ps-slide').find('.ps-slide-item').removeClass('on');
+      $this.closest('.ps-slide').find('.ps-slide-content').slideUp(300);
+      $this.closest('.ps-slide-item').addClass('on');
+      $this.next().slideDown(300);
+    } else {
+      $this.closest('.ps-slide').find('.ps-slide-item').removeClass('on');
+      $this.closest('.ps-slide').find('.ps-slide-content').slideUp(300);
+    }
+  });
+}
+
+
 $(function () {
   ui.fxInit();
 
@@ -18937,6 +18953,9 @@ $(function () {
 
   // 상품상세 이미지 교체
   thumbnail();
+
+  // slider
+  slide();
 
 });
 
