@@ -1246,21 +1246,41 @@
 
 
 /* 상품 상세 정보 */
-.ps-detail {
+.ps-prd-detail {
   position: relative;
   padding-top: 100px;
   border-top: 4px solid #222;
   
   &--content {
-    padding-top: 80px;
-    border-top: 4px solid #eee;
-
+    padding-top: 23px;
     .inner {
       width: 1364px;
       margin: 0 auto;
     }
+
+    & + & {
+      margin-top: 80px;
+      padding-top: 80px;
+      border-top: 4px solid #eee;
+    }
+
+    .ps-recommand {
+      margin-top: 80px;
+    }
   }
 
+  &--board {
+    .incont {
+      text-align: center;
+      img {
+        display: inline-block;
+      }
+    }
+
+    .ps-slide {
+      margin-top: 100px;
+    }
+  }
 
 }
 
@@ -1328,14 +1348,11 @@
 
       &.qa {
         display: flex;
-
         .q {
           flex: none;
           width: 30px;
         }
-      }
-
-      
+      }      
     }
     &.on {
       + .ps-slide-item {
@@ -1373,6 +1390,18 @@
         }
       }
     }
+    &--i {
+      padding: 30px 24px;
+      border: 1px solid #222;
+      border-top: none;
+
+      .size-tit {
+        padding-top: 40px;
+        padding-bottom: 14px;
+        font-size: 14px;
+        color: #999;
+      }
+    }
   }
 
   &.big {
@@ -1387,6 +1416,28 @@
       }
     }
   }
+
+  &.brd {
+    border-top: none;
+    .ps-slide-item {
+      &::before {
+        content: none;
+      }
+      .title {
+        padding: 20px 80px 20px 24px;
+        border: 1px solid #222;
+        &:after {
+          top: 17px;
+          right: 24px;
+        }
+      }
+      & + .ps-slide-item {
+        margin-top: -1px;
+      }
+    }
+  }
+
+
 }
 
 .bd-box {

@@ -1658,6 +1658,43 @@ button.swiper-pagination-bullet {
   max-width: 566px;
 }
 
+.ps-table.type3 table > thead > tr > th {
+  height: 50px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  background: #f5f5f5;
+}
+
+.ps-table.type3 table > tbody > tr {
+  border-top: 1px solid #eee;
+}
+
+.ps-table.type3 table > tbody > tr > td {
+  height: 58px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.ps-table.type3 table > tbody > tr:first-child {
+  border-top: none;
+}
+
+.ps-table.type4 table > tbody > tr > th {
+  height: 36px;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+}
+
+.ps-table.type4 table > tbody > tr > td {
+  height: 36px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #999;
+}
+
 /* table */
 /* checkbox */
 .ps-chkbox {
@@ -3126,20 +3163,41 @@ main.index + .ps-footer {
 }
 
 /* 상품 상세 정보 */
-.ps-detail {
+.ps-prd-detail {
   position: relative;
   padding-top: 100px;
   border-top: 4px solid #222;
 }
 
-.ps-detail--content {
+.ps-prd-detail--content {
+  padding-top: 23px;
+}
+
+.ps-prd-detail--content .inner {
+  width: 1364px;
+  margin: 0 auto;
+}
+
+.ps-prd-detail--content + .ps-prd-detail--content {
+  margin-top: 80px;
   padding-top: 80px;
   border-top: 4px solid #eee;
 }
 
-.ps-detail--content .inner {
-  width: 1364px;
-  margin: 0 auto;
+.ps-prd-detail--content .ps-recommand {
+  margin-top: 80px;
+}
+
+.ps-prd-detail--board .incont {
+  text-align: center;
+}
+
+.ps-prd-detail--board .incont img {
+  display: inline-block;
+}
+
+.ps-prd-detail--board .ps-slide {
+  margin-top: 100px;
 }
 
 .ps-i {
@@ -3241,6 +3299,19 @@ main.index + .ps-footer {
   color: #e13310;
 }
 
+.ps-slide-content--i {
+  padding: 30px 24px;
+  border: 1px solid #222;
+  border-top: none;
+}
+
+.ps-slide-content--i .size-tit {
+  padding-top: 40px;
+  padding-bottom: 14px;
+  font-size: 14px;
+  color: #999;
+}
+
 .ps-slide.big .ps-slide-item .title {
   padding: 27px 30px 27px 0;
   font-size: 20px;
@@ -3249,6 +3320,28 @@ main.index + .ps-footer {
 
 .ps-slide.big .ps-slide-item .title:after {
   top: 25px;
+}
+
+.ps-slide.brd {
+  border-top: none;
+}
+
+.ps-slide.brd .ps-slide-item::before {
+  content: none;
+}
+
+.ps-slide.brd .ps-slide-item .title {
+  padding: 20px 80px 20px 24px;
+  border: 1px solid #222;
+}
+
+.ps-slide.brd .ps-slide-item .title:after {
+  top: 17px;
+  right: 24px;
+}
+
+.ps-slide.brd .ps-slide-item + .ps-slide-item {
+  margin-top: -1px;
 }
 
 .bd-box {
