@@ -749,8 +749,7 @@ $z-dim: 1100;
           }
           &:first-child {
             > th + td,
-            > th + td ~ td,
-             {
+            > th + td ~ td {
               border-top: 1px solid #ccc;
             }
             > td {
@@ -792,6 +791,14 @@ $z-dim: 1100;
                 display: block;
                 height: 11px;
               }
+              &.vt {
+                &::before {
+                  content: none;
+                }
+              }
+            }
+            &.big {
+              font-size: 18px;
             }
             &.essential {
               &:after {
@@ -1061,11 +1068,11 @@ $z-dim: 1100;
       position: relative;
       padding-left: 14px;
       font-size: 16px;
-      line-height: 20px;
+      line-height: 24px;
       &::before {
         content: '';
         position: absolute;
-        top: 8px;
+        top: 10px;
         left: 0;
         width: 4px;
         border-bottom: 4px solid #222;
@@ -1074,7 +1081,7 @@ $z-dim: 1100;
         padding-top: 10px;
       }
       + li {
-        margin-top: 8px;
+        margin-top: 6px;
       }
     }
     &.white {

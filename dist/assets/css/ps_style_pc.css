@@ -772,6 +772,9 @@ video {
 	--tw-text-opacity: 1;
 	color: rgba(209, 59, 64, var(--tw-text-opacity));
 }
+.underline {
+	text-decoration: underline;
+}
 @media (min-width: 640px) {
 
 	.sm\:my-2 {
@@ -2479,6 +2482,14 @@ button.swiper-pagination-bullet {
   height: 11px;
 }
 
+.ps-table.type2 > table > tbody > tr > th.top.vt::before {
+  content: none;
+}
+
+.ps-table.type2 > table > tbody > tr > th.big {
+  font-size: 18px;
+}
+
 .ps-table.type2 > table > tbody > tr > th.essential:after {
   content: '';
   display: inline-block;
@@ -2706,13 +2717,13 @@ button.swiper-pagination-bullet {
   position: relative;
   padding-left: 14px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
 }
 
 .ps-list.type1 > li::before {
   content: '';
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 0;
   width: 4px;
   border-bottom: 4px solid #222;
@@ -2723,7 +2734,7 @@ button.swiper-pagination-bullet {
 }
 
 .ps-list.type1 > li + li {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .ps-list.type1.white > li {
@@ -3809,28 +3820,38 @@ main.index + .ps-footer {
 
 .ps-item-name {
   position: relative;
-  padding-right: 120px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.ps-item-name .cate {
+.ps-item-name .cont .cate {
   padding-bottom: 6px;
   font-size: 16px;
   font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
 }
 
-.ps-item-name .name {
+.ps-item-name .cont .name {
   font-weight: 500;
   font-size: 28px;
   line-height: 35px;
 }
 
 .ps-item-name .units {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  padding-left: 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4074,6 +4095,49 @@ main.index + .ps-footer {
   color: #23c300;
 }
 
+.ps-recommand {
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.ps-recommand .title {
+  padding-bottom: 30px;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.ps-recommand--items.ps-items-swiper .cont .swiper-slide {
+  width: 300px;
+}
+
+.ps-recommand--items.ps-items-swiper .cont .swiper-slide .ps-prd-item {
+  width: 300px;
+  margin-bottom: 0;
+}
+
+/* 상품 상세 정보 */
+.ps-detail {
+  position: relative;
+  padding-top: 100px;
+  border-top: 4px solid #222;
+}
+
+.ps-detail--content {
+  padding-top: 80px;
+  border-top: 4px solid #eee;
+}
+
+.ps-detail--content .inner {
+  width: 1364px;
+  margin: 0 auto;
+}
+
+.ps-i {
+  /* 배송안내 */
+  /* 배송안내 */
+}
+
+/* 상품 상세 정보 */
 /* 상품상세 */
 /* 슬라이드 */
 .ps-slide {
@@ -4201,6 +4265,19 @@ main.index + .ps-footer {
   border: 1px solid #eee;
 }
 
+.ps-card-benefit {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.ps-card-benefit .sub-txt {
+  display: block;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+}
+
 /* 슬라이드 */
 .ps-post-list {
   padding-top: 20px;
@@ -4318,6 +4395,10 @@ main.index + .ps-footer {
 .color-sort--ty8 {
   border: 1px solid #ccc;
   background: #fff;
+}
+
+.color-sort--ty8 > span {
+  height: 28px;
 }
 
 /* 색상 선택 */

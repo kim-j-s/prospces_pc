@@ -995,23 +995,25 @@
   // 상품정보 - 명
   &-name {
     position: relative;
-    padding-right: 120px;
-    .cate {
-      padding-bottom: 6px;
-      font-size: 16px;
-      font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
-    }
-    .name {
-      font-weight: 500;
-      font-size: 28px;
-      line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .cont {
+      .cate {
+        padding-bottom: 6px;
+        font-size: 16px;
+        font-family: Poppins, Spoqa Han Sans Neo, sans-serif;
+      }
+      .name {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 35px;
+      }
     }
 
     .units {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
+      flex: none;
+      padding-left: 20px;
       display: flex;
       .ps-share {
         margin-left: 6px;
@@ -1219,6 +1221,65 @@
 
 
 }
+
+.ps-recommand {
+  padding-bottom: 50px;
+  overflow: hidden;
+  .title {
+    padding-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  &--items.ps-items-swiper {
+    .cont {
+      .swiper-slide {
+        width: 300px;
+        .ps-prd-item {
+          width: 300px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/* 상품 상세 정보 */
+.ps-detail {
+  position: relative;
+  padding-top: 100px;
+  border-top: 4px solid #222;
+  
+  &--content {
+    padding-top: 80px;
+    border-top: 4px solid #eee;
+
+    .inner {
+      width: 1364px;
+      margin: 0 auto;
+    }
+  }
+
+
+}
+
+.ps-i {
+
+  /* 배송안내 */
+  &-delivery {
+    
+  }
+  /* 배송안내 */
+
+}
+
+/* 상품 상세 정보 */
+
+
+
+
+
 /* 상품상세 */
 
 
@@ -1334,6 +1395,18 @@
   line-height: 20px;
   border: 1px solid #eee;
 }
+
+.ps-card-benefit {
+  font-size: 16px;
+  line-height: 20px;
+  .sub-txt {
+    display: block;
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #999;
+  }
+}
 /* 슬라이드 */
 
 
@@ -1441,6 +1514,9 @@
   &--ty8 {
     border: 1px solid #ccc;
     background: #fff;
+    > span {
+      height: 28px;
+    }
   }
 }
 /* 색상 선택 */
