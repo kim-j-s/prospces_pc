@@ -177,13 +177,19 @@
                   <select name="" id="" class="ps-select w-full">
                     <option value="">230</option>
                     <option value="">235</option>
-                    <option value="">240</option>
+                    <option value="" disabled>240 [품절]</option>
                     <option value="">245</option>
                     <option value="">250</option>
                     <option value="">255</option>
                   </select>
                 </div>
               </div>
+
+
+              <div class="ps-item-payment">
+                -- 결제정보 진행 중 --
+              </div>
+
 
               <div class="ps-item-buy">
                 <div class="btn-wrap">
@@ -202,7 +208,7 @@
                   <a href="javascript:void(0)" class="ps-btn naver"><span>Pay 구매</span></a>
                 </div>
                 <div class="bottom">
-                  <a href=""><span>[멤버쉽]</span>첫달 무료가입하고 추가 4%!</a>
+                  <a href="#"><span>[멤버쉽]</span>첫달 무료가입하고 추가 4%!</a>
                 </div>
               </div>
             </div>            
@@ -219,7 +225,7 @@
                   <div class="swiper-slide">
                     <a href="#" class="ps-prd-item">
                       <div class="thumbs">
-                        <img src="../../assets/images/temp/temp_prd_thumbs_15.png" alt="오리지널 덴스 후디">
+                        <img src="../../assets/images/img_prd_default.jpg" alt="오리지널 덴스 후디">
                       </div>
                       <div class="desc s-items">
                         <p class="name">빅스타 103</p>
@@ -288,18 +294,20 @@
               </div>
             </div>
           </div>
-
-
         </section>
       </div>
 
       <section class="ps-prd-detail">
-        <div class="ps-inner--small">
-          <div class="ps-tab--wrap type1">
-            <a href="#" class="ps-tab--item active">상품정보</a>
-            <a href="#" class="ps-tab--item">리뷰</a>
-            <a href="#" class="ps-tab--item">배송안내</a>
+        <div class="ps-prd-detail--tab">
+          <div class="ps-prd-detail--tab-inner">
+            <div class="incont">
+              <div class="ps-tab--wrap type1 mb-0">
+                <a href="javascript:void(0)" class="ps-tab--item anchor active">상품정보</a>
+                <a href="javascript:void(0)" class="ps-tab--item anchor">리뷰</a>
+                <a href="javascript:void(0)" class="ps-tab--item anchor">배송안내</a>
+              </div>
             </div>
+          </div>
         </div>
 
         <!-- 상품정보 -->
@@ -640,9 +648,6 @@
         <!-- 배송안내 -->
 
       </section>
-
-
-
     </main>
     <!--// Main -->
     @@include('_footer.html')
@@ -685,5 +690,4 @@
     })
   </script>
 </body>
-
 </html>

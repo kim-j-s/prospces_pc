@@ -290,6 +290,10 @@ $z-dim: 1100;
           &:hover {
             background: #f5f5f5;
           }
+
+          &.disabled {
+            opacity: 0.5;
+          }
         }
       }
     }

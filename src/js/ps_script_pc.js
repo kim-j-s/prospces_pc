@@ -37,6 +37,7 @@ var ui = {
     ui.fxTab();
     ui.fxLayer();
     ui.fxSelect();
+    ui.fxPrdDetailScroll();    
   },
   /**
    * comment  : 윈도우 이벤트
@@ -262,6 +263,66 @@ var ui = {
     $('.ps-select').selectric();
     $('.selectric-input').remove();
   },
+  /**
+   * comment  : 스티키
+   * param    : 
+   * @author  : 
+   * @date    : 
+   */
+  fxPrdDetailScroll: function () {
+
+    // 상품상세 탭
+    var $prdDetailTab = $('.ps-prd-detail--tab');
+    // 상품상세 탭
+
+    if ($prdDetailTab.length > 0) {
+      ui.window.$this.on({
+        'scroll': function () {
+          if ($prdDetailTab.offset().top < ui.window.scrollTop) {
+            $('.ps-prd-detail--tab-inner').addClass('on');
+          } else {
+            $('.ps-prd-detail--tab-inner').removeClass('on');
+          }
+
+          var $itp = $('.ps-prd-detail--content');
+          var $itpHeight = 0;
+          var $itpIndex = 0;
+          var $itpTop = 0;
+          var $itpBottom = 0;
+          for (var i = 0; i < $itp.length; i++)
+          {
+            $itpHeight = $itp.eq(i).outerHeight();
+            $itpTop = $itp.eq(i).offset().top;
+            $itpBottom = $itpTop + $itpHeight;
+
+            if ($itpTop <= ui.window.scrollTop && ui.window.scrollTop <= $itpBottom)
+            {
+              $itpIndex = i;
+            }
+          }
+          $(".ps-tab--wrap a").removeClass("active");
+          $(".ps-tab--wrap a:eq(" + $itpIndex + ")").addClass("active");          
+        }
+      });
+    }
+
+    $('.anchor').on('click', function(){
+      var $this = $(this);
+      var $index = $this.index();
+      console.log($index);
+
+      $('.anchor').removeClass('active');
+      $this.addClass('active');
+
+      var $target = $('.ps-prd-detail--content');
+      var $top = $target.eq($index).offset().top;
+      $('html, body').animate({
+        scrollTop: $top
+      }, 500);
+      return false;
+    })
+
+  },
 }
 
 // 공유하기 url 복사
@@ -280,11 +341,9 @@ function CopyUrlToClipboard(){
     ct = setTimeout(clearToast, 1500);    
   });
 }
-
 function clearToast() {
   $('.ps-toast-msg').removeClass('on');
 }
-
 
 // 상품상세 이미지 교체
 function thumbnail() {
@@ -296,7 +355,7 @@ function thumbnail() {
   });
 }
 
-
+// slider
 function slide() {
   $('.ps-slide-item a').on('click', function () {
     var $this = $(this);

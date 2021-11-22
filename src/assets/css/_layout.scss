@@ -1176,6 +1176,18 @@
     }    
   }
 
+
+  // 결제정보
+  &-payment {
+    padding: 30px 0 20px;
+
+    font-size: 16px;
+
+  }
+
+
+
+
   //구매 버튼
   &-buy {
     padding-top: 20px;
@@ -1217,9 +1229,6 @@
       }
     }
   }
-  
-
-
 }
 
 .ps-recommand {
@@ -1250,17 +1259,73 @@
   position: relative;
   padding-top: 100px;
   border-top: 4px solid #222;
+
+  &--tab {
+    margin: 0 auto;
+    height: 51px;
+    &-inner {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      min-width: 1640px;
+      transition: $duration-short;
+      background: rgba($color: #fff, $alpha: 0.8);
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0;
+        border-bottom: 1px solid #222;
+        transition: $duration-short;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        border-bottom: 1px solid #222;
+        transition: $duration-short;
+      }
+      &.on {
+        position: fixed;
+        top: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &::before {
+          left: 0;
+          width: 100%;
+        }
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+        .up & {
+          top: 120px;
+        }
+      }
+      .incont {
+        width: 1364px;
+        margin: 0 auto;
+      }
+    }
+  }
   
   &--content {
-    padding-top: 23px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     .inner {
       width: 1364px;
       margin: 0 auto;
     }
 
+    &:last-child {
+      padding-bottom: 0;
+    }
+
     & + & {
-      margin-top: 80px;
-      padding-top: 80px;
+      padding-top: 160px;
       border-top: 4px solid #eee;
     }
 
