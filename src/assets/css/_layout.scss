@@ -1181,12 +1181,48 @@
   &-payment {
     padding: 30px 0 20px;
 
-    font-size: 16px;
+    &--top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-right: 30px;
+      padding-bottom: 24px;
+      font-size: 20px;
+      line-height: 44px;
+      border-bottom: 2px solid #222;
+
+      .size {
+        width: 272px;
+      }
+
+      .price {
+        flex: none;
+        width: 147px;
+        text-align: right;
+      }
+
+      .ps-btn.close {
+        position: absolute;
+        top: 13px;
+        right: 0;
+      }
+    }
+
+    &--total {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 24px;
+      font-size: 22px;
+      line-height: 40px;
+      .amount {
+        padding-left: 20px;
+        font-size: 32px;
+        color: #d13b40;
+      }
+    }
 
   }
-
-
-
 
   //구매 버튼
   &-buy {
@@ -1251,6 +1287,22 @@
       }
     }
   }
+}
+
+/* 카운터 */
+.ps-counter {
+  position: relative;
+  display: inline-flex;
+  width: 143px;
+  &--number {
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 42px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+
 }
 
 

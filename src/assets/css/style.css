@@ -870,6 +870,10 @@ button.swiper-pagination-bullet {
   outline: none;
 }
 
+.ps-btn > span {
+  position: relative;
+}
+
 .ps-btn.type1 {
   display: inline-block;
   vertical-align: top;
@@ -1006,6 +1010,10 @@ button.swiper-pagination-bullet {
   text-indent: -9999px;
 }
 
+.ps-btn.icon > span {
+  text-indent: -9999px;
+}
+
 .ps-btn.share {
   display: inline-block;
   width: 44px;
@@ -1049,6 +1057,53 @@ button.swiper-pagination-bullet {
   width: 44px;
   height: 44px;
   background: url(../images/icon_wishlist.svg) no-repeat center center/100% 100%;
+}
+
+.ps-btn.close {
+  width: 18px;
+  height: 18px;
+  background: url(../images/icon_close.svg) no-repeat center center/100% 100%;
+}
+
+.ps-btn.minus {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ccc;
+}
+
+.ps-btn.minus::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  width: 14px;
+  border-bottom: 2px solid #999;
+}
+
+.ps-btn.plus {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ccc;
+}
+
+.ps-btn.plus::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  width: 14px;
+  border-bottom: 2px solid #999;
+}
+
+.ps-btn.plus::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  height: 14px;
+  border-left: 2px solid #999;
 }
 
 /* button */
@@ -3100,7 +3155,48 @@ main.index + .ps-footer {
 
 .ps-item-payment {
   padding: 30px 0 20px;
-  font-size: 16px;
+}
+
+.ps-item-payment--top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  padding-bottom: 24px;
+  font-size: 20px;
+  line-height: 44px;
+  border-bottom: 2px solid #222;
+}
+
+.ps-item-payment--top .size {
+  width: 272px;
+}
+
+.ps-item-payment--top .price {
+  flex: none;
+  width: 147px;
+  text-align: right;
+}
+
+.ps-item-payment--top .ps-btn.close {
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+
+.ps-item-payment--total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 24px;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.ps-item-payment--total .amount {
+  padding-left: 20px;
+  font-size: 32px;
+  color: #d13b40;
 }
 
 .ps-item-buy {
@@ -3169,6 +3265,22 @@ main.index + .ps-footer {
 .ps-recommand--items.ps-items-swiper .cont .swiper-slide .ps-prd-item {
   width: 300px;
   margin-bottom: 0;
+}
+
+/* 카운터 */
+.ps-counter {
+  position: relative;
+  display: inline-flex;
+  width: 143px;
+}
+
+.ps-counter--number {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 42px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 /* 상품 상세 정보 */
