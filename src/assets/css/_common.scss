@@ -23,7 +23,6 @@ $z-dim: 1100;
   text-overflow: ellipsis;
 }
 
-
 .line-clamp-1 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -285,7 +284,7 @@ $z-dim: 1100;
 /* select */
 .selectric-wrapper {
   position: relative;
-  z-index: 300;
+  z-index: 1;
   display: inline-block;
   width: 360px;
   cursor: pointer;
@@ -315,6 +314,7 @@ $z-dim: 1100;
       right: 0;
       width: 54px;
       height: 100%;
+      font-size: 0;
       text-indent: -999px;
       overflow: hidden;
       background: url('../images/icon_down_gray.svg') no-repeat center center / 14px auto;
@@ -364,6 +364,11 @@ $z-dim: 1100;
         transform: rotate(-180deg);
       }
     }
+  }
+
+  &.selectric-above .selectric-items {
+    top: auto;
+    bottom: calc(100% - 1px);
   }
 
   &.selectric-mini {

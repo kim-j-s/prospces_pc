@@ -273,7 +273,6 @@ var ui = {
 
     // 상품상세 탭
     var $prdDetailTab = $('.ps-prd-detail--tab');
-    // 상품상세 탭
 
     if ($prdDetailTab.length > 0) {
       ui.window.$this.on({
@@ -321,6 +320,26 @@ var ui = {
       }, 500);
       return false;
     })
+
+    // 상품상세 추가옵션
+    var $bottomOption = $('.ps-bottom-options');
+    var $content = $('.ps-prd-detail');
+    
+    if ($bottomOption.length > 0) {
+      ui.window.$this.on({
+        'scroll': function () {
+          if ($content.offset().top < ui.window.scrollTop && $content.offset().top + $content.outerHeight() > ui.window.scrollTop + ui.window.height) {
+            $bottomOption.addClass('active');
+            console.log($content.offset().top + $content.outerHeight());
+            console.log(ui.window.scrollTop + ui.window.height);
+          } else {
+            $bottomOption.removeClass('active');
+            $('.ps-bottom-options--item-btn').removeClass('active');
+            $('.ps-bottom-options--item-btn').next('.ps-bottom-options--wrap').slideUp();
+          }
+        }
+      });
+    }
 
   },
 }

@@ -309,6 +309,94 @@
       </div>
 
       <section class="ps-prd-detail">
+
+        <!-- 결제정보 -->
+        <div class="ps-bottom-options">
+          <div class="inner">
+            <div class="ps-bottom-options--item">
+              <button type="button" class="ps-btn ps-bottom-options--item-btn"><span>옵션선택</span></button>
+              <div class="ps-bottom-options--wrap">
+                <div class="inner">
+                  <div class="ps-bottom-options--cont">
+                    <div class="ps-bottom-options--cont-top">
+                      <div class="cont">
+                        <p class="name">오리지널 빅스타 103</p>
+                        <p class="amount font-bold">128,900원</p>
+                      </div>
+                      <button type="button" class="ps-btn icon wishlist">추천하기</button>
+                    </div>
+
+                    <div class="ps-item-option">
+                      <h4 class="ps-title-type3 font-bold">색상</h4>
+                      <div class="ps-item-option--color">
+                        <div class="ps-item-option--color-item on">
+                          <a href="#">
+                            <img src="../../assets/images/temp/temp_color_select1.png" alt="">
+                          </a>
+                        </div>
+                        <div class="ps-item-option--color-item">
+                          <a href="#">
+                            <img src="../../assets/images/temp/temp_color_select2.png" alt="">
+                          </a>
+                        </div>
+                        <div class="ps-item-option--color-item">
+                          <a href="#">
+                            <img src="../../assets/images/temp/temp_color_select3.png" alt="">
+                          </a>
+                        </div>
+                        <div class="ps-item-option--color-item">
+                          <a href="#">
+                            <img src="../../assets/images/temp/temp_color_select4.png" alt="">
+                          </a>
+                        </div>
+                        <div class="ps-item-option--color-item">
+                          <a href="#">
+                            <img src="../../assets/images/temp/temp_color_select5.png" alt="">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="ps-item-option--size">
+                        <select name="" id="" class="ps-select w-full">
+                          <option value="">230</option>
+                          <option value="">235</option>
+                          <option value="" disabled>240 [품절]</option>
+                          <option value="">245</option>
+                          <option value="">250</option>
+                          <option value="">255</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="ps-item-payment">
+                      <div class="ps-item-payment--top">
+                        <strong class="size font-medium">230</strong>
+                        <div class="ps-counter">
+                          <button type="button" class="ps-btn icon minus"><span>감소</span></button>
+                          <span class="ps-counter--number font-bold">1</span>
+                          <button type="button" class="ps-btn icon plus"><span>증가</span></button>
+                        </div>
+                        <span class="price font-bold">128,900원</span>
+                        <button type="button" class="ps-btn icon close"><span>삭제</span></button>
+                      </div>
+                      <div class="ps-item-payment--total">
+                        <span class="font-medium">총 상품 금액</span>
+                        <strong class="amount font-bold">128,900원</strong>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="ps-bottom-options--btns">
+                    <a href="javascript:void(0)" class="ps-btn type2">구매하기</a>
+                    <a href="javascript:void(0)" class="ps-btn type1">쇼핑백</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 결제정보 -->
+
         <div class="ps-prd-detail--tab">
           <div class="ps-prd-detail--tab-inner">
             <div class="incont">
@@ -686,6 +774,18 @@
         type: "progressbar",
       },
       */
+    });
+
+    $('.ps-bottom-options--item-btn').on('click', function(e) {
+      var $this = $(this);
+      e.preventDefault();
+      if ($this.hasClass('active')) {
+        $this.removeClass('active');
+        $this.next('.ps-bottom-options--wrap').slideUp(300);
+      } else {
+        $this.addClass('active');
+        $this.next('.ps-bottom-options--wrap').slideDown(300);
+      }
     });
 
     AOS.init({

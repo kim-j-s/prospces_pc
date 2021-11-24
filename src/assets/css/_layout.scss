@@ -1176,7 +1176,6 @@
     }    
   }
 
-
   // 결제정보
   &-payment {
     padding: 30px 0 20px;
@@ -1267,6 +1266,138 @@
   }
 }
 
+/* 상세페이지 하단 플로팅 옵션 */
+.ps-bottom-options {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  > .inner {
+    position: relative;
+    width: 1346px;
+    margin: 0 auto;
+    text-align: right;
+  }
+
+  &--item {
+    display: inline-block;
+
+    &-btn {
+      position: relative;
+      display: inline-block;
+      width: 260px;
+      height: 60px;
+      padding: 0 20px;
+      border: 1px solid #222;
+      border-bottom: none;
+      color: #fff;
+      text-align: left;
+      background: #222;
+      transition: $duration-short;
+      > span {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      
+      &:after {
+        content: '';
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        width: 12px;
+        height: 12px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(225deg);
+        transition: $duration-short;
+      }
+
+      &.active {
+        color: #222;
+        background: #fff;
+        &:after {
+          top: 20px;
+          border-right: 2px solid #222;
+          border-bottom: 2px solid #222;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &--wrap {
+    display: none;
+    overflow: hidden;
+    > .inner {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 950px;
+      padding: 30px;
+      border: 1px solid #222;
+      background: #fff;
+    }
+  }
+
+  &--cont {
+    flex: none;
+    width: 580px;
+    text-align: left;
+    &-top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #222;
+
+      .cont {
+        padding-right: 20px;
+        .name {
+          padding-bottom: 8px;
+          font-size: 20px;
+          line-height: 25px;
+        }
+  
+        .amount {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .ps-item-option {
+      padding-top: 30px;
+    }
+
+    .ps-item-payment {
+      padding-bottom: 0;
+    }
+  }
+
+  &--btns {
+    .ps-btn {
+      width: 250px;
+      + .ps-btn {
+        margin-top: 10px;
+      }
+    }
+    
+  }
+}
+/* 상세페이지 하단 플로팅 옵션 */
+
 .ps-recommand {
   padding-bottom: 50px;
   overflow: hidden;
@@ -1304,7 +1435,6 @@
   }
 
 }
-
 
 /* 상품 상세 정보 */
 .ps-prd-detail {
@@ -1412,10 +1542,6 @@
 }
 
 /* 상품 상세 정보 */
-
-
-
-
 
 /* 상품상세 */
 
